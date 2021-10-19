@@ -38,7 +38,7 @@ metadata = {
     "grades": [
         "p1",
         "p2"],
-    "disciplinas:": [
+    "disciplinas": [
         {
             "nome": "Física",
             "grade": "p1",
@@ -148,8 +148,8 @@ metadata = {
 }
 
 
-num_horarios = sum([len(diciplina["horas"])
-                   for diciplina in metadata["disciplinas"]])
+num_horarios = sum([len(disciplina["horas"])
+                   for disciplina in metadata["disciplinas"]])
 
 num_professores = len(metadata["disciplinas"])
 num_salas = num_horarios

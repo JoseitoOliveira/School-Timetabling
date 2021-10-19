@@ -1,4 +1,5 @@
-from metadata import get_num_horarios
+from typing import Dict
+from metadata import num_horarios
 
 CHOQUE_SALA = 1
 CHOQUE_PROF = 1
@@ -8,11 +9,11 @@ INCAPACIDADE_SALA = -10
 
 def fitness(ind, metadata):
     num_d = len(metadata['disciplinas'])
-    num_h = get_num_horarios(metadata)
+    num_h = num_horarios
 
-    cromo_horas = ind[0:num_h]
-    cromo_profe = ind[num_h: num_h+num_d]
-    cromo_salas = ind[num_h+num_d: 2*num_h+num_d]
+    cromo_horas = [int(x) for x in ind[:num_h]]
+    cromo_profe = [int(x) for x in ind[num_h: num_h+num_d]]
+    cromo_salas = [int(x) for x in ind[num_h+num_d:]]
 
     sala_horas = []
     prof_horas = []
@@ -41,12 +42,12 @@ def fitness(ind, metadata):
                     fit += CHOQUE_PROF
         return fit
 
-    def fit_afinidade_disciplina(i_prof, i_disc):
+    def fit_afinidade_disciplina(i_prof, disciplina):
         fit = 0
         profe = metadata['professores'][i_prof]
-        disciplina = metadata['disciplinas'][i_disc]['nome']
-        if disciplina in profe['disciplinas'].key():
-            fit += profe['disciplinas'][disciplina]
+        nome_disciplina = disciplina['nome']
+        if nome_disciplina in profe['disciplinas'].keys():
+            fit += profe['disciplinas'][nome_disciplina]
         else:
             fit += AVERSAO_DISCIPLINA
         return fit
@@ -77,4 +78,4 @@ def fitness(ind, metadata):
 
         ultimo += num_h
 
-    return fit
+    return fit,
