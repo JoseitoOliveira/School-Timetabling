@@ -1,3 +1,8 @@
+from deap import tools
+import json
+
+from AG.utilidades_AG import cruzamento_2pontos
+
 metadata = {
     "professores": [
         {
@@ -148,8 +153,96 @@ metadata = {
 }
 
 
-num_horarios = sum([len(disciplina["horas"])
-                   for disciplina in metadata["disciplinas"]])
+def completar_metadata(metadata):
 
-num_professores = len(metadata["disciplinas"])
-num_salas = num_horarios
+    professores = metadata['professores']
+    salas = metadata['salas']
+    nomes_salas_válidos = [sala['nome'] for sala in salas]
+
+    for disciplina in metadata['disciplinas']:
+
+        disciplina['professores'] = [
+            {'nome': profe['nome'],
+             'afinidade': profe['disciplinas'][disciplina['nome']]}
+            for profe in professores
+            if disciplina['nome'] in profe['disciplinas'].keys()
+        ]
+
+        if disciplina['professores'] == []:
+            raise Exception(
+                f'Não há professores para a disciplina {disciplina["nome"]}.'
+            )
+
+        if 'salas' not in disciplina:
+            disciplina['salas'] = [
+                sala for sala in salas
+                if sala['capacidade'] >= disciplina['num_alunos']
+            ]
+        else:
+            nomes_salas = disciplina['salas']
+
+            for nome_sala in nomes_salas:
+                if nome_sala not in nomes_salas_válidos:
+                    raise Exception(
+                        f'A sala {nome_sala} definida na disciplina '
+                        f'{disciplina["nome"]} não é uma sala válida.'
+                    )
+
+            disciplina['salas'] = [
+                sala for sala in salas
+                if sala['nome'] in nomes_salas
+                if sala['capacidade'] >= disciplina['num_alunos']
+            ]
+
+        if disciplina['salas'] == []:
+            raise Exception(
+                f'Não há sala que comporte a disciplina {disciplina["nome"]} '
+                f'que possui {disciplina["num_alunos"]} alunos matriculados.'
+            )
+
+    return metadata
+
+
+def dummy_mut(ind, *args, **kargs):
+    return ind,
+
+
+def dummy_cruz(ind1, ind2, *args, **kargs):
+    return ind1, ind2
+
+
+def criar_cromossomos(metadata):
+    cromossomos = []
+    for disciplina in metadata['disciplinas']:
+        limite_superior = {
+            'horas': len(metadata['horarios']),
+            'professores': len(disciplina['professores']),
+            'salas': len(disciplina['salas'])
+        }
+        for tipo in ['horas', 'professores', 'salas']:
+            numero_genes = len(disciplina[tipo])
+            cromossomos.append({
+                'numero_genes': numero_genes if tipo != 'profesores' else 1,
+                'tipo': int,
+                'limite_inferior': 0,
+                'limite_superior': limite_superior[tipo],
+                'mutacao': {
+                    'fcn': tools.mutUniformInt if limite_superior[tipo] > 1 else dummy_mut,
+                    'args': {
+                        'indpb': 0.4,
+                        'low': 0,
+                        'up': limite_superior[tipo] - 1
+                    },
+                },
+                'cruzamento': {
+                    'fcn': cruzamento_2pontos if limite_superior[tipo] > 1 else dummy_cruz,
+                    'args': {}
+                }
+            })
+    return cromossomos
+
+
+metadata = completar_metadata(metadata)
+
+with open('metadata.json', mode='w', encoding='utf8') as f:
+    json.dump(metadata, f)

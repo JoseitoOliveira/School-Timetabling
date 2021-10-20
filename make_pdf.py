@@ -1,4 +1,4 @@
-from metadata import metadata, num_horarios
+from metadata import metadata
 
 TEMPLATE_HTML = """
 <!DOCTYPE html>
@@ -52,11 +52,7 @@ empty_table_args = {f'_{i}': '' for i, _ in enumerate(metadata['horarios'])}
 
 
 def make_html(ind):
-    num_d = len(metadata['disciplinas'])
-    num_h = num_horarios
-    cromo_horas = [int(x) for x in ind[:num_h]]
-    cromo_profe = [int(x) for x in ind[num_h: num_h+num_d]]
-    cromo_salas = [int(x) for x in ind[num_h+num_d:]]
+    ind = [int(x) for x in ind]
 
     grades = metadata['grades']
     tables_args = [empty_table_args.copy() for _ in grades]
@@ -64,22 +60,32 @@ def make_html(ind):
      for i, grade in enumerate(grades)]
 
     ultimo = 0
-    for i_d, disciplina in enumerate(metadata['disciplinas']):
+    for disciplina in metadata['disciplinas']:
         num_h = len(disciplina['horas'])
-        horas = cromo_horas[ultimo:ultimo+num_h]
-        salas = cromo_salas[ultimo:ultimo+num_h]
-        profe = cromo_profe[i_d]
+        num_p = 1
+        num_s = len(disciplina['salas'])
+        len_cromo = num_h + num_p + num_s
+        cromo_disciplina = ind[ultimo:ultimo+len_cromo]
+
+        ini_horas = cromo_disciplina[:num_h]
+        i_prof = cromo_disciplina[num_h]
+        salas = cromo_disciplina[num_h+num_p:]
+
+        qtd_horas = disciplina['horas']
+        grade = disciplina['grade']
+        profe = disciplina['professores'][i_prof]
+
         grade = disciplina['grade']
         i_grade = metadata['grades'].index(grade)
         for i, sala in enumerate(salas):
-            for h in range(horas[i], horas[i]+disciplina['horas'][i], 1):
+            for h in range(ini_horas[i], ini_horas[i]+qtd_horas[i], 1):
                 args = (
                     f"{disciplina['nome']}<br>"
-                    f"{metadata['professores'][profe]['nome']}<br>"
-                    f"{metadata['salas'][sala]['nome']}<br>"
+                    f"{profe['nome']}<br>"
+                    f"{disciplina['salas'][sala]['nome']}<br>"
                 )
                 tables_args[i_grade][f'_{h}'] += args
-        ultimo += num_h
+        ultimo += len_cromo
 
     tables = '\n'.join([TEMPLATE_TABLE.format(**args) for args in tables_args])
     return TEMPLATE_HTML.format(tables=tables)

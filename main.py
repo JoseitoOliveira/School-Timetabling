@@ -1,16 +1,13 @@
-from functools import partial
-
 from deap import tools
 from ttictoc import tic, toc
 
 from AG.AG import AG
-from AG.utilidades_AG import cruzamento_2pontos
-from fitness import fitness, fitness_cache, fitness_meta
+from fitness import fitness_cache
 from make_pdf import make_html
-from metadata import metadata, num_horarios, num_professores, num_salas
-
-TAM_POP = 100
+from metadata import criar_cromossomos, metadata
+TAM_POP = 50
 NUM_GEN = 200
+
 
 definições = {
     'otimizacao': (1,),
@@ -26,62 +23,7 @@ definições = {
         'args': {
         }
     },
-    'cromossomos': [
-        {  # Horários
-            'numero_genes': num_horarios,
-            'tipo': int,
-            'limite_inferior': 0,
-            'limite_superior': len(metadata['horarios']),
-            'mutacao': {
-                'fcn': tools.mutUniformInt,
-                'args': {
-                    'indpb': 0.4,
-                    'low': 0,
-                    'up': len(metadata['horarios']) - 1
-                },
-            },
-            'cruzamento': {
-                'fcn': cruzamento_2pontos,
-                'args': {}
-            }
-        },
-        {  # Professores
-            'numero_genes': num_professores,
-            'tipo': int,
-            'limite_inferior': 0,
-            'limite_superior': len(metadata['professores']),
-            'mutacao': {
-                'fcn': tools.mutUniformInt,
-                'args': {
-                    'indpb': 0.4,
-                    'low': 0,
-                    'up': len(metadata['professores']) - 1
-                },
-            },
-            'cruzamento': {
-                'fcn': cruzamento_2pontos,
-                'args': {}
-            }
-        },
-        {  # Salas
-            'numero_genes': num_salas,
-            'tipo': int,
-            'limite_inferior': 0,
-            'limite_superior': len(metadata['salas']),
-            'mutacao': {
-                'fcn': tools.mutUniformInt,
-                'args': {
-                    'indpb': 0.4,
-                    'low': 0,
-                    'up': len(metadata['salas']) - 1
-                },
-            },
-            'cruzamento': {
-                'fcn': cruzamento_2pontos,
-                'args': {}
-            }
-        }
-    ]
+    'cromossomos': criar_cromossomos(metadata)
 }
 
 if __name__ == "__main__":
