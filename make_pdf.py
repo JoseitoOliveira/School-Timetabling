@@ -59,33 +59,30 @@ def make_html(ind):
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]
 
-    ultimo = 0
     for disciplina in metadata['disciplinas']:
-        num_h = len(disciplina['horas'])
-        num_p = 1
-        num_s = len(disciplina['salas'])
-        len_cromo = num_h + num_p + num_s
-        cromo_disciplina = ind[ultimo:ultimo+len_cromo]
+        grade = disciplina['grade']
+        i_grade = metadata['grades'].index(grade)
 
-        ini_horas = cromo_disciplina[:num_h]
-        i_prof = cromo_disciplina[num_h]
-        salas = cromo_disciplina[num_h+num_p:]
+        cromo_p = disciplina['cromossomos'][0]
+        cromo_s = disciplina['cromossomos'][1]
+        cromo_h = disciplina['cromossomos'][2]
+        i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
+        i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
+        i_h = ind[cromo_h['slice_i']:cromo_h['slice_f']]
+
+        salas = [disciplina['salas'][i] for i in i_s]
 
         qtd_horas = disciplina['horas']
         grade = disciplina['grade']
-        profe = disciplina['professores'][i_prof]
-
-        grade = disciplina['grade']
-        i_grade = metadata['grades'].index(grade)
+        profe = disciplina['professores'][i_p[0]]
         for i, sala in enumerate(salas):
-            for h in range(ini_horas[i], ini_horas[i]+qtd_horas[i], 1):
+            for h in range(i_h[i], i_h[i]+qtd_horas[i]):
                 args = (
                     f"{disciplina['nome']}<br>"
                     f"{profe['nome']}<br>"
-                    f"{disciplina['salas'][sala]['nome']}<br>"
+                    f"{sala['nome']}<br>"
                 )
                 tables_args[i_grade][f'_{h}'] += args
-        ultimo += len_cromo
 
     tables = '\n'.join([TEMPLATE_TABLE.format(**args) for args in tables_args])
     return TEMPLATE_HTML.format(tables=tables)

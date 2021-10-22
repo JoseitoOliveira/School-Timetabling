@@ -1,14 +1,12 @@
 from functools import partial, lru_cache
 from metadata import metadata
 
-CHOQUE_SALA = -10
-CHOQUE_PROF = -10
-CHOQUE_GRADE = -10
-AVERSAO_DISCIPLINA = -10
-INCAPACIDADE_SALA = -10
+CHOQUE_SALA = -20
+CHOQUE_PROF = -20
+CHOQUE_GRADE = -20
+AULAS_AOS_SABADOS = -15
 HORAS_DIAS_DISTINTOS = -8
 AULAS_MESMO_DIA = -8
-AULAS_AOS_SABADOS = -5
 AULAS_EM_DOIS_TURNOS = -5
 
 
@@ -21,7 +19,7 @@ def fitness(ind, metadata):
         """Verifica se a sala está ocupada no horário"""
         fit = 0
         for i, sala in enumerate(salas):
-            nome_sala = metadata['salas'][sala]['nome']
+            nome_sala = sala['nome']
             for h in range(ini_horas[i], ini_horas[i]+qtd_horas[i], 1):
                 tag = f'{nome_sala}{h}'
                 if tag in sala_horas:
@@ -56,23 +54,20 @@ def fitness(ind, metadata):
                 if tag in grade_horas:
                     fit += CHOQUE_GRADE
                 else:
-                    prof_horas.append(tag)
+                    grade_horas.append(tag)
         return fit
 
     def fit_afinidade_disciplina(i_prof, disciplina):
         """Verifica se o professor tem afinidade com a disciplina"""
         return disciplina['professores'][i_prof]['afinidade']
 
-    def fit_capacidade_salas(disciplina, i_salas: list):
+    def fit_capacidade_salas(disciplina, salas: list):
         """Verifica se a sala comporta os alunos matriculados na disciplina"""
         fit = 0
-        salas = [disciplina['salas'][i] for i in i_salas]
         for sala in salas:
             dif = sala['capacidade'] - disciplina['num_alunos']
             if dif >= 0:
                 fit += dif
-            else:
-                fit += dif * INCAPACIDADE_SALA
         return fit
 
     def fit_horas_em_dias_distintos(ini_horas, qtd_horas):
@@ -114,33 +109,28 @@ def fitness(ind, metadata):
         return fit
 
     fit = 0
-    ultimo = 0
     for disciplina in metadata['disciplinas']:
-        num_h = len(disciplina['horas'])
-        num_p = 1
-        num_s = len(disciplina['salas'])
-        len_cromo = num_h + num_p + num_s
-        cromo_disciplina = ind[ultimo:ultimo+len_cromo]
+        cromo_p = disciplina['cromossomos'][0]
+        cromo_s = disciplina['cromossomos'][1]
+        cromo_h = disciplina['cromossomos'][2]
+        i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
+        i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
+        i_h = ind[cromo_h['slice_i']:cromo_h['slice_f']]
 
-        ini_horas = cromo_disciplina[:num_h]
-        i_prof = cromo_disciplina[num_h]
-        salas = cromo_disciplina[num_h+num_p:]
+        salas = [disciplina['salas'][i] for i in i_s]
 
-        num_h = len(disciplina['horas'])
         qtd_horas = disciplina['horas']
         grade = disciplina['grade']
-        profe = disciplina['professores'][i_prof]
-        fit += fit_choque_salas(salas, ini_horas, qtd_horas)
-        fit += fit_choque_profe(profe, ini_horas, qtd_horas)
-        fit += fit_choque_grade(grade, ini_horas, qtd_horas)
-        fit += fit_afinidade_disciplina(i_prof, disciplina)
+        profe = disciplina['professores'][i_p[0]]
+        fit += fit_choque_salas(salas, i_h, qtd_horas)
+        fit += fit_choque_profe(profe, i_h, qtd_horas)
+        fit += fit_choque_grade(grade, i_h, qtd_horas)
+        fit += fit_afinidade_disciplina(i_p[0], disciplina)
         fit += fit_capacidade_salas(disciplina, salas)
-        fit += fit_horas_em_dias_distintos(ini_horas, qtd_horas)
-        fit += fit_aulas_no_mesmo_dia(ini_horas)
-        fit += fit_aulas_aos_sabados(ini_horas)
-        fit += fit_aula_em_dois_turnos(ini_horas, qtd_horas)
-
-        ultimo += len_cromo
+        fit += fit_horas_em_dias_distintos(i_h, qtd_horas)
+        fit += fit_aulas_no_mesmo_dia(i_h)
+        fit += fit_aulas_aos_sabados(i_h)
+        fit += fit_aula_em_dois_turnos(i_h, qtd_horas)
 
     return fit,
 
