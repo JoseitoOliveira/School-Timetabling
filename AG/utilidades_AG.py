@@ -1,9 +1,11 @@
 import random
 import numpy as np
+from numba import jit
 
 from deap import tools
 
 
+@jit
 def cruzamento_1ponto(ind1, ind2):
     '''
     Rotina de apoio para cruzamento em 1 ponto.
@@ -18,6 +20,7 @@ def cruzamento_1ponto(ind1, ind2):
     return ind1, ind2
 
 
+@jit
 def cruzamento_2pontos(ind1, ind2):
     '''
     Rotina de apoio para cruzamento em 2 pontos.

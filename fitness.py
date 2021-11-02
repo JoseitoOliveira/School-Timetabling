@@ -1,18 +1,20 @@
-from functools import partial, lru_cache
+from functools import partial
 from metadata import metadata
+from more_itertools import pairwise
 
 CHOQUE_SALA = -20
 CHOQUE_PROF = -20
 CHOQUE_GRADE = -20
-AULAS_AOS_SABADOS = -15
-HORAS_DIAS_DISTINTOS = -8
+AULAS_AOS_SABADOS = -20
+HORAS_DIAS_DISTINTOS = -15
 AULAS_MESMO_DIA = -8
-AULAS_EM_DOIS_TURNOS = -5
+AULAS_EM_DOIS_TURNOS = -10
+AULAS_EM_M1_T1 = -10
+PESO_DISTANCIA_ENTRE_SALAS = -2 * 1e-1
 
 
 def fitness(ind, metadata):
 
-    ind = [int(x) for x in ind]
     sala_horas = []
 
     def fit_choque_salas(salas, ini_horas, qtd_horas):
@@ -94,8 +96,7 @@ def fitness(ind, metadata):
         """Verifica se há aulas aos sábados"""
         fit = 0
         for h in ini_horas:
-            dia = int(h/10)
-            if dia == 5:
+            if h > 49:
                 fit += AULAS_AOS_SABADOS
         return fit
 
@@ -108,14 +109,54 @@ def fitness(ind, metadata):
                 fit += AULAS_EM_DOIS_TURNOS
         return fit
 
+    def fit_aulas_M1_T1(ini_horas, qtd_horas):
+        """Verifica se há aulas nos horários M1 e T1"""
+        fit = 0
+        for ini_h, qtd_hora in zip(ini_horas, qtd_horas):
+            for h in range(ini_h, ini_h+qtd_hora, 1):
+                if h % 5 == 0:
+                    fit += AULAS_EM_M1_T1
+        return fit
+
+    grade_dia_sala = {
+        grade: {
+            dia: []
+            for dia in range(7)
+        } for grade in metadata['grades']
+    }
+
+    def adicionar_grade_dia_sala(salas, ini_horas, qtd_horas, grade):
+        for ini_h, qtd_hora, sala in zip(ini_horas, qtd_horas, salas):
+            for h in range(ini_h, ini_h+qtd_hora, 1):
+                dia = int(h/10)
+                grade_dia_sala[grade][dia].append((h, sala))
+
+    def fit_distancia_percorrida():
+        def calc_distancia(s1, s2):
+            return metadata['distancias'][s1['nome']][s2['nome']]
+        distancia = 0
+        for grade in metadata['grades']:
+            _grade = grade_dia_sala[grade]
+            for dia in range(6):
+                h_salas = sorted(_grade[dia], key=lambda x: x[0])
+                for (_, s1), (_, s2) in pairwise(h_salas):
+                    distancia += calc_distancia(s1, s2)
+        return distancia * PESO_DISTANCIA_ENTRE_SALAS
+
     fit = 0
     for disciplina in metadata['disciplinas']:
         cromo_p = disciplina['cromossomos'][0]
         cromo_s = disciplina['cromossomos'][1]
-        cromo_h = disciplina['cromossomos'][2]
+        cromos_h = disciplina['cromossomos'][2:]
         i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
         i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
-        i_h = ind[cromo_h['slice_i']:cromo_h['slice_f']]
+
+        i_h = []
+        for i, horarios in enumerate(disciplina['horarios']):
+            cromo_h = cromos_h[i]
+            index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
+            horario = horarios[index_h]
+            i_h.append(metadata['horarios'].index(horario))
 
         salas = [disciplina['salas'][i] for i in i_s]
 
@@ -126,19 +167,18 @@ def fitness(ind, metadata):
         fit += fit_choque_profe(profe, i_h, qtd_horas)
         fit += fit_choque_grade(grade, i_h, qtd_horas)
         fit += fit_afinidade_disciplina(i_p[0], disciplina)
-        fit += fit_capacidade_salas(disciplina, salas)
+        # fit += fit_capacidade_salas(disciplina, salas)
         fit += fit_horas_em_dias_distintos(i_h, qtd_horas)
         fit += fit_aulas_no_mesmo_dia(i_h)
         fit += fit_aulas_aos_sabados(i_h)
         fit += fit_aula_em_dois_turnos(i_h, qtd_horas)
+        fit += fit_aulas_M1_T1(i_h, qtd_horas)
+
+        adicionar_grade_dia_sala(salas, i_h, qtd_horas, grade)
+
+    fit += fit_distancia_percorrida()
 
     return fit,
 
 
 fitness_meta = partial(fitness, metadata=metadata)
-
-_fitness_cache = lru_cache(maxsize=32)(fitness_meta)
-
-
-def fitness_cache(ind):
-    return _fitness_cache(tuple(ind))

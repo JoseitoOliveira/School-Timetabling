@@ -1,0 +1,8 @@
+- Chocar com o pre-requisito é bom [não iniciado]
+- Penalidades dependem da grade [não iniciado]
+- Penalizar os horários M1, T1 [abordagem ruim]
+- Penalizar salas distantes utilizando distância euclidiana (considerar mudanças em turnos)
+- Definir horarios 
+
+ 
+fornecer no html o número de choques do horários, professores, etc... 

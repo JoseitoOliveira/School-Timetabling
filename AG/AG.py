@@ -1,6 +1,8 @@
 from deap import base
 from deap import creator
 from deap import tools
+from tqdm import tqdm
+from multiprocessing import Pool, cpu_count
 
 import random
 import numpy as np
@@ -192,9 +194,18 @@ class AG():
         creator.create("Problema", base.Fitness, weights=pesos)
         creator.create("Individual", np.ndarray, fitness=creator.Problema)
 
+        # Cria o pool de processos
+        mp = Pool(cpu_count() - 1)
+        fnc_fitness = self.metadados['fitness']
+
+        def multi_fitness(pop):
+            _pop = [[int(x) for x in ind] for ind in pop]
+            return mp.map(fnc_fitness, _pop, chunksize=100)
+
         # Registro das estruturas
 
         toolbox = base.Toolbox()
+        toolbox.register("map", mp.map)
         toolbox.register("attr", self._cria_individuo)
         toolbox.register("individual", tools.initIterate,
                          creator.Individual, toolbox.attr)
@@ -208,101 +219,68 @@ class AG():
         tam_elitismo = self.metadados['tam_elitismo']
         tam_hof = tam_elitismo if (tam_elitismo > 0) else 1
 
-        # inicia o contador de gerações
-        g = 0
-
         # Cria a população inicial
         pop = toolbox.population(n=self.metadados['npop'])
-        if(habilita_depuracao):
-            self._print_pop(pop, 'pop')
-
-        # Cria a memória genética
-        mem_ind, mem_fit = self._cria_memg(pop)
-        if(habilita_depuracao):
-            self._print_pop_fit(mem_ind, mem_fit, 'mem_ind, mem_fit')
 
         # Registra "_memg_fitness" como a função fitness
-        toolbox.register("evaluate", self._memg_fitness,
-                         mem_ind=mem_ind, mem_fit=mem_fit)
+        toolbox.register("evaluate", self.metadados['fitness'])
 
         # Avalia a população
-        fitnesses = list(map(toolbox.evaluate, pop))
+        #fitnesses = list(map(toolbox.evaluate, pop))
+        fitnesses = multi_fitness(pop)
+
         for ind, fit in zip(pop, fitnesses):
             ind.fitness.values = fit
-        if(habilita_depuracao):
-            self._print_pop_fit(pop, fitnesses, 'pop, fit')
 
         # Inicializa o hof
         hof = tools.HallOfFame(tam_hof, similar=np.array_equal)
         hof.update(pop)
-        if(habilita_depuracao):
-            fits = [self._memg_fitness(ind, mem_ind, mem_fit) for ind in hof]
-            self._print_pop_fit(hof, fits, 'hof, fit')
 
         # Cria a lista que armazenará a melhor fitness ao longo das gerações
         list_best_fit = []
-        fits = [ind.fitness.values[0] for ind in pop]
         if pesos[0] < 0:
-            list_best_fit.append(min(fits))
+            list_best_fit.append(min(fitnesses))
         else:
-            list_best_fit.append(max(fits))
+            list_best_fit.append(max(fitnesses))
 
         # Loop principal de gerações
         geracoes = self.metadados['nger']
-        while g < geracoes:
+        taxa_cruzamento = self.metadados['taxa_cruzamento']
+        taxa_mutacao = self.metadados['taxa_mutacao']
 
-            # Atualiza o contador de gerações
-            g = g + 1
-            if(habilita_depuracao):
-                print(f'\n===== Geração {g} =====\n')
+        pbar_geracoes = tqdm(range(geracoes))
+        for g in pbar_geracoes:
 
             # Seleciona "npop-tam_elitismo" indivíduos
             offspring = toolbox.select(pop, len(pop) - tam_elitismo)
             offspring = list(map(toolbox.clone, offspring))
-            if(habilita_depuracao):
-                self._print_pop(offspring, 'offspring')
 
             # Aplica cruzamento
-            taxa_cruzamento = self.metadados['taxa_cruzamento']
             for child1, child2 in zip(offspring[::2], offspring[1::2]):
                 if random.random() < taxa_cruzamento:
                     toolbox.mate(child1, child2)
                     del child1.fitness.values
                     del child2.fitness.values
-            if(habilita_depuracao):
-                self._print_pop(offspring, 'offspring + cruzamento')
 
             # Aplica mutação
-            taxa_mutacao = self.metadados['taxa_mutacao']
             for mutant in offspring:
                 if random.random() < taxa_mutacao:
                     toolbox.mutate(ind=mutant)
                     del mutant.fitness.values
-            if(habilita_depuracao):
-                self._print_pop(offspring, 'offspring + cruzamento + mutação')
 
             # Avalia indivíduos (apenas aqueles que foram modificados)
             invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-            fitnesses = map(toolbox.evaluate, invalid_ind)
+            # fitnesses = list(map(toolbox.evaluate, invalid_ind))
+            fitnesses = multi_fitness(invalid_ind)
             for ind, fit in zip(invalid_ind, fitnesses):
                 ind.fitness.values = fit
-            if(habilita_depuracao):
-                fits = [ind.fitness.values for ind in offspring]
-                self._print_pop_fit(offspring, fits, 'offspring, fit')
 
             # Adiciona hall da fama (elitismo)
-            if(tam_elitismo > 0):
+            if tam_elitismo > 0:
                 offspring.extend(hof.items)
-            if(habilita_depuracao):
-                fits = [ind.fitness.values for ind in offspring]
-                self._print_pop_fit(
-                    offspring, fits, 'offspring, fit após elitismo')
 
             # Atualiza a população
-            pop[:] = offspring
-            if(habilita_depuracao):
-                fits = [ind.fitness.values for ind in pop]
-                self._print_pop_fit(pop, fits, 'pop, fit')
+            pop = offspring
 
             # Salva a melhor fitness da população atual
             fits = [ind.fitness.values[0] for ind in pop]
@@ -313,23 +291,10 @@ class AG():
 
             # Atualiza o hall da fama
             hof.update(pop)
-            if(habilita_depuracao):
-                fits = [self._memg_fitness(ind, mem_ind, mem_fit)
-                        for ind in hof]
-                self._print_pop_fit(hof, fits, 'hof, fit')
+
+            pbar_geracoes.set_description(f'Melhor fit={list_best_fit[-1]}')
 
         del creator.Problema
         del creator.Individual
 
         return (list_best_fit, hof)
-
-    # def executa_ag_n_vezes(self, n=1):
-    #     list_list_fitness = [] 
-    #     list_list_hof = []
-    #     list_list_tempo = []
-    #     for i in range(n):
-    #         list_best_fit, hof, tempo = self.executa()
-    #         list_list_fitness.append(list_best_fit) 
-    #         list_list_hof.append(hof)
-    #         list_list_tempo.append(tempo)
-    #     return (list_list_fitness, list_list_hof, list_list_tempo)

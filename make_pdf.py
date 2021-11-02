@@ -48,7 +48,8 @@ TEMPLATE_TABLE = """
 </table>
 """
 
-empty_table_args = {f'_{i}': '' for i, _ in enumerate(metadata['horarios'])}
+# empty_table_args = {f'_{i}': '' for i, _ in enumerate(metadata['horarios'])}
+empty_table_args = {f'_{i}': '' for i in range(60)}
 
 
 def make_html(ind):
@@ -65,10 +66,16 @@ def make_html(ind):
 
         cromo_p = disciplina['cromossomos'][0]
         cromo_s = disciplina['cromossomos'][1]
-        cromo_h = disciplina['cromossomos'][2]
+        cromos_h = disciplina['cromossomos'][2:]
         i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
         i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
-        i_h = ind[cromo_h['slice_i']:cromo_h['slice_f']]
+
+        i_h = []
+        for i, horarios in enumerate(disciplina['horarios']):
+            cromo_h = cromos_h[i]
+            index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
+            horario = horarios[index_h]
+            i_h.append(metadata['horarios'].index(horario))
 
         salas = [disciplina['salas'][i] for i in i_s]
 
