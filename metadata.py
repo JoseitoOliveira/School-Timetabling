@@ -1,15 +1,62 @@
-from deap import tools
-
-from AG.utilidades_AG import cruzamento_1ponto, cruzamento_2pontos
+from AG.utilidades_AG import cruzamento_uniforme, mutUniformInt
 
 metadata = {
     "professores": [
         {
+            "nome": "Rafael",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Dispositivos": 2,
+            }
+        },
+        {
+            "nome": "Prof Eletromag",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Eletromagnetismo": 2,
+            }
+        },
+        {
+            "nome": "Prof Mec. Sólidos",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Mec. dos Sólidos II": 2,
+            }
+        },
+        {
+            "nome": "Prof Economia I",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Economia I": 2,
+            }
+        },
+        {
             "nome": "Cícero",
             "hrs_min": 8,
             "hrs_max": 12,
-            "disciplinas": {  # nome: afinidade
+            "disciplinas": {
                 "Instrumentação Eletrônica": 2,
+                "Materiais Elétricos": 2
+            }
+        },
+        {
+            "nome": "Rômulo",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Mecânica dos Flúidos": 2,
+            }
+        },
+        {
+            "nome": "Darlan",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Teoria do Controle": 2,
             }
         },
         {
@@ -17,7 +64,30 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 12,
             "disciplinas": {
-                "Máquinas Elétricas": 1,
+                "Máquinas Elétricas": 2,
+                "Conversão": 1
+            },
+            "horarios": {
+                "2M5": -10,
+                "2T1": -10,
+                "3M5": -10,
+                "3T1": -10,
+                "4M5": -10,
+                "4T1": -10,
+                "5M5": -10,
+                "5T1": -10,
+                "6M5": -10,
+                "6T1": -10,
+                "7M5": -10,
+                "7T1": -10
+            }
+        },
+        {
+            "nome": "Jéssica",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Pesquisa": 2
             }
         },
         {
@@ -73,7 +143,8 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 8,
             "disciplinas": {
-                "Filtros": 2
+                "Filtros": 2,
+                "Eletrônica": 2
             }
         },
         {
@@ -89,7 +160,16 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 8,
             "disciplinas": {
-                "Acionamentos e Circuitos Elétricos": 2
+                "Acionamentos e Circuitos Elétricos": 2,
+                "Circuitos 2": 2
+            }
+        },
+        {
+            "nome": "Waslon",
+            "hrs_min": 8,
+            "hrs_max": 8,
+            "disciplinas": {
+                "Análise de Sinais e Sistemas": 2,
             }
         },
         {
@@ -97,116 +177,182 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 8,
             "disciplinas": {
-                "Microc e Microp": 2
+                "Microc e Microp": 2,
+                "Técnicas de Programação": 2
             }
         },
     ],
     "salas": [
         {
             "nome": "CTM1",
-            "capacidade": 30,
-            "lat": -7.142684,
-            "lon": -34.850135,
-            "alt": 10
+            "capacidade": 30
         },
         {
             "nome": "CTM2",
-            "capacidade": 30,
-            "lat": -7.142684,
-            "lon": -34.850235,
-            "alt": 10
+            "capacidade": 30
         },
         {
             "nome": "CTM3",
-            "capacidade": 30,
-            "lat": -7.142684,
-            "lon": -34.850335,
-            "alt": 10
+            "capacidade": 30
         },
         {
             "nome": "CTM4",
-            "capacidade": 30,
-            "lat": -7.142684,
-            "lon": -34.850435,
-            "alt": 10
+            "capacidade": 30
         }
     ],
-    "grades": [
-        "p7",
-        "p8"],
-    "disciplinas": [
-        {
-            "nome": "Instrumentação Eletrônica",
-            "grade": "p7",
-            "num_alunos": 10,
-            "horas": [2, 2]
-        },
-        {
-            "nome": "Máquinas Elétricas",
-            "grade": "p7",
-            "num_alunos": 20,
-            "horas": [2, 3]
-        },
-        {
-            "nome": "Controle I",
-            "grade": "p7",
-            "num_alunos": 15,
-            "horas": [2, 3]
-        },
-        {
-            "nome": "Princípios de Comunicações",
-            "grade": "p7",
-            "num_alunos": 12,
-            "horas": [2, 3]
-        },
-        {
-            "nome": "Sistemas Elétricos",
-            "grade": "p7",
-            "num_alunos": 20,
-            "horas": [2, 3]
-        },
-        {
-            "nome": "Eletrônica de Potência",
-            "grade": "p7",
-            "num_alunos": 25,
-            "horas": [2, 3]
-        },
-        {
-            "nome": "Técnicas de Medição",
-            "grade": "p8",
+    "grades": ["p5", "p6", "p7", "p8"],
+    "disciplinas": {
+        "Dispositivos": {
+            "grades": ["p5"],
             "num_alunos": 22,
-            "horas": [2, 2]
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
         },
-        {
-            "nome": "Análise de Sistemas Elétricos",
-            "grade": "p8",
-            "num_alunos": 15,
-            "horas": [2, 2]
+        "Eletromagnetismo": {
+            "grades": ["p5"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
         },
-        {
-            "nome": "Filtros",
-            "grade": "p8",
-            "num_alunos": 15,
-            "horas": [2, 2]
+        "Circuitos 2": {
+            "grades": ["p5", "p6"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
         },
-        {
-            "nome": "Instrumentação Industrial",
-            "grade": "p8",
-            "num_alunos": 15,
-            "horas": [2, 2]
+        "Técnicas de Programação": {
+            "grades": ["p5"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
         },
-        {
-            "nome": "Acionamentos e Circuitos Elétricos",
-            "grade": "p8",
-            "num_alunos": 15,
-            "horas": [2, 2]
+        "Análise de Sinais e Sistemas": {
+            "grades": ["p5"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
         },
-        {
-            "nome": "Microc e Microp",
-            "grade": "p8",
+        "Mec. dos Sólidos II": {
+            "grades": ["p5"],
+            "num_alunos": 22,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Economia I": {
+            "grades": ["p5"],
+            "num_alunos": 22,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Mecânica dos Flúidos": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [3, 3],
+            "aulas_aos_sabados": False
+        },
+        "Teoria do Controle": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Eletrônica": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [3, 2],
+            "aulas_aos_sabados": False
+        },
+        "Materiais Elétricos": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Conversão": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Pesquisa": {
+            "grades": ["p6"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Instrumentação Eletrônica": {
+            "grades": ["p7"],
+            "num_alunos": 10,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Máquinas Elétricas": {
+            "grades": ["p7"],
+            "num_alunos": 20,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Controle I": {
+            "grades": ["p7"],
             "num_alunos": 15,
-            "horas": [2, 2]
-        }],
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Princípios de Comunicações": {
+            "grades": ["p7"],
+            "num_alunos": 12,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Sistemas Elétricos": {
+            "grades": ["p7"],
+            "num_alunos": 20,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Eletrônica de Potência": {
+            "grades": ["p7"],
+            "num_alunos": 25,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Técnicas de Medição": {
+            "grades": ["p8"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Análise de Sistemas Elétricos": {
+            "grades": ["p8"],
+            "num_alunos": 15,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Filtros": {
+            "grades": ["p8"],
+            "num_alunos": 15,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Instrumentação Industrial": {
+            "grades": ["p8"],
+            "num_alunos": 15,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Acionamentos e Circuitos Elétricos": {
+            "grades": ["p8"],
+            "num_alunos": 15,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Microc e Microp": {
+            "grades": ["p8"],
+            "num_alunos": 15,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False,
+        }
+    },
     "horarios": [
         "2M1",
         "2M2",
@@ -273,11 +419,20 @@ metadata = {
         "CTM2": {"CTM1": 10, "CTM2": 00, "CTM3": 10, "CTM4": 20},
         "CTM3": {"CTM1": 20, "CTM2": 10, "CTM3": 00, "CTM4": 10},
         "CTM4": {"CTM1": 30, "CTM2": 20, "CTM3": 10, "CTM4": 00},
+    },
+    "choques": {
+        "Conversão": [
+            "Sistemas Elétricos",
+            "Princípios de Comunicações",
+            "Controle I",
+            "Instrumentação Eletrônica",
+            "Eletrônica de Potência"
+        ]
     }
 }
 
 
-horarios_3 = [
+horarios_3 = {
     "2M1",
     "2T1",
     "3M1",
@@ -289,8 +444,8 @@ horarios_3 = [
     "6M1",
     "6T1",
     "7M1",
-    "7T1"]
-horarios_2 = [
+    "7T1"}
+horarios_2 = {
     "2M2",
     "2T2",
     "3M2",
@@ -314,8 +469,8 @@ horarios_2 = [
     "6M4",
     "6T4",
     "7M4",
-    "7T4"]
-horarios_s = [
+    "7T4"}
+horarios_s = {
     "7M1",
     "7M2",
     "7M3",
@@ -325,8 +480,8 @@ horarios_s = [
     "7T2",
     "7T3",
     "7T4",
-    "7T5"]
-horarios_t = [
+    "7T5"}
+horarios_t = {
     "2M1",
     "2M2",
     "2M3",
@@ -386,102 +541,145 @@ horarios_t = [
     "7T2",
     "7T3",
     "7T4",
-    "7T5"]
+    "7T5"}
+
+
+def completar_professores(disciplina):
+    professores = metadata['professores']
+    disciplina['professores'] = [
+        {
+            'nome': profe['nome'],
+            'afinidade': profe['disciplinas'][disciplina['nome']],
+            'horarios': profe.setdefault('horarios', dict())
+        }
+        for profe in professores
+        if disciplina['nome'] in profe['disciplinas'].keys()
+    ]
+
+    if disciplina['professores'] == []:
+        raise Exception(
+            f'Não há professores para a disciplina {disciplina["nome"]}.'
+        )
+    return disciplina
+
+
+def completar_salas(disciplina):
+    salas = metadata['salas']
+    nomes_salas_válidos = [sala['nome'] for sala in salas]
+    if 'salas' not in disciplina:
+        disciplina['salas'] = [
+            sala for sala in salas
+            if sala['capacidade'] >= disciplina['num_alunos']
+        ]
+    else:
+        nomes_salas = disciplina['salas']
+
+        for nome_sala in nomes_salas:
+            if nome_sala not in nomes_salas_válidos:
+                raise Exception(
+                    f'A sala {nome_sala} definida na disciplina '
+                    f'{disciplina["nome"]} não é uma sala válida.'
+                )
+
+        disciplina['salas'] = [
+            sala for sala in salas
+            if sala['nome'] in nomes_salas
+            if sala['capacidade'] >= disciplina['num_alunos']
+        ]
+
+    if disciplina['salas'] == []:
+        raise Exception(
+            f'Não há sala que comporte a disciplina {disciplina["nome"]} '
+            f'que possui {disciplina["num_alunos"]} alunos matriculados.'
+        )
+    return disciplina
+
+
+def completar_nome_disciplina(nome, disciplina):
+    disciplina['nome'] = nome
+    return disciplina
+
+
+def completar_horarios(disciplina):
+    if "aulas_aos_sabados" in disciplina:
+        aulas_aos_sabados = disciplina['aulas_aos_sabados']
+    else:
+        aulas_aos_sabados = True
+
+    if 'horarios' not in disciplina:
+        disciplina['horarios'] = []
+
+        for i, h in enumerate(disciplina['horas']):
+            if h == 2:
+                disciplina['horarios'].append(
+                    sorted(list(horarios_2))
+                    if aulas_aos_sabados
+                    else sorted(list(horarios_2 - horarios_s))
+                )
+            elif h == 3:
+                disciplina['horarios'].append(
+                    sorted(list(horarios_3))
+                    if aulas_aos_sabados
+                    else sorted(list(horarios_3 - horarios_s))
+                )
+            else:
+                disciplina['horarios'].append(
+                    sorted(list(horarios_t))
+                    if aulas_aos_sabados
+                    else sorted(list(horarios_t - horarios_s))
+                )
+
+    assert len(disciplina['horarios']) == len(disciplina['horas'])
+    return disciplina
+
+
+def completar_cromossomos(disciplina, ultimo_gene):
+    num_genes_p = 1
+    num_genes_s = len(disciplina['horas'])
+
+    cromossomos = []
+    cromossomos.append({   # Professores
+        'numero_genes': num_genes_p,
+        'limite_inferior': 0,
+        'limite_superior': len(disciplina['professores']),
+        'slice_i': ultimo_gene,
+        'slice_f': ultimo_gene+num_genes_p
+    })
+    ultimo_gene += num_genes_p
+    cromossomos.append({  # Salas
+        'numero_genes': num_genes_s,
+        'limite_inferior': 0,
+        'limite_superior': len(disciplina['salas']),
+        'slice_i': ultimo_gene,
+        'slice_f': ultimo_gene+num_genes_s
+    })
+    ultimo_gene += num_genes_s
+
+    num_genes_h = 1
+    for horarios in disciplina['horarios']:
+        cromossomos.append({  # Horiários
+            'numero_genes': num_genes_h,
+            'limite_inferior': 0,
+            'limite_superior': len(horarios),
+            'slice_i': ultimo_gene,
+            'slice_f': ultimo_gene+num_genes_h
+        })
+        ultimo_gene += num_genes_h
+
+    disciplina['cromossomos'] = cromossomos
+    return disciplina, ultimo_gene
 
 
 def completar_metadata(metadata):
 
-    professores = metadata['professores']
-    salas = metadata['salas']
-    nomes_salas_válidos = [sala['nome'] for sala in salas]
     ultimo_gene = 0
-    for disciplina in metadata['disciplinas']:
-
-        disciplina['professores'] = [
-            {'nome': profe['nome'],
-             'afinidade': profe['disciplinas'][disciplina['nome']]}
-            for profe in professores
-            if disciplina['nome'] in profe['disciplinas'].keys()
-        ]
-
-        if disciplina['professores'] == []:
-            raise Exception(
-                f'Não há professores para a disciplina {disciplina["nome"]}.'
-            )
-
-        if 'salas' not in disciplina:
-            disciplina['salas'] = [
-                sala for sala in salas
-                if sala['capacidade'] >= disciplina['num_alunos']
-            ]
-        else:
-            nomes_salas = disciplina['salas']
-
-            for nome_sala in nomes_salas:
-                if nome_sala not in nomes_salas_válidos:
-                    raise Exception(
-                        f'A sala {nome_sala} definida na disciplina '
-                        f'{disciplina["nome"]} não é uma sala válida.'
-                    )
-
-            disciplina['salas'] = [
-                sala for sala in salas
-                if sala['nome'] in nomes_salas
-                if sala['capacidade'] >= disciplina['num_alunos']
-            ]
-
-        if disciplina['salas'] == []:
-            raise Exception(
-                f'Não há sala que comporte a disciplina {disciplina["nome"]} '
-                f'que possui {disciplina["num_alunos"]} alunos matriculados.'
-            )
-
-        if 'horarios' not in disciplina:
-            disciplina['horarios'] = []
-
-            for h in disciplina['horas']:
-                if h == 2:
-                    disciplina['horarios'].append(horarios_2)
-                elif h == 3:
-                    disciplina['horarios'].append(horarios_3)
-                else:
-                    disciplina['horarios'].append(horarios_t)
-
-        assert len(disciplina['horarios']) == len(disciplina['horas'])
-
-        num_genes_p = 1
-        num_genes_s = len(disciplina['horas'])
-
-        cromossomos = []
-        cromossomos.append({   # Professores
-            'numero_genes': num_genes_p,
-            'limite_inferior': 0,
-            'limite_superior': len(disciplina['professores']),
-            'slice_i': ultimo_gene,
-            'slice_f': ultimo_gene+num_genes_p
-        })
-        ultimo_gene += num_genes_p
-        cromossomos.append({  # Salas
-            'numero_genes': num_genes_s,
-            'limite_inferior': 0,
-            'limite_superior': len(disciplina['salas']),
-            'slice_i': ultimo_gene,
-            'slice_f': ultimo_gene+num_genes_s
-        })
-        ultimo_gene += num_genes_s
-
-        num_genes_h = 1
-        for horarios in disciplina['horarios']:
-            cromossomos.append({  # Horiários
-                'numero_genes': num_genes_h,
-                'limite_inferior': 0,
-                'limite_superior': len(horarios),
-                'slice_i': ultimo_gene,
-                'slice_f': ultimo_gene+num_genes_h
-            })
-            ultimo_gene += num_genes_h
-
-        disciplina['cromossomos'] = cromossomos
+    for nome, disciplina in metadata['disciplinas'].items():
+        disciplina = completar_nome_disciplina(nome, disciplina)
+        disciplina = completar_professores(disciplina)
+        disciplina = completar_salas(disciplina)
+        disciplina = completar_horarios(disciplina)
+        disciplina, ultimo_gene = completar_cromossomos(disciplina,
+                                                        ultimo_gene)
 
     return metadata
 
@@ -491,22 +689,20 @@ def dummy_mut(ind, *args, **kargs):
 
 
 def dummy_cruz(ind1, ind2, *args, **kargs):
-    return ind1, ind2
+    return ind2, ind1
 
 
 def criar_cromossomos(metadata):
 
     cromossomos = []
-    for disciplina in metadata['disciplinas']:
+    for disciplina in metadata['disciplinas'].values():
         for cromo in disciplina['cromossomos']:
             numero_genes = cromo['numero_genes']
             limite_inferior = cromo['limite_inferior']
             limite_superior = cromo['limite_superior']
             diff_limite = limite_superior - limite_inferior
-            if diff_limite > 1 and numero_genes > 1:
-                fcn_cruzamento = cruzamento_2pontos
-            elif diff_limite > 1 and numero_genes == 1:
-                fcn_cruzamento = cruzamento_1ponto
+            if diff_limite > 1:
+                fcn_cruzamento = cruzamento_uniforme
             else:
                 fcn_cruzamento = dummy_cruz
 
@@ -516,9 +712,9 @@ def criar_cromossomos(metadata):
                 'limite_inferior': limite_inferior,
                 'limite_superior': limite_superior,
                 'mutacao': {
-                    'fcn': tools.mutUniformInt if diff_limite > 1 else dummy_mut,
+                    'fcn': mutUniformInt if diff_limite > 1 else dummy_mut,
                     'args': {
-                        'indpb': 0.4,
+                        'indpb': 0.15,
                         'low': 0,
                         'up': limite_superior - 1
                     },

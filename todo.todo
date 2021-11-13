@@ -1,0 +1,15 @@
+Fazer:
+    ☐ Validação cruzada ??
+    
+Fazendo:
+    ☐ Criar rotinas para impressão e leitura de individuos formatados @started(21-11-07 21:01)
+    
+Feito:
+    ✔ Como lidar com uma disciplina que pertence a mais de uma grade? @critical @done(21-11-13 12:37)
+    ✔ Distância por turnos @done(21-11-07 20:58)
+    ✔ Afinidade do professor com horário @done(21-11-07 20:58)
+    ✔ Aulas em dias seguidos @done(21-11-07 20:55)
+    ✔ Evitar choque de disciplinas especificadas @done(21-11-07 23:07)
+    ✘ Chocar com o pré-requisito é bom [Abordagem ruim] @cancelled(21-11-07 21:04)
+
+

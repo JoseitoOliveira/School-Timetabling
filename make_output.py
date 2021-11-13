@@ -1,4 +1,5 @@
 from metadata import metadata
+from fitness import fitness
 
 TEMPLATE_HTML = """
 <!DOCTYPE html>
@@ -20,6 +21,8 @@ TEMPLATE_HTML = """
 
 <body>
     <div class="container-fluid flex-row mx-auto">
+    <strong>{fitness}</strong>
+    {stats}
     {tables}
     </div>
 </body>
@@ -48,22 +51,20 @@ TEMPLATE_TABLE = """
 </table>
 """
 
-# empty_table_args = {f'_{i}': '' for i, _ in enumerate(metadata['horarios'])}
 empty_table_args = {f'_{i}': '' for i in range(60)}
 
 
 def make_html(ind):
-    ind = [int(x) for x in ind]
 
     grades = metadata['grades']
     tables_args = [empty_table_args.copy() for _ in grades]
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]
 
-    for disciplina in metadata['disciplinas']:
-        grade = disciplina['grade']
-        i_grade = metadata['grades'].index(grade)
+    sum_fit, fit = fitness(ind, metadata)
 
+    for disciplina in metadata['disciplinas'].values():
+        grades = disciplina['grades']
         cromo_p = disciplina['cromossomos'][0]
         cromo_s = disciplina['cromossomos'][1]
         cromos_h = disciplina['cromossomos'][2:]
@@ -80,16 +81,77 @@ def make_html(ind):
         salas = [disciplina['salas'][i] for i in i_s]
 
         qtd_horas = disciplina['horas']
-        grade = disciplina['grade']
         profe = disciplina['professores'][i_p[0]]
-        for i, sala in enumerate(salas):
-            for h in range(i_h[i], i_h[i]+qtd_horas[i]):
-                args = (
-                    f"{disciplina['nome']}<br>"
-                    f"{profe['nome']}<br>"
-                    f"{sala['nome']}<br>"
-                )
-                tables_args[i_grade][f'_{h}'] += args
 
-    tables = '\n'.join([TEMPLATE_TABLE.format(**args) for args in tables_args])
-    return TEMPLATE_HTML.format(tables=tables)
+        for grade in grades:
+            i_grade = metadata['grades'].index(grade)
+            for i, sala in enumerate(salas):
+                for h in range(i_h[i], i_h[i]+qtd_horas[i]):
+                    args = (
+                        f"{disciplina['nome']}<br>"
+                        f"{profe['nome']}<br>"
+                        f"{sala['nome']}<br>"
+                    )
+                    tables_args[i_grade][f'_{h}'] += args
+
+    stats = '<br>'.join(
+        [f'{field} = {getattr(fit, field)}' for field in fit.__dataclass_fields__])
+    tables = '<br>'.join([TEMPLATE_TABLE.format(**args)
+                         for args in tables_args])
+    return TEMPLATE_HTML.format(tables=tables, stats=stats, fitness=sum_fit)
+
+
+TEMPLATE_INDIVIDUO = """
+from make_output import make_html
+
+#     2|  3|  4|  5|  6|  7
+# M1  0| 10| 20| 30| 40| 50
+# M2  1| 11| 21| 31| 41| 51
+# M3  2| 12| 22| 32| 42| 52
+# M4  3| 13| 23| 33| 43| 53
+# M5  4| 14| 24| 34| 44| 54
+# T1  5| 15| 25| 35| 45| 55
+# T2  6| 16| 26| 36| 46| 56
+# T3  7| 17| 27| 37| 47| 57
+# T4  8| 18| 28| 38| 48| 58
+# T5  9| 19| 29| 39| 49| 59
+
+ind = [
+{cromossomos}
+]
+
+html = make_html(ind)
+with open('output.html', mode='w', encoding='utf8') as f:
+    f.write(html)
+"""
+
+
+def individuo_formatado(ind):
+    str_cromossomos = []
+    for disciplina in metadata['disciplinas'].values():
+        cromo_p = disciplina['cromossomos'][0]
+        cromo_s = disciplina['cromossomos'][1]
+        cromos_h = disciplina['cromossomos'][2:]
+        i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
+        i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
+
+        i_h = []
+        for i, horarios in enumerate(disciplina['horarios']):
+            cromo_h = cromos_h[i]
+            index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
+            horario = horarios[index_h]
+            i_h.append(metadata['horarios'].index(horario))
+
+        cromo = i_p + i_s + i_h
+        header = (
+            f"    # {disciplina['nome']}\n"
+            f"    # p:{[profe['nome'] for profe in disciplina['professores']]}\n"
+            f"    # s:{[sala['nome'] for sala in disciplina['salas']]}\n"
+            f"  #{' p, ' * len(i_p)}{' s, ' * len(i_s)}{' h, ' * len(i_h)}\n"
+        )
+
+        str_cromossomos.append(
+            f"{header}"
+            f"   {', '.join([f'{x:2}' for x in cromo])},\n"
+        )
+    return TEMPLATE_INDIVIDUO.format(cromossomos='\n'.join(str_cromossomos))

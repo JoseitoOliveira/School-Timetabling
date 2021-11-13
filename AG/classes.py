@@ -1,13 +1,9 @@
-from copy import copy, deepcopy
 import numpy as np
-import json
-
-import ujson
 
 
 class Fitness:
     def __init__(self) -> None:
-        self.values = ()
+        self.values: tuple = ()
 
     @property
     def valid(self):
@@ -41,17 +37,6 @@ class Fitness:
         else:
             del self.__dict__[name]
 
-    def __deepcopy__(self, memo):
-        """Replace the basic deepcopy function with a faster one.
-
-        It assumes that the elements in the :attr:`values` tuple are
-        immutable and the fitness does not contain any other object
-        than :attr:`values` and :attr:`weights`.
-        """
-        copy_ = self.__class__()
-        copy_.values = self.values
-        return copy_
-
     def __str__(self):
         """Return the values of the Fitness object."""
         return str(self.values if self.valid else tuple())
@@ -65,17 +50,20 @@ class Fitness:
 class Individual():
 
     def __init__(self, genes: np.ndarray):
-        self.genes = genes
-        self.fitness = Fitness()
+        self.genes: np.ndarray = genes
+        self.fitness: Fitness = Fitness()
+
+    def __len__(self):
+        return len(self.genes)
 
     def __getitem__(self, key):
         return self.genes[key]
 
     def __setitem__(self, key, value):
         self.genes[key] = value
-    
+
     def __repr__(self) -> str:
-        return f"Individual({self.genes})"
+        return "Individual({})".format(self.genes)
 
     def __iter__(self):
         return self.genes.__iter__()

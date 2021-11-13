@@ -4,14 +4,12 @@ from copy import deepcopy
 from functools import partial
 from multiprocessing import cpu_count
 from typing import List
-from numba import njit
-from numba.core.decorators import jit
 
 import numpy as np
-from deap import tools
 from tqdm import tqdm
 
 from AG.classes import Individual
+from AG.utilidades_AG import HallOfFame
 
 
 class AG():
@@ -19,7 +17,7 @@ class AG():
     Classe usada para executar um Algoritmo Genético.
     '''
 
-    def __init__(self, metadados):
+    def __init__(self, metadados: dict, filename: str = 'Indivíduos.txt'):
         '''
         Cria uma instância da classe.
         O único argumento é metadados, em que devem estar todos os dados 
@@ -27,6 +25,9 @@ class AG():
         Atenção: 
             Não foi feita uma cópia de metadados, apenas uma referência!
         '''
+        self.filename = filename
+        with open(self.filename, mode='w', encoding='utf8') as f:
+            f.write('')
 
         self.metadados = metadados
 
@@ -58,16 +59,16 @@ class AG():
 
         return individuo
 
-    def _selecao(self, pop, k):
+    def _selecao(self, pop: list, k):
         '''
         '''
         selecao_fcn = self.metadados['selecao']['fcn']
         selecao_args = self.metadados['selecao']['args']
-        
+
         selecionado = selecao_fcn(pop, k, **selecao_args)
         return selecionado
 
-    def _cruzamento_numpy(self, ind1, ind2):
+    def _cruzamento_numpy(self, ind1: Individual, ind2: Individual):
         '''
         Essa rotina opera por cromossomo.
         Retorno: os dois indivíduos recebidos com alterações.
@@ -83,7 +84,7 @@ class AG():
             pos += genes
         return ind1, ind2
 
-    def _mutacao_numpy(self, ind):
+    def _mutacao_numpy(self, ind: Individual):
         '''
         Implementa a mutação de ind, conforme especificado em metadados.
 
@@ -111,12 +112,17 @@ class AG():
     def _population(self, n):
         return [Individual(self._cria_individuo()) for _ in range(n)]
 
-    def worker(self, pop, npop, n_workers, taxa_cruzamento, taxa_mutacao, fnc_fitness):
-        
+    def worker(self, pop: list, npop,
+               n_workers,
+               taxa_cruzamento,
+               taxa_mutacao,
+               fnc_fitness):
+
         # Seleciona "npop-tam_elitismo" indivíduos
-        offspring: List[Individual] = tools.selRoulette(
+        offspring: List[Individual] = self.metadados['selecao']['fcn'](
             individuals=pop,
-            k=int(npop/n_workers)
+            k=int(npop/n_workers),
+            **self.metadados['selecao']['args']
         )
         offspring = [deepcopy(ind) for ind in offspring]
 
@@ -141,6 +147,11 @@ class AG():
 
         return offspring
 
+    def save_ind(self, ind: np.ndarray):
+        fit_sum, fit = self.metadados['fitness'](ind)
+        with open(self.filename, mode='a', encoding='utf8') as f:
+            f.write(f'{fit}\n{ind}\n\n')
+
     def executa(self):
 
         n_workers = cpu_count()
@@ -153,14 +164,14 @@ class AG():
 
         # Cria a população inicial
         npop = self.metadados['npop']
-        pop = self._population(n=npop)
+        pop: list = self._population(n=npop)
 
-        fitnesses = [self.metadados['fitness'](ind) for ind in pop]
+        fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
         for ind, fit in zip(pop, fitnesses):
             ind.fitness.values = fit
 
         # Inicializa o hof
-        hof = tools.HallOfFame(tam_hof, similar=np.array_equal)
+        hof = HallOfFame(tam_hof, similar=np.array_equal)
         hof.update(pop)
 
         # Cria a lista que armazenará a melhor fitness ao longo das gerações
@@ -172,16 +183,24 @@ class AG():
         worker = partial(self.worker,
                          npop=npop,
                          n_workers=n_workers,
-                         taxa_cruzamento=self.metadados['taxa_cruzamento'],
-                         taxa_mutacao=self.metadados['taxa_mutacao'],
                          fnc_fitness=self.metadados['fitness'])
+
+        taxa_cruzamento = self.metadados['taxa_cruzamento']
+        taxa_mutacao = self.metadados['taxa_mutacao']
 
         with ProcessPoolExecutor(n_workers) as mp:
             pbar_geracoes = tqdm(range(geracoes))
-            for i in pbar_geracoes:
+            for g in pbar_geracoes:
                 offspring = []
-                futures = [mp.submit(worker, pop=pop)
-                           for _ in range(n_workers)]
+                futures = [
+                    mp.submit(
+                        worker,
+                        pop=pop,
+                        taxa_cruzamento=taxa_cruzamento(g),
+                        taxa_mutacao=taxa_mutacao(g),
+                    )
+                    for _ in range(n_workers)
+                ]
                 for result in as_completed(futures):
                     offspring.extend(result.result())
 
@@ -199,10 +218,17 @@ class AG():
                 else:
                     list_best_fit.append(max(fits))
 
+                if (
+                    len(list_best_fit) == 1 or
+                    list_best_fit[-1] != list_best_fit[-2]
+                ):
+                    ind = pop[fits.index(list_best_fit[-1])]
+                    self.save_ind(ind)
+
                 # Atualiza o hall da fama
                 hof.update(pop)
 
                 pbar_geracoes.set_description(
-                    f'Melhor fit={list_best_fit[-1]} {len(pop)}')
+                    f'Melhor fit={list_best_fit[-1]:0.2f} {len(pop)}')
 
         return (list_best_fit, hof)
