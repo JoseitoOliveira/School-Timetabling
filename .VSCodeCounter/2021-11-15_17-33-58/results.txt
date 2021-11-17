@@ -1,0 +1,42 @@
+Date : 2021-11-15 17:33:58
+Directory : c:\Users\josei\Documents\GitHub\TCC
+Total : 14 files,  4347 codes, 368 comments, 289 blanks, all 5004 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Python           |         10 |      4,176 |        368 |        270 |      4,814 |
+| HTML             |          2 |        153 |          0 |         10 |        163 |
+| Todo             |          1 |          9 |          0 |          9 |         18 |
+| pip requirements |          1 |          9 |          0 |          0 |          9 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                    | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                       |         14 |      4,347 |        368 |        289 |      5,004 |
+| AG                                                      |          3 |        324 |        103 |        102 |        529 |
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                | language         | code       | comment    | blank      | total      |
++---------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\josei\Documents\GitHub\TCC\AG\AG2.py           | Python           |        173 |         13 |         49 |        235 |
+| c:\Users\josei\Documents\GitHub\TCC\AG\classes.py       | Python           |         45 |          3 |         22 |         70 |
+| c:\Users\josei\Documents\GitHub\TCC\AG\utilidades_AG.py | Python           |        106 |         87 |         31 |        224 |
+| c:\Users\josei\Documents\GitHub\TCC\fitness.py          | Python           |        203 |         12 |         42 |        257 |
+| c:\Users\josei\Documents\GitHub\TCC\index.html          | HTML             |         37 |          0 |          3 |         40 |
+| c:\Users\josei\Documents\GitHub\TCC\individuo.py        | Python           |         38 |        192 |         36 |        266 |
+| c:\Users\josei\Documents\GitHub\TCC\main.py             | Python           |         70 |          0 |         19 |         89 |
+| c:\Users\josei\Documents\GitHub\TCC\make_output.py      | Python           |         77 |         56 |         21 |        154 |
+| c:\Users\josei\Documents\GitHub\TCC\metadata.py         | Python           |        845 |          0 |         45 |        890 |
+| c:\Users\josei\Documents\GitHub\TCC\metadata_c.py       | Python           |      2,609 |          0 |          1 |      2,610 |
+| c:\Users\josei\Documents\GitHub\TCC\output.html         | HTML             |        116 |          0 |          7 |        123 |
+| c:\Users\josei\Documents\GitHub\TCC\requirements.txt    | pip requirements |          9 |          0 |          0 |          9 |
+| c:\Users\josei\Documents\GitHub\TCC\teste.py            | Python           |         10 |          5 |          4 |         19 |
+| c:\Users\josei\Documents\GitHub\TCC\todo.todo           | Todo             |          9 |          0 |          9 |         18 |
+| Total                                                   |                  |      4,347 |        368 |        289 |      5,004 |
++---------------------------------------------------------+------------------+------------+------------+------------+------------+

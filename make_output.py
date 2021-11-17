@@ -21,7 +21,7 @@ TEMPLATE_HTML = """
 
 <body>
     <div class="container-fluid flex-row mx-auto">
-    <strong>{fitness}</strong>
+    <strong>{fitness:.2}</strong><br>
     {stats}
     {tables}
     </div>
@@ -104,18 +104,6 @@ def make_html(ind):
 TEMPLATE_INDIVIDUO = """
 from make_output import make_html
 
-#     2|  3|  4|  5|  6|  7
-# M1  0| 10| 20| 30| 40| 50
-# M2  1| 11| 21| 31| 41| 51
-# M3  2| 12| 22| 32| 42| 52
-# M4  3| 13| 23| 33| 43| 53
-# M5  4| 14| 24| 34| 44| 54
-# T1  5| 15| 25| 35| 45| 55
-# T2  6| 16| 26| 36| 46| 56
-# T3  7| 17| 27| 37| 47| 57
-# T4  8| 18| 28| 38| 48| 58
-# T5  9| 19| 29| 39| 49| 59
-
 ind = [
 {cromossomos}
 ]
@@ -139,15 +127,23 @@ def individuo_formatado(ind):
         for i, horarios in enumerate(disciplina['horarios']):
             cromo_h = cromos_h[i]
             index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
-            horario = horarios[index_h]
-            i_h.append(metadata['horarios'].index(horario))
+            i_h.append(index_h)
 
         cromo = i_p + i_s + i_h
         header = (
-            f"    # {disciplina['nome']}\n"
-            f"    # p:{[profe['nome'] for profe in disciplina['professores']]}\n"
-            f"    # s:{[sala['nome'] for sala in disciplina['salas']]}\n"
-            f"  #{' p, ' * len(i_p)}{' s, ' * len(i_s)}{' h, ' * len(i_h)}\n"
+            "    # {disciplina}\n"
+            "    # p: {professores}\n"
+            "    # s: {salas}\n"
+            "{horarios}\n"
+            "  #{cabeçalho}\n"
+        ).format(
+            disciplina=disciplina['nome'],
+            professores=[profe['nome'] for profe in disciplina['professores']],
+            salas=[sala['nome'] for sala in disciplina['salas']],
+            horarios='\n'.join(['    # h{}:{}'.format(i, h)
+                               for i, h in enumerate(disciplina['horarios'])]),
+            cabeçalho=' p, ' * len(i_p) + ' s, ' * len(i_s) +
+            ', '.join([f'h{i}' for i in range(len(i_h))])
         )
 
         str_cromossomos.append(

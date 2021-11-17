@@ -9,9 +9,9 @@ from fitness import fitness_meta
 from make_output import make_html
 from metadata import criar_cromossomos, metadata
 
-TAM_POP = 2**10
+TAM_POP = 2**13
 TAM_CACHE = TAM_POP
-NUM_GER = 200
+NUM_GER = 400
 NUM_REPETICOES = 1
 
 
@@ -23,17 +23,13 @@ def fitness_cache(ind):
 
 
 def taxa_mutacao(ger):
-    if ger / NUM_GER < 0.50:
-        return 0.10
-    else:
-        return 0.50
+    tx_ini = 0.20
+    tx_fim = 0.03
+    return tx_ini + (tx_fim - tx_ini) * (ger / NUM_GER)
 
 
 def taxa_cruzamento(ger):
-    if ger / NUM_GER < 0.5:
-        return 0.90
-    else:
-        return 0.50
+    return 0.90
 
 
 definicoes = {

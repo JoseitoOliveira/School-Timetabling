@@ -7,10 +7,11 @@ from dataclasses import dataclass
 CHOQUE_SALA = -20
 CHOQUE_PROF = -20
 CHOQUE_GRADE = -20
+CHOQUE_LABORATORIOS = -20
+CHOQUE_DISCIPLINAS = -5
 AULAS_MESMO_DIA = -20
 AULAS_AOS_SABADOS = -10
 AULAS_DIAS_SEGUIDOS = -10
-CHOQUE_DISCIPLINAS = -5
 DISTANCIA_ENTRE_SALAS = -1e-3
 
 
@@ -19,8 +20,9 @@ class Partial_Fitnesses:
     choque_salas: int = 0
     choque_professor: int = 0
     choque_grade: int = 0
-    afinidade_disciplina: int = 0
+    choque_laboratorios: int = 0
     choque_disciplinas: int = 0
+    afinidade_disciplina: int = 0
     horarios_professor: int = 0
     aulas_no_mesmo_dia: int = 0
     aulas_em_dias_seguidos: int = 0
@@ -100,6 +102,21 @@ def fitness(ind, metadata):
                     fit += CHOQUE_GRADE
                 else:
                     grade_horas.append(tag)
+        return fit
+
+    laboratorios_horas = []
+
+    def fit_choque_laboratorios(laboratorios, horarios):
+        """Verifica se a sala está ocupada no horário"""
+        fit = 0
+        for lab, _horarios in zip(laboratorios, horarios):
+            nome_lab = lab['nome']
+            for h in _horarios:
+                tag = f'{nome_lab}{h}'
+                if tag in laboratorios_horas:
+                    fit += CHOQUE_SALA
+                else:
+                    laboratorios_horas.append(tag)
         return fit
 
     def fit_choque_disciplinas():

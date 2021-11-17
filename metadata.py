@@ -7,7 +7,7 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 12,
             "disciplinas": {
-                "Dispositivos": 2,
+                "Dispositivos": 0,
             }
         },
         {
@@ -15,15 +15,15 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 12,
             "disciplinas": {
-                "Eletromagnetismo": 2,
+                "Eletromagnetismo": 0,
             }
         },
         {
-            "nome": "Prof Mec. Sólidos",
+            "nome": "Prof Mec. Sólidos II",
             "hrs_min": 8,
             "hrs_max": 12,
             "disciplinas": {
-                "Mec. dos Sólidos II": 2,
+                "Mec. dos Sólidos II": 0,
             }
         },
         {
@@ -31,7 +31,64 @@ metadata = {
             "hrs_min": 8,
             "hrs_max": 12,
             "disciplinas": {
-                "Economia I": 2,
+                "Economia I": 0,
+            }
+        },
+        {
+            "nome": "Prof Sociologia do Trabalho",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Sociologia do Trabalho": 0,
+            }
+        },
+        {
+            "nome": "Prof Complexas",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Complexas": 0,
+            }
+        },
+        {
+            "nome": "Prof Estocásticos",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Estocásticos": 0,
+            }
+        },
+        {
+            "nome": "Prof Cálculo Numério",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Cálculo Numério": 0,
+            }
+        },
+        {
+            "nome": "Prof Mec. Sólidos I",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Mec. dos Sólidos I": 0,
+            }
+        },
+        {
+            "nome": "Prof Física Experimental II",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Física Experimental II": 0,
+            }
+        },
+        {
+            "nome": "Alexandre",
+            "hrs_min": 8,
+            "hrs_max": 12,
+            "disciplinas": {
+                "Circuitos I": 2,
+                "Conversão": 2,
             }
         },
         {
@@ -161,7 +218,7 @@ metadata = {
             "hrs_max": 8,
             "disciplinas": {
                 "Acionamentos e Circuitos Elétricos": 2,
-                "Circuitos 2": 2
+                "Circuitos II": 2
             }
         },
         {
@@ -197,11 +254,64 @@ metadata = {
         },
         {
             "nome": "CTM4",
-            "capacidade": 30
-        }
+            "capacidade": 30,
+            "especial": False
+        },
+        {
+            "nome": "LMI",
+            "capacidade": 30,
+            "especial": True
+        },
+        {
+            "nome": "LMA",
+            "capacidade": 30,
+            "especial": True
+        },
     ],
-    "grades": ["p5", "p6", "p7", "p8"],
+    "grades": ["p4", "p5", "p6", "p7", "p8"],
     "disciplinas": {
+        "Circuitos I": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Sociologia do Trabalho": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 3],
+            "aulas_aos_sabados": False
+        },
+        "Complexas": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Estocásticos": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Mec. dos Sólidos I": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Cálculo Numério": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2, 2],
+            "aulas_aos_sabados": False
+        },
+        "Física Experimental II": {
+            "grades": ["p4"],
+            "num_alunos": 22,
+            "horas": [2],
+            "aulas_aos_sabados": False
+        },
         "Dispositivos": {
             "grades": ["p5"],
             "num_alunos": 22,
@@ -214,8 +324,8 @@ metadata = {
             "horas": [2, 2],
             "aulas_aos_sabados": False
         },
-        "Circuitos 2": {
-            "grades": ["p5", "p6"],
+        "Circuitos II": {
+            "grades": ["p5"],
             "num_alunos": 22,
             "horas": [2, 2],
             "aulas_aos_sabados": False
@@ -224,7 +334,8 @@ metadata = {
             "grades": ["p5"],
             "num_alunos": 22,
             "horas": [2, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "salas": ["LMA", "LMI"]
         },
         "Análise de Sinais e Sistemas": {
             "grades": ["p5"],
@@ -260,7 +371,8 @@ metadata = {
             "grades": ["p6"],
             "num_alunos": 22,
             "horas": [3, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA", "LMI"]
         },
         "Materiais Elétricos": {
             "grades": ["p6"],
@@ -284,7 +396,8 @@ metadata = {
             "grades": ["p7"],
             "num_alunos": 10,
             "horas": [2, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "salas": ["LMA", "LMI"]
         },
         "Máquinas Elétricas": {
             "grades": ["p7"],
@@ -351,6 +464,7 @@ metadata = {
             "num_alunos": 15,
             "horas": [2, 2],
             "aulas_aos_sabados": False,
+            "salas": ["LMA", "LMI"]
         }
     },
     "horarios": [
@@ -415,10 +529,12 @@ metadata = {
         "7T4",
         "7T5"],
     "distancias": {
-        "CTM1": {"CTM1": 00, "CTM2": 10, "CTM3": 20, "CTM4": 30},
-        "CTM2": {"CTM1": 10, "CTM2": 00, "CTM3": 10, "CTM4": 20},
-        "CTM3": {"CTM1": 20, "CTM2": 10, "CTM3": 00, "CTM4": 10},
-        "CTM4": {"CTM1": 30, "CTM2": 20, "CTM3": 10, "CTM4": 00},
+        "CTM1": {"CTM1": 00, "CTM2": 10, "CTM3": 20, "CTM4": 30, "LMI": 40, "LMA": 50},
+        "CTM2": {"CTM1": 10, "CTM2": 00, "CTM3": 10, "CTM4": 20, "LMI": 40, "LMA": 50},
+        "CTM3": {"CTM1": 20, "CTM2": 10, "CTM3": 00, "CTM4": 10, "LMI": 40, "LMA": 50},
+        "CTM4": {"CTM1": 30, "CTM2": 20, "CTM3": 10, "CTM4": 00, "LMI": 40, "LMA": 50},
+        "LMI": {"CTM1": 30, "CTM2": 20, "CTM3": 10, "CTM4": 00, "LMI": 00, "LMA": 50},
+        "LMA": {"CTM1": 30, "CTM2": 20, "CTM3": 10, "CTM4": 00, "LMI": 50, "LMA": 00},
     },
     "choques": {
         "Conversão": [
@@ -427,7 +543,16 @@ metadata = {
             "Controle I",
             "Instrumentação Eletrônica",
             "Eletrônica de Potência"
+        ],
+        "Circuitos I": [
+            "Dispositivos",
+            "Eletromagnetismo",
+            "Técnicas de Programação",
+            "Análise de Sistemas Elétricos",
+            "Mec. dos Sólidos II",
+            "Economia I",
         ]
+
     }
 }
 
@@ -565,17 +690,18 @@ def completar_professores(disciplina):
 
 def completar_salas(disciplina):
     salas = metadata['salas']
-    nomes_salas_válidos = [sala['nome'] for sala in salas]
+    nomes_salas_validos = [sala['nome'] for sala in salas]
     if 'salas' not in disciplina:
         disciplina['salas'] = [
             sala for sala in salas
             if sala['capacidade'] >= disciplina['num_alunos']
+            if 'especial' not in sala or sala['especial'] is False
         ]
     else:
         nomes_salas = disciplina['salas']
 
         for nome_sala in nomes_salas:
-            if nome_sala not in nomes_salas_válidos:
+            if nome_sala not in nomes_salas_validos:
                 raise Exception(
                     f'A sala {nome_sala} definida na disciplina '
                     f'{disciplina["nome"]} não é uma sala válida.'
@@ -592,6 +718,34 @@ def completar_salas(disciplina):
             f'Não há sala que comporte a disciplina {disciplina["nome"]} '
             f'que possui {disciplina["num_alunos"]} alunos matriculados.'
         )
+    return disciplina
+
+
+def completar_laboratorios(disciplina):
+    salas = metadata['salas']
+    nomes_salas_validos = [sala['nome'] for sala in salas]
+    if 'laboratorios' not in disciplina:
+        disciplina['laboratorios'] = []
+    else:
+        nomes_labs = disciplina['laboratorios']
+
+        disciplina['laboratorios'] = [
+            sala for sala in salas
+            if sala['nome'] in nomes_labs
+            if sala['capacidade'] >= disciplina['num_alunos']
+        ]
+        for nome_lab in nomes_labs:
+            if nome_lab not in nomes_salas_validos:
+                raise Exception(
+                    f'O laboratório {nome_lab} definido na disciplina '
+                    f'{disciplina["nome"]} não é um laboratório válida.'
+                )
+
+        disciplina['laboratorios'] = [
+            lab for lab in salas
+            if lab['nome'] in nomes_labs
+        ]
+
     return disciplina
 
 
@@ -678,6 +832,7 @@ def completar_metadata(metadata):
         disciplina = completar_professores(disciplina)
         disciplina = completar_salas(disciplina)
         disciplina = completar_horarios(disciplina)
+        disciplina = completar_laboratorios(disciplina)
         disciplina, ultimo_gene = completar_cromossomos(disciplina,
                                                         ultimo_gene)
 
