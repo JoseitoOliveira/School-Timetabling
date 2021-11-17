@@ -1005,7 +1005,7 @@
                                                              'numero_genes': 1,
                                                              'slice_f': 130,
                                                              'slice_i': 129}],
-                                            'grades': ['p7'],
+                                            'grades': ['p7', 'p8'],
                                             'horarios': [['2M2',
                                                           '2M4',
                                                           '2T2',

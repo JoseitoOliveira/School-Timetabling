@@ -424,7 +424,7 @@ metadata = {
             "aulas_aos_sabados": False
         },
         "Eletrônica de Potência": {
-            "grades": ["p7"],
+            "grades": ["p7", "p8"],
             "num_alunos": 25,
             "horas": [2, 3],
             "aulas_aos_sabados": False

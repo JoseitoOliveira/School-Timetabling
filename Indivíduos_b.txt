@@ -1,19 +1,21 @@
-Fitness: 6.799999999999997
+Fitness: -20.18
 choque_salas: 0
 choque_professor: 0
 choque_grade: 0
-afinidade_disciplina: 44
+choque_laboratorios: 0
 choque_disciplinas: 0
+mesmo_turno: -20
+afinidade_disciplina: 44
 horarios_professor: 0
 aulas_no_mesmo_dia: 0
 aulas_em_dias_seguidos: 0
 aulas_aos_sabados: 0
-distancia_percorrida: -37.2
-Individual([ 0  2  3  9  1  0  1  2  5  7  0  2  1 11  1  0  1  3  6 19  0  3  3  3
- 18  3  8  0  3  0 15  7  0  2  4  0  1  0 10  0  0  0  0 14  1  0  3  0
-  4 17  0  0  0  3 19  0  0  3 16  5  0  0  3 15  3  0  1  1  7  9  0  1
-  3  1  5  0  2  3 17 11  0  0  0  8  0  0  2  0  7 12  0  1  2 15  6  0
-  1  0  3 13  0  1  0  2 17  0  2  1  3  4  0  2  1 13  2  0  0  1 11  0
-  0  2  2  1  6  0  1  3  9  8  0  2  2 18  5  0  3  3  1 13  0  3  2  9
- 19  0  2  2  0  8  0  3  0 14  6  0  1  1 12  4])
+distancia_percorrida: -44.18
+Individual([ 0  1  3 17  0  0  0  1  6  9  0  1  0 10  2  0  2  0  1 15  0  2  1  0
+ 11  3 16  0  0  0 12  5  0  0 13  0  0  2 11 19  0  0  1 10  2  0  2  2
+ 17  9  0  0  1  5 16  0  3  1  1  8  0  1  1 12  3  0  0  0  3  7  0  3
+  3  9  1  0  0  0 17  9  0  3  1  2 15  0  3  1  5 14  0  3  3 19  7  0
+  0  1  1 13  0  1  0  9 17  0  1  1  7  8  0  3  2 15  3  0  3  0 13  2
+  0  3  2  3  7  0  1  2  5  6  0  3  0  6 18  0  2  2  7 15  0  3  1  9
+  1  0  3  1 17  4  0  2  3  0 16  0  0  1 14  3])
 

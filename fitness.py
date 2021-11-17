@@ -1,4 +1,4 @@
-from functools import partial
+from functools import partial, reduce
 from itertools import chain
 from metadata import metadata
 from more_itertools import pairwise
@@ -13,6 +13,7 @@ AULAS_MESMO_DIA = -20
 AULAS_AOS_SABADOS = -10
 AULAS_DIAS_SEGUIDOS = -10
 DISTANCIA_ENTRE_SALAS = -1e-3
+MUDANÇA_DE_TURNO = -4
 
 
 @dataclass
@@ -22,6 +23,7 @@ class Partial_Fitnesses:
     choque_grade: int = 0
     choque_laboratorios: int = 0
     choque_disciplinas: int = 0
+    mesmo_turno: int = 0
     afinidade_disciplina: int = 0
     horarios_professor: int = 0
     aulas_no_mesmo_dia: int = 0
@@ -105,6 +107,12 @@ def fitness(ind, metadata):
         return fit
 
     laboratorios_horas = []
+
+    def fit_mesmo_turno(ini_horas):
+        """ Verifica se os horários da aula são no mesmo turno """
+        turnos = map(lambda i: bool(int(i/5) % 2), ini_horas)
+        mudança_turno = reduce(lambda x, y: x != y, turnos,)
+        return MUDANÇA_DE_TURNO if mudança_turno else 0
 
     def fit_choque_laboratorios(laboratorios, horarios):
         """Verifica se a sala está ocupada no horário"""
@@ -241,6 +249,7 @@ def fitness(ind, metadata):
         fit.choque_grade += fit_choque_grade(grades, horarios)
         fit.afinidade_disciplina += fit_afinidade_disciplina(professor)
         fit.horarios_professor += fit_horarios_professores(professor, horarios)
+        fit.mesmo_turno += fit_mesmo_turno(i_h)
         fit.aulas_no_mesmo_dia += fit_aulas_no_mesmo_dia(i_h)
         fit.aulas_aos_sabados += fit_aulas_aos_sabados(i_h)
         fit.aulas_em_dias_seguidos += fit_aulas_em_dias_seguidos(i_h)
