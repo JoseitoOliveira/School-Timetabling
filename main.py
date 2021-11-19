@@ -9,10 +9,10 @@ from fitness import fitness_meta
 from make_output import make_html
 from metadata import criar_cromossomos, metadata
 
-TAM_POP = 2**10
+TAM_POP = 2**12
+NUM_GER = 2**8
+NUM_REPETICOES = 50
 TAM_CACHE = TAM_POP
-NUM_GER = 200
-NUM_REPETICOES = 1
 
 
 _fitness_cache = lru_cache(maxsize=TAM_CACHE)(fitness_meta)
@@ -23,6 +23,7 @@ def fitness_cache(ind):
 
 
 def taxa_mutacao(ger):
+    return 0.10
     tx_ini = 0.20
     tx_fim = 0.03
     return tx_ini + (tx_fim - tx_ini) * (ger / NUM_GER)
@@ -36,7 +37,7 @@ definicoes = {
     'otimizacao': (1,),
     'npop': TAM_POP,
     'nger': NUM_GER,
-    'tam_elitismo': 0,
+    'tam_elitismo': 1,
     'tam_memg': 0,
     'taxa_cruzamento': taxa_cruzamento,
     'taxa_mutacao': taxa_mutacao,

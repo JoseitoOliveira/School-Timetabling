@@ -266,7 +266,7 @@ metadata = {
             "nome": "LMA",
             "capacidade": 30,
             "especial": True
-        },
+        }
     ],
     "grades": ["p4", "p5", "p6", "p7", "p8"],
     "disciplinas": {
@@ -372,25 +372,28 @@ metadata = {
             "num_alunos": 22,
             "horas": [3, 2],
             "aulas_aos_sabados": False,
-            "laboratorios": ["LMA", "LMI"]
+            "laboratorios": ["LMA"]
         },
         "Materiais Elétricos": {
             "grades": ["p6"],
             "num_alunos": 22,
             "horas": [2, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Conversão": {
             "grades": ["p6"],
             "num_alunos": 22,
             "horas": [2, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Pesquisa": {
             "grades": ["p6"],
             "num_alunos": 22,
             "horas": [2, 2],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Instrumentação Eletrônica": {
             "grades": ["p7"],
@@ -403,19 +406,22 @@ metadata = {
             "grades": ["p7"],
             "num_alunos": 20,
             "horas": [2, 3],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Controle I": {
             "grades": ["p7"],
             "num_alunos": 15,
             "horas": [2, 3],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Princípios de Comunicações": {
             "grades": ["p7"],
             "num_alunos": 12,
             "horas": [2, 3],
-            "aulas_aos_sabados": False
+            "aulas_aos_sabados": False,
+            "laboratorios": ["LMA"]
         },
         "Sistemas Elétricos": {
             "grades": ["p7"],
@@ -729,11 +735,6 @@ def completar_laboratorios(disciplina):
     else:
         nomes_labs = disciplina['laboratorios']
 
-        disciplina['laboratorios'] = [
-            sala for sala in salas
-            if sala['nome'] in nomes_labs
-            if sala['capacidade'] >= disciplina['num_alunos']
-        ]
         for nome_lab in nomes_labs:
             if nome_lab not in nomes_salas_validos:
                 raise Exception(
@@ -742,8 +743,8 @@ def completar_laboratorios(disciplina):
                 )
 
         disciplina['laboratorios'] = [
-            lab for lab in salas
-            if lab['nome'] in nomes_labs
+            sala for sala in salas
+            if sala['nome'] in nomes_labs
         ]
 
     return disciplina
@@ -790,6 +791,7 @@ def completar_horarios(disciplina):
 def completar_cromossomos(disciplina, ultimo_gene):
     num_genes_p = 1
     num_genes_s = len(disciplina['horas'])
+    num_genes_l = len(disciplina['horas']) if disciplina['laboratorios'] else 0
 
     cromossomos = []
     cromossomos.append({   # Professores
@@ -809,6 +811,15 @@ def completar_cromossomos(disciplina, ultimo_gene):
     })
     ultimo_gene += num_genes_s
 
+    cromossomos.append({  # Laboratórios
+        'numero_genes': num_genes_l,
+        'limite_inferior': 0,
+        'limite_superior': len(disciplina['laboratorios']),
+        'slice_i': ultimo_gene,
+        'slice_f': ultimo_gene+num_genes_l
+    })
+    ultimo_gene += num_genes_l
+
     num_genes_h = 1
     for horarios in disciplina['horarios']:
         cromossomos.append({  # Horiários
@@ -822,6 +833,54 @@ def completar_cromossomos(disciplina, ultimo_gene):
 
     disciplina['cromossomos'] = cromossomos
     return disciplina, ultimo_gene
+
+
+def get_horarios(disciplina, ind):
+    qtd_horas = disciplina['horas']
+    cromos_h = disciplina['cromossomos'][3:]
+    i_h = []
+    for i, horarios in enumerate(disciplina['horarios']):
+        cromo_h = cromos_h[i]
+        index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
+        horario = horarios[index_h]
+        i_h.append(metadata['horarios'].index(horario))
+
+    horarios = [
+        [h for h in range(ini_h, ini_h+qtd_horas[i], 1)]
+        for i, ini_h in enumerate(i_h)
+    ]
+    return horarios, i_h
+
+
+def extrair_dados(disciplina, ind):
+
+    cromo_p = disciplina['cromossomos'][0]
+    cromo_s = disciplina['cromossomos'][1]
+    cromo_l = disciplina['cromossomos'][2]
+    i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
+    i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
+    i_l = ind[cromo_l['slice_i']:cromo_l['slice_f']]
+
+    salas = [disciplina['salas'][i] for i in i_s]
+    laboratorios = [disciplina['laboratorios'][i] for i in i_l]
+
+    qtd_horas = disciplina['horas']
+    grades: list = disciplina['grades']
+    professor = disciplina['professores'][i_p[0]]
+    horarios, i_h = get_horarios(disciplina, ind)
+
+    return (
+        i_p,
+        i_s,
+        i_l,
+        i_h,
+        salas,
+        laboratorios,
+        qtd_horas,
+        horarios,
+        grades,
+        professor
+    )
 
 
 def completar_metadata(metadata):

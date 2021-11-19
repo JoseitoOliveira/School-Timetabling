@@ -1,4 +1,4 @@
-from metadata import metadata
+from metadata import metadata, extrair_dados
 from fitness import fitness
 
 TEMPLATE_HTML = """
@@ -21,7 +21,7 @@ TEMPLATE_HTML = """
 
 <body>
     <div class="container-fluid flex-row mx-auto">
-    <strong>{fitness:.2}</strong><br>
+    <strong>{fitness:.2f}</strong><br>
     {stats}
     {tables}
     </div>
@@ -64,24 +64,11 @@ def make_html(ind):
     sum_fit, fit = fitness(ind, metadata)
 
     for disciplina in metadata['disciplinas'].values():
-        grades = disciplina['grades']
-        cromo_p = disciplina['cromossomos'][0]
-        cromo_s = disciplina['cromossomos'][1]
-        cromos_h = disciplina['cromossomos'][2:]
-        i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
-        i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
 
-        i_h = []
-        for i, horarios in enumerate(disciplina['horarios']):
-            cromo_h = cromos_h[i]
-            index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
-            horario = horarios[index_h]
-            i_h.append(metadata['horarios'].index(horario))
-
-        salas = [disciplina['salas'][i] for i in i_s]
-
-        qtd_horas = disciplina['horas']
-        profe = disciplina['professores'][i_p[0]]
+        (i_p, i_s, i_l, i_h,
+         salas, laboratorios,
+         qtd_horas, horarios,
+         grades, professor) = extrair_dados(disciplina, ind)
 
         for grade in grades:
             i_grade = metadata['grades'].index(grade)
@@ -89,8 +76,9 @@ def make_html(ind):
                 for h in range(i_h[i], i_h[i]+qtd_horas[i]):
                     args = (
                         f"{disciplina['nome']}<br>"
-                        f"{profe['nome']}<br>"
+                        f"{professor['nome']}<br>"
                         f"{sala['nome']}<br>"
+                        f"{laboratorios[i]['nome'] if laboratorios else ''}" 
                     )
                     tables_args[i_grade][f'_{h}'] += args
 
@@ -117,17 +105,11 @@ with open('output.html', mode='w', encoding='utf8') as f:
 def individuo_formatado(ind):
     str_cromossomos = []
     for disciplina in metadata['disciplinas'].values():
-        cromo_p = disciplina['cromossomos'][0]
-        cromo_s = disciplina['cromossomos'][1]
-        cromos_h = disciplina['cromossomos'][2:]
-        i_p = ind[cromo_p['slice_i']:cromo_p['slice_f']]
-        i_s = ind[cromo_s['slice_i']:cromo_s['slice_f']]
 
-        i_h = []
-        for i, horarios in enumerate(disciplina['horarios']):
-            cromo_h = cromos_h[i]
-            index_h = ind[cromo_h['slice_i']:cromo_h['slice_f']][0]
-            i_h.append(index_h)
+        (i_p, i_s, i_l, i_h,
+         salas, laboratorios,
+         qtd_horas, horarios,
+         grades, professor) = extrair_dados(disciplina, ind)
 
         cromo = i_p + i_s + i_h
         header = (

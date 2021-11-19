@@ -8,6 +8,7 @@
 ☐ Validar horas mínimas e máximas dos professores
 ☐ Testar a mutação variável como uma rampa
 
+✔ Criar laboratórios com possibilidade de N choques de horários @done(21-11-18 15:00)
 ✔ Manter o turno de uma disciplina é bom @done(21-11-17 11:10)
 ✔ Criar rotinas para impressão e leitura de individuos formatados @done(21-11-14 10:45)    
 ✔ Como lidar com uma disciplina que pertence a mais de uma grade? @done(21-11-13 12:37)
