@@ -3,6 +3,7 @@ from AG.utilidades_AG import cruzamento_uniforme, mutUniformInt
 from modelos import *
 from horarios import *
 
+from dataclasses import asdict
 
 professores = [
     Professor(
@@ -713,4 +714,4 @@ metadata = completar_metadata(metadata)
 
 with open('metadata_c.py', mode='w', encoding='utf8') as f:
     from pprint import pprint
-    pprint(metadata, f)
+    pprint(asdict(metadata), stream=f)
