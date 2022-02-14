@@ -1,9 +1,12 @@
+from dataclasses import dataclass
 from functools import partial, reduce
 from itertools import chain
 from typing import Tuple
-from metadata import metadata, extrair_dados, get_horarios
+
 from more_itertools import pairwise
-from dataclasses import dataclass
+
+from metadata import extrair_dados, get_horarios, metadata
+from modelos import Disciplina, MetaData, Prof_Disciplina, Sala
 
 CHOQUE_SALA = -20
 CHOQUE_PROF = -20
@@ -63,14 +66,14 @@ class Partial_Fitnesses:
                            for field in self.__dataclass_fields__]))
 
 
-def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
+def fitness(ind: list[int], metadata: MetaData) -> Tuple[int, Partial_Fitnesses]:
 
     prof_horas = []
 
-    def fit_choque_profe(profe, horarios):
+    def fit_choque_profe(profe: Prof_Disciplina, horarios: list[list[int]]):
         """Verifica se o professor está ocupada no horário"""
         fit = 0
-        nome_professor = profe['nome']
+        nome_professor = profe.nome
         for h in chain(*horarios):
             tag = f'{nome_professor}{h}'
             if tag in prof_horas:
@@ -81,7 +84,7 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
 
     grade_horas = []
 
-    def fit_choque_grade(grades, horarios):
+    def fit_choque_grade(grades: list[str], horarios: list[list[int]]):
         """Verifica se a turma está com 2 ou mais aulas no horário"""
         fit = 0
         for h in chain(*horarios):
@@ -100,29 +103,28 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
         return MUDANÇA_DE_TURNO if mudança_turno else 0
 
     salas_hora_disciplinas = {
-        lab['nome']: {
+        lab.nome: {
             hora: []
             for hora in range(60)
-        } for lab in metadata['salas']
+        } for lab in metadata.salas
     }
 
-    def fit_choque_laboratorios(laboratorios, horarios, nome_disciplina):
+    def fit_choque_laboratorios(laboratorios: list[Sala], horarios: list[list[int]], nome_disciplina: str):
         fit = 0
         for lab, _horarios in zip(laboratorios, horarios):
-            nome_lab = lab['nome']
             for h in _horarios:
-                sala_hora_disciplinas = salas_hora_disciplinas[nome_lab][h]
+                sala_hora_disciplinas = salas_hora_disciplinas[lab.nome][h]
                 if nome_disciplina not in sala_hora_disciplinas:
                     sala_hora_disciplinas.append(nome_disciplina)
                 if len(sala_hora_disciplinas) > NUM_DISCIPLINA_POR_LAB:
                     fit += CHOQUE_LABORATORIOS
         return fit
 
-    def fit_choque_salas(salas, horarios, nome_disciplina):
+    def fit_choque_salas(salas: list[Sala], horarios: list[list[int]], nome_disciplina: str):
         """Verifica se a sala está ocupada no horário"""
         fit = 0
         for sala, _horarios in zip(salas, horarios):
-            nome_sala = sala['nome']
+            nome_sala = sala.nome
             for h in _horarios:
                 sala_hora_disciplinas = salas_hora_disciplinas[nome_sala][h]
                 if nome_disciplina not in sala_hora_disciplinas:
@@ -133,12 +135,12 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
 
     def fit_choque_disciplinas():
         fit = 0
-        for nome_disciplina, nome_outras in metadata['choques'].items():
-            disciplina = metadata['disciplinas'][nome_disciplina]
+        for nome_disciplina, nome_outras in metadata.choques.items():
+            disciplina = metadata.disciplinas[nome_disciplina]
             horarios, _ = get_horarios(disciplina, ind)
             horarios = list(chain(*horarios))
             for nome_outra in nome_outras:
-                outra_disciplina = metadata['disciplinas'][nome_outra]
+                outra_disciplina = metadata.disciplinas[nome_outra]
                 horarios_outra, _ = get_horarios(outra_disciplina, ind)
                 horarios_outra = list(chain(*horarios_outra))
                 for horario in horarios:
@@ -146,9 +148,9 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
                         fit += CHOQUE_DISCIPLINAS
         return fit
 
-    def fit_afinidade_disciplina(profe):
+    def fit_afinidade_disciplina(profe: Prof_Disciplina):
         """Verifica se o professor tem afinidade com a disciplina"""
-        return profe['afinidade']
+        return profe.afinidade
 
     def fit_aulas_em_dias_seguidos(ini_horas):
         """
@@ -175,12 +177,12 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
                 dias.append(dia)
         return fit
 
-    def fit_horarios_professores(professor, horarios):
+    def fit_horarios_professores(professor: Prof_Disciplina, horarios: list[list[int]]):
         """Verifica a afinidade do professor com o horário"""
         fit = 0
         for i in chain(*horarios):
-            h = metadata['horarios'][i]
-            fit += professor['horarios'].setdefault(h, 0)
+            h = metadata.horarios[i]
+            fit += professor.horarios.setdefault(h, 0)
         return fit
 
     def fit_aulas_aos_sabados(ini_horas):
@@ -195,10 +197,10 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
         grade: {
             turno: []
             for turno in range(12)
-        } for grade in metadata['grades']
+        } for grade in metadata.grades
     }
 
-    def adicionar_grade_dia_sala(salas, horarios, grades):
+    def adicionar_grade_dia_sala(salas: list[Sala], horarios: list[list[int]], grades: list[str]):
         for _horarios, sala in zip(horarios, salas):
             for h in _horarios:
                 turno = int(h/5)
@@ -207,9 +209,9 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
 
     def fit_distancia_percorrida():
         def calc_distancia(s1, s2):
-            return metadata['distancias'][s1['nome']][s2['nome']]
+            return metadata.distancias[s1.nome][s2.nome]
         distancia = 0
-        for grade in metadata['grades']:
+        for grade in metadata.grades:
             _grade = grade_dia_sala[grade]
             for turno in range(12):
                 h_salas = sorted(_grade[turno], key=lambda x: x[0])
@@ -220,14 +222,15 @@ def fitness(ind, metadata) -> Tuple[int, Partial_Fitnesses]:
         return distancia * DISTANCIA_ENTRE_SALAS
 
     fit = Partial_Fitnesses()
-    for disciplina in metadata['disciplinas'].values():
+    for disciplina in metadata.disciplinas.values():
+        disciplina: Disciplina
 
         (i_p, i_s, i_l, i_h,
          salas, laboratorios,
          qtd_horas, horarios,
          grades, professor) = extrair_dados(disciplina, ind)
 
-        nome_disciplina = disciplina['nome']
+        nome_disciplina = disciplina.nome
 
         fit.choque_salas += fit_choque_salas(salas, horarios, nome_disciplina)
         fit.choque_professor += fit_choque_profe(professor, horarios)

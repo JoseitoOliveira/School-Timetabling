@@ -1,13 +1,13 @@
 
-
-
 ☐ Validação cruzada ??
-☐ Como lidar com disciplinas que possuem laboratórios?
+
+☐ Validar horas mínimas e máximas dos professores
+☐ alterar nome da key "horarios" em "professor" para "afinidade_horarios"
 
 ☐ Mantendo o produto TAM_POP x NUM_GER constantes, variar a divisão
-☐ Validar horas mínimas e máximas dos professores
 ☐ Testar a mutação variável como uma rampa
 
+✔ Como lidar com disciplinas que possuem laboratórios? @done(22-02-07 18:47)
 ✔ Criar laboratórios com possibilidade de N choques de horários @done(21-11-18 15:00)
 ✔ Manter o turno de uma disciplina é bom @done(21-11-17 11:10)
 ✔ Criar rotinas para impressão e leitura de individuos formatados @done(21-11-14 10:45)    

@@ -9,9 +9,9 @@ from fitness import fitness_meta
 from make_output import make_html
 from metadata import criar_cromossomos, metadata
 
-TAM_POP = 2**12
+TAM_POP = 2**11
 NUM_GER = 2**8
-NUM_REPETICOES = 50
+NUM_REPETICOES = 1
 TAM_CACHE = TAM_POP
 
 

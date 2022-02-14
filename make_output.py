@@ -56,14 +56,14 @@ empty_table_args = {f'_{i}': '' for i in range(60)}
 
 def make_html(ind):
 
-    grades = metadata['grades']
+    grades = metadata.grades
     tables_args = [empty_table_args.copy() for _ in grades]
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]
 
     sum_fit, fit = fitness(ind, metadata)
 
-    for disciplina in metadata['disciplinas'].values():
+    for disciplina in metadata.disciplinas.values():
 
         (i_p, i_s, i_l, i_h,
          salas, laboratorios,
@@ -71,14 +71,14 @@ def make_html(ind):
          grades, professor) = extrair_dados(disciplina, ind)
 
         for grade in grades:
-            i_grade = metadata['grades'].index(grade)
+            i_grade = metadata.grades.index(grade)
             for i, sala in enumerate(salas):
                 for h in range(i_h[i], i_h[i]+qtd_horas[i]):
                     args = (
-                        f"{disciplina['nome']}<br>"
-                        f"{professor['nome']}<br>"
-                        f"{sala['nome']}<br>"
-                        f"{laboratorios[i]['nome'] if laboratorios else ''}" 
+                        f"{disciplina.nome}<br>"
+                        f"{professor.nome}<br>"
+                        f"{sala.nome}<br>"
+                        f"{laboratorios[i].nome if laboratorios else ''}"
                     )
                     tables_args[i_grade][f'_{h}'] += args
 
@@ -104,7 +104,7 @@ with open('output.html', mode='w', encoding='utf8') as f:
 
 def individuo_formatado(ind):
     str_cromossomos = []
-    for disciplina in metadata['disciplinas'].values():
+    for disciplina in metadata.disciplinas.values():
 
         (i_p, i_s, i_l, i_h,
          salas, laboratorios,
@@ -119,11 +119,11 @@ def individuo_formatado(ind):
             "{horarios}\n"
             "  #{cabeçalho}\n"
         ).format(
-            disciplina=disciplina['nome'],
-            professores=[profe['nome'] for profe in disciplina['professores']],
-            salas=[sala['nome'] for sala in disciplina['salas']],
+            disciplina=disciplina.nome,
+            professores=[profe.nome for profe in disciplina.professores],
+            salas=[sala.nome for sala in disciplina.salas],
             horarios='\n'.join(['    # h{}:{}'.format(i, h)
-                               for i, h in enumerate(disciplina['horarios'])]),
+                               for i, h in enumerate(disciplina.horarios)]),
             cabeçalho=' p, ' * len(i_p) + ' s, ' * len(i_s) +
             ', '.join([f'h{i}' for i in range(len(i_h))])
         )
