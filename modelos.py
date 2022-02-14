@@ -57,7 +57,7 @@ class Disciplina:
         for h in self.horas:
             if h == 2:
                 horarios_binarios = (horarios_2
-                                     if not self.aulas_aos_sabados
+                                     if self.aulas_aos_sabados
                                      else horarios_2 & ~sabado)
                 self.horarios.append(
                     [
@@ -68,7 +68,7 @@ class Disciplina:
                 )
             elif h == 3:
                 horarios_binarios = (horarios_3
-                                     if not self.aulas_aos_sabados
+                                     if self.aulas_aos_sabados
                                      else horarios_3 & ~sabado)
 
                 self.horarios.append(
@@ -79,7 +79,9 @@ class Disciplina:
                     ]
                 )
             else:
-                horarios_binarios = todos
+                horarios_binarios = (todos
+                                     if self.aulas_aos_sabados
+                                     else todos & ~sabado)
                 self.horarios.append(
                     [
                         horario_str

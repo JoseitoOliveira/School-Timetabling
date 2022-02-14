@@ -277,49 +277,42 @@ disciplinas = {
         grades=["p4"],
         num_alunos=22,
         horas=[2, 2, 2],
-        aulas_aos_sabados=False
     ),
     "Cálculo Numérico": Disciplina(
         nome="Cálculo Numérico",
         grades=["p4"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Física Experimental II": Disciplina(
         nome="Física Experimental II",
         grades=["p4"],
         num_alunos=22,
         horas=[2],
-        aulas_aos_sabados=False
     ),
     "Dispositivos": Disciplina(
         nome="Dispositivos",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Eletromagnetismo": Disciplina(
         nome="Eletromagnetismo",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Circuitos II": Disciplina(
         nome="Circuitos II",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Técnicas de Programação": Disciplina(
         nome="Técnicas de Programação",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         salas=[sala for sala in salas if sala.nome in ["LMI", "LMA"]]
     ),
     "Análise de Sinais e Sistemas": Disciplina(
@@ -327,42 +320,36 @@ disciplinas = {
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Mec. dos Sólidos II": Disciplina(
         nome="Mec. dos Sólidos II",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 3],
-        aulas_aos_sabados=False
     ),
     "Economia I": Disciplina(
         nome="Economia I",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 3],
-        aulas_aos_sabados=False
     ),
     "Mecânica dos Flúidos": Disciplina(
         nome="Mecânica dos Flúidos",
         grades=["p6"],
         num_alunos=22,
         horas=[3, 3],
-        aulas_aos_sabados=False
     ),
     "Teoria do Controle": Disciplina(
         nome="Teoria do Controle",
         grades=["p6"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False
     ),
     "Eletrônica": Disciplina(
         nome="Eletrônica",
         grades=["p6"],
         num_alunos=22,
         horas=[3, 2],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Materiais Elétricos": Disciplina(
@@ -370,7 +357,6 @@ disciplinas = {
         grades=["p6"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Conversão": Disciplina(
@@ -378,7 +364,6 @@ disciplinas = {
         grades=["p6"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Pesquisa": Disciplina(
@@ -386,7 +371,6 @@ disciplinas = {
         grades=["p6"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Instrumentação Eletrônica": Disciplina(
@@ -394,7 +378,6 @@ disciplinas = {
         grades=["p7"],
         num_alunos=10,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         salas=[sala for sala in salas if sala.nome in ["LMI", "LMA"]]
     ),
     "Máquinas Elétricas": Disciplina(
@@ -402,7 +385,6 @@ disciplinas = {
         grades=["p7"],
         num_alunos=20,
         horas=[2, 3],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Controle I": Disciplina(
@@ -410,7 +392,6 @@ disciplinas = {
         grades=["p7"],
         num_alunos=15,
         horas=[2, 3],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Princípios de Comunicações": Disciplina(
@@ -418,7 +399,6 @@ disciplinas = {
         grades=["p7"],
         num_alunos=12,
         horas=[2, 3],
-        aulas_aos_sabados=False,
         laboratorios=[sala for sala in salas if sala.nome in ["LMA"]]
     ),
     "Sistemas Elétricos": Disciplina(
@@ -440,7 +420,6 @@ disciplinas = {
         grades=["p8"],
         num_alunos=22,
         horas=[2, 2],
-        aulas_aos_sabados=False,
     ),
     "Análise de Sistemas Elétricos": Disciplina(
         nome="Análise de Sistemas Elétricos",
@@ -475,7 +454,6 @@ disciplinas = {
         grades=["p8"],
         num_alunos=15,
         horas=[2, 2],
-        aulas_aos_sabados=False,
         salas=[sala for sala in salas if sala.nome in ["LMI", "LMA"]]
     )
 }
