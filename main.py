@@ -1,21 +1,21 @@
 from functools import lru_cache
 from statistics import mean, pvariance
 
-from tqdm.std import tqdm
+from tqdm.std import tqdm, trange
 
-from AG.AG2 import AG
-from AG.utilidades_AG import selTournament
-from fitness import fitness_meta
-from make_output import make_html
-from metadata import criar_cromossomos, metadata
+from src.AG.AG2 import AG
+from src.AG.utilidades_AG import selTournament
+from src.fitness import fitness
+from src.make_output import make_html
+from src.metadata import criar_cromossomos, metadata
 
-TAM_POP = 2**11
-NUM_GER = 2**8
-NUM_REPETICOES = 1
+TAM_POP = 2**4
+NUM_GER = 2**3
+NUM_REPETICOES = 2
 TAM_CACHE = TAM_POP
 
 
-_fitness_cache = lru_cache(maxsize=TAM_CACHE)(fitness_meta)
+_fitness_cache = lru_cache(maxsize=TAM_CACHE)(fitness)
 
 
 def fitness_cache(ind):
@@ -24,9 +24,6 @@ def fitness_cache(ind):
 
 def taxa_mutacao(ger):
     return 0.10
-    tx_ini = 0.20
-    tx_fim = 0.03
-    return tx_ini + (tx_fim - tx_ini) * (ger / NUM_GER)
 
 
 def taxa_cruzamento(ger):
@@ -56,7 +53,7 @@ if __name__ == "__main__":
 
     lists_bests_fits = []
     list_best_ind = []
-    for _ in tqdm(range(max(NUM_REPETICOES, 1))):
+    for _ in trange(max(NUM_REPETICOES, 1)):
         list_best_fit, hof = obj.executa()
         lists_bests_fits.append(list_best_fit)
         list_best_ind.append(hof[-1])
@@ -73,11 +70,11 @@ if __name__ == "__main__":
         aux = [x[g] for x in lists_bests_fits]
         print(f'{g + 1:^3} | {mean(aux):^6.1f} | {pvariance(aux):0.1f}')
 
-    obj2 = AG(definicoes, 'Indivíduos_b.txt')
+    obj2 = AG(definicoes, 'out/Indivíduos_b.txt')
     for ind in list_best_ind:
         obj2.save_ind(ind)
 
     best_ind = max(list_best_ind, key=lambda x: x.fitness)
     html = make_html(best_ind)
-    with open('output.html', mode='w', encoding='utf8') as f:
+    with open('out/output.html', mode='w', encoding='utf8') as f:
         f.write(html)

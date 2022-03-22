@@ -1,12 +1,18 @@
 
-☐ Validação cruzada ??
 
-☐ Validar horas mínimas e máximas dos professores
-☐ alterar nome da key "horarios" em "professor" para "afinidade_horarios"
+☐ Se uma disciplina possui um horário fixo, remover esse horários das demais disciplinas do mesmo período
+
+✔ Validar horas mínimas e máximas dos professores @done(22-02-21 19:28)
+✔ Adicionar relação entre sala e horario @done(22-02-19 12:59)
+✔ Adicionar relação entre professor e sala @done(22-02-19 12:59)
+✔ Adicionar disciplinas ofertadas por outros centros @done(22-02-19 11:18)
+✔ Criar sala fake @done(22-02-19 11:18)
+✔ Criar professor fake @done(22-02-19 11:18)
 
 ☐ Mantendo o produto TAM_POP x NUM_GER constantes, variar a divisão
 ☐ Testar a mutação variável como uma rampa
 
+✔ alterar nome da key "horarios" em "professor" para "afinidade_horarios" @done(22-02-14 18:43)
 ✔ Como lidar com disciplinas que possuem laboratórios? @done(22-02-07 18:47)
 ✔ Criar laboratórios com possibilidade de N choques de horários @done(21-11-18 15:00)
 ✔ Manter o turno de uma disciplina é bom @done(21-11-17 11:10)

@@ -1,4 +1,4 @@
-from make_output import make_html, individuo_formatado
+from src.make_output import make_html, individuo_formatado
 
 ind = """0  0  3  7  7  0  2  1 16  4  0  3  0  9 19  0  2  1 18  4  0  1  0  2
   3 17  6  0  1  2  2 11  0  0 13  0  3  2  8 17  0  2  0  3 15  0  3  3

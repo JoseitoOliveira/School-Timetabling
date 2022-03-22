@@ -8,8 +8,8 @@ from typing import List
 import numpy as np
 from tqdm import tqdm
 
-from AG.classes import Individual
-from AG.utilidades_AG import HallOfFame
+from src.AG.classes import Individual
+from src.AG.utilidades_AG import HallOfFame
 
 
 class AG():
@@ -17,7 +17,7 @@ class AG():
     Classe usada para executar um Algoritmo Genético.
     '''
 
-    def __init__(self, metadados: dict, filename: str = 'Indivíduos.txt'):
+    def __init__(self, metadados: dict, filename: str = 'out/Indivíduos.txt'):
         '''
         Cria uma instância da classe.
         O único argumento é metadados, em que devem estar todos os dados 

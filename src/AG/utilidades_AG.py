@@ -4,7 +4,7 @@ import numpy as np
 from collections.abc import Sequence
 from bisect import bisect_right
 
-from AG.classes import Individual
+from src.AG.classes import Individual
 
 
 class HallOfFame(object):

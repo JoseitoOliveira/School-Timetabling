@@ -1,5 +1,5 @@
-from metadata import metadata, extrair_dados
-from fitness import fitness
+from src.metadata import metadata, extrair_dados
+from src.fitness import Fitness
 
 TEMPLATE_HTML = """
 <!DOCTYPE html>
@@ -22,7 +22,10 @@ TEMPLATE_HTML = """
 <body>
     <div class="container-fluid flex-row mx-auto">
     <strong>{fitness:.2f}</strong><br>
-    {stats}
+    {stats} <br>
+    <hr style="width:50%;text-align:left;margin-left:0">
+    {professores}
+    <hr style="width:50%;text-align:left;margin-left:0">
     {tables}
     </div>
 </body>
@@ -50,6 +53,13 @@ TEMPLATE_TABLE = """
     </tbody>
 </table>
 """
+TEMPLATE_PROFESSOR = """
+Professor: {nome}<br>
+Horas mínimas: {hrs_min}<br>
+Horas máximas: {hrs_max}<br>
+Horas totais: <span style="color:{color}">{hrs_tot}</span><br>
+Disciplinas: {disciplinas}<br>
+"""
 
 empty_table_args = {f'_{i}': '' for i in range(60)}
 
@@ -61,7 +71,9 @@ def make_html(ind):
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]
 
-    sum_fit, fit = fitness(ind, metadata)
+    sum_fit, fit = Fitness(metadata)(ind)
+
+    professores = {}
 
     for disciplina in metadata.disciplinas.values():
 
@@ -69,6 +81,19 @@ def make_html(ind):
          salas, laboratorios,
          qtd_horas, horarios,
          grades, professor) = extrair_dados(disciplina, ind)
+
+        if not professor.sem_professor:
+            if professor.nome not in professores:
+                professores[professor.nome] = {
+                    'nome': professor.nome,
+                    'hrs_min': professor.hrs_min,
+                    'hrs_max': professor.hrs_max,
+                    'hrs_tot': sum(disciplina.horas),
+                    'disciplinas': f"{disciplina.nome} | ",
+                }
+            else:
+                professores[professor.nome]['hrs_tot'] += sum(disciplina.horas)
+                professores[professor.nome]['disciplinas'] += f"{disciplina.nome} | "
 
         for grade in grades:
             i_grade = metadata.grades.index(grade)
@@ -84,13 +109,22 @@ def make_html(ind):
 
     stats = '<br>'.join(
         [f'{field} = {getattr(fit, field)}' for field in fit.__dataclass_fields__])
+
     tables = '<br>'.join([TEMPLATE_TABLE.format(**args)
                          for args in tables_args])
-    return TEMPLATE_HTML.format(tables=tables, stats=stats, fitness=sum_fit)
+
+    profes_html = '<br>'.join([TEMPLATE_PROFESSOR.format(
+        color='red' if not (args['hrs_min'] <= args['hrs_tot'] and
+                            args['hrs_tot'] <= args['hrs_max']) else 'black',
+        **args)
+        for args in professores.values()]
+    )
+
+    return TEMPLATE_HTML.format(tables=tables, stats=stats, fitness=sum_fit, professores=profes_html)
 
 
 TEMPLATE_INDIVIDUO = """
-from make_output import make_html
+from src.make_output import make_html
 
 ind = [
 {cromossomos}

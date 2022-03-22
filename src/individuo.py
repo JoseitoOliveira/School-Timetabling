@@ -1,5 +1,5 @@
 
-from make_output import make_html
+from src.make_output import make_html
 
 ind = [
     # Circuitos I

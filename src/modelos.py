@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
-from horarios import *
+
+from src.horarios import *
 
 
 @dataclass
@@ -9,6 +10,13 @@ class Professor:
     hrs_min: int = 8
     hrs_max: int = 12
     afinidade_horarios: dict[str, int] = field(default_factory=lambda: {})
+    afinidade_salas: dict[str, int] = field(default_factory=lambda: {})
+
+    __sem_professor__: bool = False
+
+    @property
+    def sem_professor(self):
+        return self.__sem_professor__
 
 
 @dataclass
@@ -16,13 +24,13 @@ class Sala:
     nome: str
     capacidade: int
     laboratorio: bool = False
+    afinidade_horarios: dict[str, int] = field(default_factory=lambda: {})
 
+    __sem_sala__: bool = False
 
-@dataclass
-class Prof_Disciplina:
-    nome: str
-    afinidade: int
-    horarios: dict[str, int]
+    @property
+    def sem_sala(self):
+        return self.__sem_sala__
 
 
 @dataclass
@@ -44,7 +52,7 @@ class Disciplina:
     horarios: list[list[str]] = field(default_factory=lambda: [])
     laboratorios: list[Sala] = field(default_factory=lambda: [])
     salas: list[Sala] = field(default_factory=lambda: [])
-    professores: list[Prof_Disciplina] = field(default_factory=lambda: [])
+    professores: list[Professor] = field(default_factory=lambda: [])
     cromossomos: list[Cromossomo] = field(default_factory=lambda: [])
 
     def __post_init__(self):
@@ -95,8 +103,22 @@ class Disciplina:
 class MetaData:
     professores: list[Professor]
     salas: list[Sala]
-    grades: list[str]
     disciplinas: dict[str, Disciplina]
     horarios: list[str]
     distancias: dict[str, dict[str, int]]
     choques: dict
+
+    def __post_init__(self):
+        self.__grades__ = list(set([
+            grade
+            for disciplina in self.disciplinas.values()
+            for grade in disciplina.grades
+        ]))
+
+    @property
+    def grades(self):
+        return self.__grades__
+
+
+sem_sala = Sala(nome='', capacidade=int(1e9), __sem_sala__=True)
+sem_professor = Professor('', {}, __sem_professor__=True)
