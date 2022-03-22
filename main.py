@@ -1,80 +1,85 @@
-from functools import lru_cache
-from statistics import mean, pvariance
+"""
 
-from tqdm.std import tqdm, trange
+@authors	joseito.junior@brphotonics.com
+@date   	10/02/2022
 
-from src.AG.AG2 import AG
-from src.AG.utilidades_AG import selTournament
-from src.fitness import fitness
-from src.make_output import make_html
-from src.metadata import criar_cromossomos, metadata
+"""
 
-TAM_POP = 2**4
-NUM_GER = 2**3
-NUM_REPETICOES = 2
-TAM_CACHE = TAM_POP
+import builtins
+import sys
+import traceback
 
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
-_fitness_cache = lru_cache(maxsize=TAM_CACHE)(fitness)
+from qt_material import apply_stylesheet
 
+# import src.aa_update as aa_update
+from resources.ui_files.main import Ui_MainWindow
+from src.console import Msg, Style, create_console
+from src.data import data
+from src.logger import logger_print, print_exception_locals
 
-def fitness_cache(ind):
-    return _fitness_cache(tuple(ind))
+theme_extra = {
 
+    # Button colors
+    'primaryColor': '#213f98',
+    'danger': '#dc3545',
+    'warning': '#ffc107',
+    'success': '#17a2b8',
 
-def taxa_mutacao(ger):
-    return 0.10
-
-
-def taxa_cruzamento(ger):
-    return 0.90
-
-
-definicoes = {
-    'otimizacao': (1,),
-    'npop': TAM_POP,
-    'nger': NUM_GER,
-    'tam_elitismo': 1,
-    'tam_memg': 0,
-    'taxa_cruzamento': taxa_cruzamento,
-    'taxa_mutacao': taxa_mutacao,
-    'fitness': fitness_cache,
-    'selecao': {
-        'fcn': selTournament,
-        'args': {
-            'tournsize': 3
-        }
-    },
-    'cromossomos': criar_cromossomos(metadata)
+    'density_scale': '-1',
+    # Font
+    'font_family': 'Roboto',
 }
 
-if __name__ == "__main__":
-    obj = AG(definicoes)
 
-    lists_bests_fits = []
-    list_best_ind = []
-    for _ in trange(max(NUM_REPETICOES, 1)):
-        list_best_fit, hof = obj.executa()
-        lists_bests_fits.append(list_best_fit)
-        list_best_ind.append(hof[-1])
+class Window(QMainWindow):
 
-    for g in [
-        1,
-        int(1/10 * NUM_GER),
-        int(2/10 * NUM_GER),
-        int(3/10 * NUM_GER),
-        int(5/10 * NUM_GER),
-        int(7.5/10 * NUM_GER),
-        NUM_GER - 1,
-    ]:
-        aux = [x[g] for x in lists_bests_fits]
-        print(f'{g + 1:^3} | {mean(aux):^6.1f} | {pvariance(aux):0.1f}')
+    def __init__(self):
+        super(Window, self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        create_console(self, self.ui.console_layout)
 
-    obj2 = AG(definicoes, 'out/Indivíduos_b.txt')
-    for ind in list_best_ind:
-        obj2.save_ind(ind)
+        self.load_types()
+        self.ui.device_index.setValue(data['device_index'])
 
-    best_ind = max(list_best_ind, key=lambda x: x.fitness)
-    html = make_html(best_ind)
-    with open('out/output.html', mode='w', encoding='utf8') as f:
-        f.write(html)
+        print(Msg(
+            'Olá, \n',
+            Style('cor! \n', color='#00ff00'),
+            Style('tamanho! \n', size=16),
+            Style('espessura! \n', font_weight=800),
+            Style('estilo! \n', font_style='italic'))
+        )
+
+        self.ui.btn_connect.clicked.connect(
+            self.connect
+        )
+
+    def connect(self):
+        print('connect')
+
+    def load_types(self):
+        self.ui.comboBox_type.clear()
+        self.ui.comboBox_type.addItems(data['types'])
+
+
+def excepthook(exc_type, exc_value, exc_tb):
+    tb = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+    print("error catched!:")
+    print("error message:\n", tb)
+    print_exception_locals()
+
+
+if __name__ == '__main__':
+    builtins.print = logger_print
+    sys.excepthook = excepthook
+    root = QApplication([])
+    app = Window()
+
+    apply_stylesheet(app,
+                     theme='light_blue.xml',
+                     invert_secondary=True,
+                     extra=theme_extra)
+    app.showMaximized()
+    sys.exit(root.exec_())
