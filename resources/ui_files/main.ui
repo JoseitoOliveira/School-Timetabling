@@ -89,7 +89,7 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideMiddle</enum>
@@ -298,102 +298,14 @@
              <widget class="QListWidget" name="listWidget_2"/>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout">
-              <item>
-               <widget class="QPushButton" name="pushButton_3">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/left_48px.png</normaloff>../images/left_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/right_48px.png</normaloff>../images/right_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
              <widget class="QListView" name="listView"/>
             </item>
            </layout>
           </item>
           <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
             <item>
              <widget class="QListWidget" name="listWidget_3"/>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <item>
-               <widget class="QPushButton" name="pushButton_2">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/left_48px.png</normaloff>../images/left_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_4">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/right_48px.png</normaloff>../images/right_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
             </item>
             <item>
              <widget class="QListWidget" name="listWidget_5"/>

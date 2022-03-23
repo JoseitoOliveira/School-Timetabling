@@ -19,12 +19,6 @@ from src.console import Msg, Style, create_console
 from src.data import data
 from src.logger import logger_print, print_exception_locals
 
-theme_extra = {
-    # 'density_scale': '0',
-    # Font
-    # 'font_family': 'Roboto',
-}
-
 
 class Window(QMainWindow):
 
@@ -49,7 +43,6 @@ if __name__ == '__main__':
 
     apply_stylesheet(app,
                      theme='light_blue.xml',
-                     invert_secondary=True,
-                     extra=theme_extra)
+                     invert_secondary=True)
     app.show()
     sys.exit(root.exec_())
