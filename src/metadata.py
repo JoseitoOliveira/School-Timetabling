@@ -1,10 +1,10 @@
+import json
 from dataclasses import asdict
-from tkinter import N
 from typing import Tuple
 
 from src.AG.utilidades_AG import cruzamento_uniforme, mutUniformInt
-from src.horarios import *
-from src.modelos import *
+from src.horarios import horarios_str
+from src.modelos import Cromossomo, Disciplina, MetaData, Professor, Sala
 
 P8_SE = "p8_se"
 P8_CA = "p8_ca"
@@ -308,48 +308,48 @@ disciplinas = [
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Vetorial I",
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Cálculo I",
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Português",
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Inglês",
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2, 1],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Metodologia",
         grades=["p1"],
         num_alunos=20,
         horas=[3],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Técincas Aplicadas de IA",
@@ -362,32 +362,32 @@ disciplinas = [
         grades=["p1"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Física II",
         grades=["p2"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Cálculo II",
         grades=["p2"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Linear",
         grades=["p2"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Cálcudo de Fluxo de Potência",
@@ -406,24 +406,24 @@ disciplinas = [
         grades=["p2"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="IC",
         grades=["p2"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Administração",
         grades=["p2"],
         num_alunos=20,
         horas=[3],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Circuitos Lógicos",
@@ -436,48 +436,48 @@ disciplinas = [
         grades=["p3"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Experimental I",
         grades=["p3"],
         num_alunos=20,
         horas=[2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Equações",
         grades=["p3"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Cálculo III",
         grades=["p3"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Probabilidades",
         grades=["p3"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="ICM",
         grades=["p3"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="ASD",
@@ -490,48 +490,48 @@ disciplinas = [
         grades=["p4"],
         num_alunos=20,
         horas=[2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Complexas",
         grades=["p4"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Numérico",
         grades=["p4"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Estocásticos",
         grades=["p4"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Sociologia",
         grades=["p4"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Sólidos I",
         grades=["p4"],
         num_alunos=20,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Circuitos I",
@@ -550,8 +550,8 @@ disciplinas = [
         grades=["p5"],
         num_alunos=22,
         horas=[2, 2],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Circuitos II",
@@ -583,30 +583,30 @@ disciplinas = [
         grades=["p5"],
         num_alunos=22,
         horas=[2, 3],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Economia I",
         grades=["p5"],
         num_alunos=22,
         horas=[2, 3],
-        professores=[sem_professor],
-        salas=[sem_sala],
+        sem_professor=True,
+        sem_sala=True
     ),
     Disciplina(
         nome="Mecânica dos Flúidos",
         grades=["p6"],
         num_alunos=22,
         horas=[3, 3],
-        professores=[sem_professor]
+        sem_professor=True,
     ),
     Disciplina(
         nome="Ciências do Ambiente",
         grades=["p6"],
         num_alunos=22,
         horas=[3],
-        professores=[sem_professor],
+        sem_professor=True,
     ),
     Disciplina(
         nome="Teoria do Controle",
@@ -902,7 +902,7 @@ metadata = MetaData(
 
 
 def completar_professores(disciplina: Disciplina):
-    if not disciplina.professores:
+    if disciplina.professores == [] and not disciplina.sem_professor:
         professores: list[Professor] = metadata.professores
         disciplina.professores = [
             profe
@@ -910,7 +910,7 @@ def completar_professores(disciplina: Disciplina):
             if disciplina.nome in profe.afinidade_disciplinas.keys()
         ]
 
-    if disciplina.professores == []:
+    if disciplina.professores == [] and not disciplina.sem_professor:
         raise Exception(
             f'Não há professores para a disciplina {disciplina.nome}.'
         )
@@ -919,14 +919,14 @@ def completar_professores(disciplina: Disciplina):
 
 def completar_salas(disciplina: Disciplina):
     salas: list[Sala] = metadata.salas
-    if disciplina.salas == []:
+    if disciplina.salas == [] and not disciplina.sem_sala:
         disciplina.salas = [
             sala for sala in salas
             if sala.capacidade >= disciplina.num_alunos
             if not sala.laboratorio
         ]
 
-    if disciplina.salas == []:
+    if disciplina.salas == [] and not disciplina.sem_sala:
         raise Exception(
             f'Não há sala que comporte a disciplina {disciplina.nome} '
             f'que possui {disciplina.num_alunos} alunos matriculados.'
@@ -945,7 +945,7 @@ def completar_cromossomos(disciplina: Disciplina, ultimo_gene):
         limite_inferior=0,
         limite_superior=len(disciplina.professores),
         slice_i=ultimo_gene,
-        slice_f=ultimo_gene+num_genes_p
+        slice_f=ultimo_gene + num_genes_p
     ))
     ultimo_gene += num_genes_p
     cromossomos.append(Cromossomo(   # Salas
@@ -953,7 +953,7 @@ def completar_cromossomos(disciplina: Disciplina, ultimo_gene):
         limite_inferior=0,
         limite_superior=len(disciplina.salas),
         slice_i=ultimo_gene,
-        slice_f=ultimo_gene+num_genes_s
+        slice_f=ultimo_gene + num_genes_s
     ))
     ultimo_gene += num_genes_s
 
@@ -962,7 +962,7 @@ def completar_cromossomos(disciplina: Disciplina, ultimo_gene):
         limite_inferior=0,
         limite_superior=len(disciplina.laboratorios),
         slice_i=ultimo_gene,
-        slice_f=ultimo_gene+num_genes_l
+        slice_f=ultimo_gene + num_genes_l
     ))
     ultimo_gene += num_genes_l
 
@@ -973,7 +973,7 @@ def completar_cromossomos(disciplina: Disciplina, ultimo_gene):
             limite_inferior=0,
             limite_superior=len(horarios),
             slice_i=ultimo_gene,
-            slice_f=ultimo_gene+num_genes_h
+            slice_f=ultimo_gene + num_genes_h
         ))
         ultimo_gene += num_genes_h
 
@@ -992,7 +992,7 @@ def get_horarios(disciplina: Disciplina, ind):
         i_h.append(metadata.horarios.index(horario))
 
     horarios = [
-        [h for h in range(ini_h, ini_h+qtd_horas[i], 1)]
+        [h for h in range(ini_h, ini_h + qtd_horas[i], 1)]
         for i, ini_h in enumerate(i_h)
     ]
     return horarios, i_h
@@ -1091,3 +1091,7 @@ metadata = completar_metadata(metadata)
 with open('out/metadata_c.py', mode='w', encoding='utf8') as f:
     from pprint import pprint
     pprint(asdict(metadata), stream=f)
+
+
+with open('data.json', mode='w', encoding='utf8') as f:
+    json.dump(metadata.as_json(), f, ensure_ascii=False, indent=4)

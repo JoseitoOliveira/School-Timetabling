@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>571</height>
+    <width>1228</width>
+    <height>845</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -60,18 +60,18 @@
      <height>9999</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="0">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0">
     <property name="sizeConstraint">
      <enum>QLayout::SetDefaultConstraint</enum>
     </property>
     <property name="leftMargin">
-     <number>2</number>
+     <number>6</number>
     </property>
     <property name="topMargin">
      <number>6</number>
     </property>
     <property name="rightMargin">
-     <number>2</number>
+     <number>6</number>
     </property>
     <property name="bottomMargin">
      <number>2</number>
@@ -79,15 +79,15 @@
     <property name="spacing">
      <number>2</number>
     </property>
-    <item row="2" column="0">
+    <item row="3" column="1">
      <widget class="QProgressBar" name="progressBar">
       <property name="value">
        <number>24</number>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QTabWidget" name="tabWidget">
+    <item row="1" column="1">
+     <widget class="QTabWidget" name="tab_telas">
       <property name="currentIndex">
        <number>1</number>
       </property>
@@ -195,7 +195,7 @@
        <attribute name="title">
         <string>Disciplinas</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,0">
         <item>
          <layout class="QFormLayout" name="formLayout">
           <property name="labelAlignment">
@@ -212,7 +212,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="nome_disciplina"/>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_3">
@@ -225,10 +225,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_2"/>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QSpinBox" name="num_alunos"/>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_4">
@@ -240,82 +237,209 @@
             </property>
            </widget>
           </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="grades_disciplinas"/>
+          </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>Horas:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_4"/>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Laboratórios</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
-             <widget class="QCheckBox" name="checkBox_3">
-              <property name="text">
-               <string>Aulas aos Sábados</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="checkBox">
-              <property name="text">
-               <string>Sem Professor</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="checkBox_2">
-              <property name="text">
-               <string>Sem Sala</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
            <widget class="QLabel" name="label_8">
             <property name="text">
              <string>Horários</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout">
+          <item row="3" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
             <item>
-             <widget class="QListWidget" name="listWidget_2"/>
+             <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0,0">
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Créditos da aula:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="num_credidos_aula">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>3</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_add_aula">
+                <property name="text">
+                 <string>Adicionar aula</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_rmv_aula">
+                <property name="text">
+                 <string>Remover aula</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
-             <widget class="QListView" name="listView"/>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QTabWidget" name="tab_horarios">
+                <property name="currentIndex">
+                 <number>-1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="list_horarios_todos">
+                <property name="dragDropMode">
+                 <enum>QAbstractItemView::DragDrop</enum>
+                </property>
+                <property name="defaultDropAction">
+                 <enum>Qt::CopyAction</enum>
+                </property>
+                <property name="viewMode">
+                 <enum>QListView::IconMode</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Laboratórios</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+            <item>
+             <widget class="QListWidget" name="list_laboratorios_disciplinas">
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="list_laboratorios">
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
           <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
             <item>
-             <widget class="QListWidget" name="listWidget_3"/>
+             <widget class="QCheckBox" name="disciplina_sem_sala">
+              <property name="text">
+               <string>Sem Sala</string>
+              </property>
+             </widget>
             </item>
             <item>
-             <widget class="QListWidget" name="listWidget_5"/>
+             <widget class="QCheckBox" name="disciplina_sem_professor">
+              <property name="text">
+               <string>Sem Professor</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
          </layout>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget"/>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QListWidget" name="list_disciplinas"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QPushButton" name="btn_add_disciplina">
+              <property name="text">
+               <string>Adicionar Disciplina</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_rmv_disciplina">
+              <property name="text">
+               <string>Remover Disciplina</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -337,7 +461,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_5"/>
+           <widget class="QLineEdit" name="nome_professor"/>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
@@ -347,7 +471,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSpinBox" name="spinBox"/>
+           <widget class="QSpinBox" name="horas_min_professor"/>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_5">
@@ -357,7 +481,7 @@
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QSpinBox" name="spinBox_2"/>
+           <widget class="QSpinBox" name="horas_max_professor"/>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_12">
@@ -488,7 +612,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget_4"/>
+         <widget class="QListWidget" name="list_professores"/>
         </item>
        </layout>
       </widget>
@@ -510,7 +634,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_6"/>
+           <widget class="QLineEdit" name="nome_sala"/>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_14">
@@ -520,7 +644,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSpinBox" name="spinBox_3"/>
+           <widget class="QSpinBox" name="capacidade_sala"/>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_15">
@@ -583,7 +707,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget_9"/>
+         <widget class="QListWidget" name="list_salas"/>
         </item>
        </layout>
       </widget>
@@ -592,6 +716,33 @@
         <string>Sobre</string>
        </attribute>
       </widget>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Console</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTextEdit" name="console"/>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from src.horarios import *
+from src.horarios import horarios_str, horarios_2, horarios_3, sabado, todos
 
 
 @dataclass
@@ -18,6 +18,27 @@ class Professor:
     def sem_professor(self):
         return self.__sem_professor__
 
+    def as_json(self):
+        return {
+            'nome': self.nome,
+            'afinidade_disciplinas': self.afinidade_disciplinas,
+            'hrs_min': self.hrs_min,
+            'hrs_max': self.hrs_max,
+            'afinidade_horarios': self.afinidade_horarios,
+            'afinidade_salas': self.afinidade_salas,
+        }
+
+    @classmethod
+    def from_json(cls, d):
+        return cls(
+            nome=d['nome'],
+            afinidade_disciplinas=d['afinidade_disciplinas'],
+            hrs_min=d['hrs_min'],
+            hrs_max=d['hrs_max'],
+            afinidade_horarios=d['afinidade_horarios'],
+            afinidade_salas=d['afinidade_salas'],
+        )
+
 
 @dataclass
 class Sala:
@@ -32,6 +53,23 @@ class Sala:
     def sem_sala(self):
         return self.__sem_sala__
 
+    def as_json(self):
+        return {
+            'nome': self.nome,
+            'capacidade': self.capacidade,
+            'laboratorio': self.laboratorio,
+            'afinidade_horarios': self.afinidade_horarios,
+        }
+
+    @classmethod
+    def from_json(cls, d):
+        return cls(
+            nome=d['nome'],
+            capacidade=d['capacidade'],
+            laboratorio=d['laboratorio'],
+            afinidade_horarios=d['afinidade_horarios'],
+        )
+
 
 @dataclass
 class Cromossomo:
@@ -41,6 +79,25 @@ class Cromossomo:
     slice_i: int
     slice_f: int
 
+    def as_json(self):
+        return {
+            'numero_genes': self.numero_genes,
+            'limite_inferior': self.limite_inferior,
+            'limite_superior': self.limite_superior,
+            'slice_i': self.slice_i,
+            'slice_f': self.slice_f
+        }
+
+    @classmethod
+    def from_json(cls, d):
+        return cls(
+            d['numero_genes'],
+            d['limite_inferior'],
+            d['limite_superior'],
+            d['slice_i'],
+            d['slice_f']
+        )
+
 
 @dataclass
 class Disciplina:
@@ -48,12 +105,14 @@ class Disciplina:
     num_alunos: int
     grades: list[str]
     horas: list[int]
-    aulas_aos_sabados: bool = False
     horarios: list[list[str]] = field(default_factory=lambda: [])
     laboratorios: list[Sala] = field(default_factory=lambda: [])
     salas: list[Sala] = field(default_factory=lambda: [])
     professores: list[Professor] = field(default_factory=lambda: [])
     cromossomos: list[Cromossomo] = field(default_factory=lambda: [])
+    aulas_aos_sabados: bool = False
+    sem_professor: bool = False
+    sem_sala: bool = False
 
     def __post_init__(self):
         if self.horarios == []:
@@ -98,6 +157,39 @@ class Disciplina:
                     ]
                 )
 
+    def as_json(self):
+        return {
+            'nome': self.nome,
+            'num_alunos': self.num_alunos,
+            'grades': self.grades,
+            'horas': self.horas,
+            'aulas_aos_sabados': self.aulas_aos_sabados,
+            'horarios': self.horarios,
+            'laboratorios': [s.as_json() for s in self.laboratorios],
+            'salas': [s.as_json() for s in self.salas],
+            'professores': [p.as_json() for p in self.professores],
+            'cromossomos': [c.as_json() for c in self.cromossomos],
+            'sem_professor': self.sem_professor,
+            'sem_sala': self.sem_sala,
+        }
+
+    @classmethod
+    def from_json(cls, d):
+        return cls(
+            nome=d['nome'],
+            num_alunos=d['num_alunos'],
+            grades=d['grades'],
+            horas=d['horas'],
+            aulas_aos_sabados=d['aulas_aos_sabados'],
+            horarios=d['horarios'],
+            laboratorios=[Sala.from_json(s) for s in d['laboratorios']],
+            salas=[Sala.from_json(s) for s in d['salas']],
+            professores=[Professor.from_json(p) for p in d['professores']],
+            cromossomos=[Cromossomo.from_json(c) for c in d['cromossomos']],
+            sem_professor=d['sem_professor'],
+            sem_sala=d['sem_sala'],
+        )
+
 
 @dataclass
 class MetaData:
@@ -119,6 +211,29 @@ class MetaData:
     def grades(self):
         return self.__grades__
 
+    def as_json(self):
+        return {
+            'professores': [p.as_json() for p in self.professores],
+            'salas': [s.as_json() for s in self.salas],
+            'disciplinas': {
+                d.nome: d.as_json()
+                for d in self.disciplinas.values()
+            },
+            'horarios': self.horarios,
+            'distancias': self.distancias,
+            'choques': self.choques
+        }
 
-sem_sala = Sala(nome='', capacidade=int(1e9), __sem_sala__=True)
-sem_professor = Professor('', {}, __sem_professor__=True)
+    @classmethod
+    def from_json(cls, d):
+        return cls(
+            professores=[Professor.from_json(p) for p in d['professores']],
+            salas=[Sala.from_json(s) for s in d['salas']],
+            disciplinas={
+                d['nome']: Disciplina.from_json(d)
+                for d in d['disciplinas'].values()
+            },
+            horarios=d['horarios'],
+            distancias=d['distancias'],
+            choques=d['choques']
+        )

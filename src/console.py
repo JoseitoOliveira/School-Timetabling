@@ -5,18 +5,20 @@
 
 """
 
+from copy import copy
 import logging
 
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QTextEdit
-from PyQt5.QtWidgets import QMainWindow, QLayout
+from datetime import datetime
 
 
 class Console(logging.Handler):
 
-    def __init__(self, parent):
+    def __init__(self, widget: QTextEdit, name='console'):
         super().__init__()
-        self.widget = QTextEdit(parent)
+        self.widget = widget
+        self.name = name
         self.widget.setReadOnly(True)
         self.widget.setStyleSheet(
             "background-color: rgba(0,0,0,0); border: 0px;")
@@ -25,27 +27,45 @@ class Console(logging.Handler):
     def clear(self):
         self.widget.clear()
 
+    def add_logging(self, level: int = logging.INFO):
+        formatter = logging.Formatter(
+            '<span style="color: #999999;">%(asctime)s</span> %(message)s',
+            datefmt='%H:%M:%S'
+        )
+        self.setFormatter(formatter)
+        logging.getLogger().addHandler(self)
+        logging.getLogger().setLevel(level)
+
+    def __call__(self, *args, **kwds):
+        for arg in args:
+            if isinstance(arg, Msg):
+                msg = arg.fmt
+
+            elif isinstance(arg, str):
+                msg = str(arg)
+
+            else:
+                continue
+
+            for line in msg.split('<br>'):
+                now = datetime.now().strftime('%H:%M:%S')
+                formmated = f'<span style="color: #ff5555;">{now}</span> {line}'
+                self.widget.append(formmated)
+
+            QtCore.QCoreApplication.processEvents()
+
     def emit(self, record):
         if isinstance(record.msg, Msg):
             record.msg = record.msg.fmt
 
-        msg = self.format(record)
-        self.widget.append(msg)
+        for line in record.msg.split('<br>'):
+            _record = copy(record)
+            _record.msg = line
+
+            msg = self.format(_record)
+            self.widget.append(msg)
+
         QtCore.QCoreApplication.processEvents()
-
-
-def create_console(parent: QMainWindow, container_layout: QLayout):
-    logTextBox = Console(parent)
-    formatter = logging.Formatter(
-        '<span style="color: #ff5555;">%(asctime)s</span> %(message)s',
-        datefmt='%H:%M:%S'
-    )
-    logTextBox.setFormatter(formatter)
-    logging.getLogger().addHandler(logTextBox)
-    logging.getLogger().setLevel(logging.DEBUG)
-
-    container_layout.addWidget(logTextBox.widget)
-    parent.setLayout(container_layout)
 
 
 class Style:

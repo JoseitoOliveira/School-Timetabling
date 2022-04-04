@@ -1,6 +1,6 @@
 {
-    "professores": [
-        {
+    "professores": {
+        "1": {
             "nome": "Lucas Hartmann",
             "afinidade_disciplinas": {
                 "ASD": 2,
@@ -19,7 +19,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "2": {
             "nome": "Ademar",
             "afinidade_disciplinas": {
                 "Informática Industrial": 1,
@@ -32,7 +32,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "3": {
             "nome": "Rogerio Gaspar",
             "afinidade_disciplinas": {
                 "Equipamentos": 2,
@@ -45,7 +45,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "4": {
             "nome": "Nady Rocha",
             "afinidade_disciplinas": {
                 "Instalações Elétricas": 2,
@@ -61,7 +61,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "5": {
             "nome": "Alexandre",
             "afinidade_disciplinas": {
                 "Circuitos I": 2,
@@ -77,7 +77,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "6": {
             "nome": "Camila Gehrke",
             "afinidade_disciplinas": {
                 "Circuitos Lógicos": 2,
@@ -92,7 +92,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "7": {
             "nome": "José Maurício",
             "afinidade_disciplinas": {
                 "Circuitos Lógicos": 2,
@@ -105,7 +105,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "8": {
             "nome": "Cícero",
             "afinidade_disciplinas": {
                 "Instrumentação Eletrônica": 2,
@@ -116,7 +116,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "9": {
             "nome": "Darlan",
             "afinidade_disciplinas": {
                 "Teoria do Controle": 2,
@@ -128,7 +128,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "10": {
             "nome": "Fabiano",
             "afinidade_disciplinas": {
                 "Máquinas Elétricas": 2,
@@ -157,7 +157,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "11": {
             "nome": "Alexsandro",
             "afinidade_disciplinas": {
                 "Controle I": 2,
@@ -170,7 +170,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "12": {
             "nome": "Fabrício",
             "afinidade_disciplinas": {
                 "Princípios de Comunicações": 2,
@@ -186,7 +186,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "13": {
             "nome": "Romero",
             "afinidade_disciplinas": {
                 "Eletrônica de Potência": 2,
@@ -197,7 +197,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "14": {
             "nome": "Yuri",
             "afinidade_disciplinas": {
                 "Técnicas de Medição": 2,
@@ -210,7 +210,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "15": {
             "nome": "Helon",
             "afinidade_disciplinas": {
                 "Análise de Sistemas Elétricos": 2,
@@ -221,7 +221,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "16": {
             "nome": "Felipe Vigolvino",
             "afinidade_disciplinas": {
                 "Proteção de Sistemas": 2,
@@ -232,7 +232,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "17": {
             "nome": "Antônio Augusto",
             "afinidade_disciplinas": {
                 "Concepção de CI": 2,
@@ -245,7 +245,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "18": {
             "nome": "Euler",
             "afinidade_disciplinas": {
                 "Filtros": 2,
@@ -260,7 +260,7 @@
                 "CTJ203": 10
             }
         },
-        {
+        "19": {
             "nome": "Juan",
             "afinidade_disciplinas": {
                 "Eventos Discretos": 2,
@@ -275,7 +275,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "20": {
             "nome": "Carlos",
             "afinidade_disciplinas": {
                 "Instrumentação Industrial": 2,
@@ -287,7 +287,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "21": {
             "nome": "Isaac",
             "afinidade_disciplinas": {
                 "Acionamentos e Circuitos Elétricos": 2,
@@ -298,7 +298,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "22": {
             "nome": "Waslon",
             "afinidade_disciplinas": {
                 "Análise de Sinais e Sistemas": 2,
@@ -311,7 +311,7 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         },
-        {
+        "23": {
             "nome": "Protásio",
             "afinidade_disciplinas": {
                 "Microc e Microp": 2,
@@ -322,65 +322,9 @@
             "afinidade_horarios": {},
             "afinidade_salas": {}
         }
-    ],
-    "salas": [
-        {
-            "nome": "CTJ201",
-            "capacidade": 40,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTJ202",
-            "capacidade": 40,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTJ203",
-            "capacidade": 40,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTM1",
-            "capacidade": 30,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTM2",
-            "capacidade": 30,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTM3",
-            "capacidade": 30,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "CTM4",
-            "capacidade": 30,
-            "laboratorio": false,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "LMI",
-            "capacidade": 30,
-            "laboratorio": true,
-            "afinidade_horarios": {}
-        },
-        {
-            "nome": "LMA",
-            "capacidade": 30,
-            "laboratorio": true,
-            "afinidade_horarios": {}
-        }
-    ],
+    },
     "disciplinas": {
-        "Física I": {
+        "1": {
             "nome": "Física I",
             "num_alunos": 20,
             "grades": [
@@ -477,10 +421,10 @@
                     "slice_f": 5
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Vetorial I": {
+        "2": {
             "nome": "Vetorial I",
             "num_alunos": 20,
             "grades": [
@@ -577,10 +521,10 @@
                     "slice_f": 10
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Cálculo I": {
+        "3": {
             "nome": "Cálculo I",
             "num_alunos": 20,
             "grades": [
@@ -677,10 +621,10 @@
                     "slice_f": 15
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Português": {
+        "4": {
             "nome": "Português",
             "num_alunos": 20,
             "grades": [
@@ -777,10 +721,10 @@
                     "slice_f": 20
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Inglês": {
+        "5": {
             "nome": "Inglês",
             "num_alunos": 20,
             "grades": [
@@ -937,10 +881,10 @@
                     "slice_f": 27
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Metodologia": {
+        "6": {
             "nome": "Metodologia",
             "num_alunos": 20,
             "grades": [
@@ -997,10 +941,10 @@
                     "slice_f": 30
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Técincas Aplicadas de IA": {
+        "7": {
             "nome": "Técincas Aplicadas de IA",
             "num_alunos": 20,
             "grades": [
@@ -1159,7 +1103,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Desenho": {
+        "8": {
             "nome": "Desenho",
             "num_alunos": 20,
             "grades": [
@@ -1256,10 +1200,10 @@
                     "slice_f": 40
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Física II": {
+        "9": {
             "nome": "Física II",
             "num_alunos": 20,
             "grades": [
@@ -1359,7 +1303,7 @@
             "sem_professor": true,
             "sem_sala": true
         },
-        "Cálculo II": {
+        "10": {
             "nome": "Cálculo II",
             "num_alunos": 20,
             "grades": [
@@ -1459,7 +1403,7 @@
             "sem_professor": true,
             "sem_sala": true
         },
-        "Linear": {
+        "11": {
             "nome": "Linear",
             "num_alunos": 20,
             "grades": [
@@ -1556,10 +1500,10 @@
                     "slice_f": 55
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Cálcudo de Fluxo de Potência": {
+        "12": {
             "nome": "Cálcudo de Fluxo de Potência",
             "num_alunos": 20,
             "grades": [
@@ -1713,10 +1657,10 @@
                     "slice_f": 60
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Otimização Aplicada": {
+        "13": {
             "nome": "Otimização Aplicada",
             "num_alunos": 20,
             "grades": [
@@ -1870,10 +1814,10 @@
                     "slice_f": 65
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Química": {
+        "14": {
             "nome": "Química",
             "num_alunos": 20,
             "grades": [
@@ -1970,10 +1914,10 @@
                     "slice_f": 70
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "IC": {
+        "15": {
             "nome": "IC",
             "num_alunos": 20,
             "grades": [
@@ -2070,10 +2014,10 @@
                     "slice_f": 75
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Administração": {
+        "16": {
             "nome": "Administração",
             "num_alunos": 20,
             "grades": [
@@ -2130,10 +2074,10 @@
                     "slice_f": 78
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Circuitos Lógicos": {
+        "17": {
             "nome": "Circuitos Lógicos",
             "num_alunos": 20,
             "grades": [
@@ -2308,7 +2252,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Física III": {
+        "18": {
             "nome": "Física III",
             "num_alunos": 20,
             "grades": [
@@ -2405,10 +2349,10 @@
                     "slice_f": 88
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Experimental I": {
+        "19": {
             "nome": "Experimental I",
             "num_alunos": 20,
             "grades": [
@@ -2475,10 +2419,10 @@
                     "slice_f": 91
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Equações": {
+        "20": {
             "nome": "Equações",
             "num_alunos": 20,
             "grades": [
@@ -2575,10 +2519,10 @@
                     "slice_f": 96
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Cálculo III": {
+        "21": {
             "nome": "Cálculo III",
             "num_alunos": 20,
             "grades": [
@@ -2678,7 +2622,7 @@
             "sem_professor": true,
             "sem_sala": true
         },
-        "Probabilidades": {
+        "22": {
             "nome": "Probabilidades",
             "num_alunos": 20,
             "grades": [
@@ -2775,10 +2719,10 @@
                     "slice_f": 106
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "ICM": {
+        "23": {
             "nome": "ICM",
             "num_alunos": 20,
             "grades": [
@@ -2875,10 +2819,10 @@
                     "slice_f": 111
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "ASD": {
+        "24": {
             "nome": "ASD",
             "num_alunos": 20,
             "grades": [
@@ -3038,10 +2982,10 @@
                     "slice_f": 116
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Experimental II": {
+        "25": {
             "nome": "Experimental II",
             "num_alunos": 20,
             "grades": [
@@ -3108,10 +3052,10 @@
                     "slice_f": 119
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Complexas": {
+        "26": {
             "nome": "Complexas",
             "num_alunos": 20,
             "grades": [
@@ -3208,10 +3152,10 @@
                     "slice_f": 124
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Numérico": {
+        "27": {
             "nome": "Numérico",
             "num_alunos": 20,
             "grades": [
@@ -3308,10 +3252,10 @@
                     "slice_f": 129
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Estocásticos": {
+        "28": {
             "nome": "Estocásticos",
             "num_alunos": 20,
             "grades": [
@@ -3408,10 +3352,10 @@
                     "slice_f": 134
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Sociologia": {
+        "29": {
             "nome": "Sociologia",
             "num_alunos": 20,
             "grades": [
@@ -3508,10 +3452,10 @@
                     "slice_f": 139
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Sólidos I": {
+        "30": {
             "nome": "Sólidos I",
             "num_alunos": 20,
             "grades": [
@@ -3611,7 +3555,7 @@
             "sem_professor": true,
             "sem_sala": true
         },
-        "Circuitos I": {
+        "31": {
             "nome": "Circuitos I",
             "num_alunos": 22,
             "grades": [
@@ -3761,7 +3705,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Dispositivos": {
+        "32": {
             "nome": "Dispositivos",
             "num_alunos": 22,
             "grades": [
@@ -3915,10 +3859,10 @@
                     "slice_f": 154
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Eletromagnetismo": {
+        "33": {
             "nome": "Eletromagnetismo",
             "num_alunos": 22,
             "grades": [
@@ -4015,10 +3959,10 @@
                     "slice_f": 159
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Circuitos II": {
+        "34": {
             "nome": "Circuitos II",
             "num_alunos": 22,
             "grades": [
@@ -4173,7 +4117,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Técnicas de Programação": {
+        "35": {
             "nome": "Técnicas de Programação",
             "num_alunos": 22,
             "grades": [
@@ -4321,10 +4265,10 @@
                     "slice_f": 169
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "FONTES RENOVÁVEIS E QUALIDADE DE ENERGIA PÓS": {
+        "36": {
             "nome": "FONTES RENOVÁVEIS E QUALIDADE DE ENERGIA PÓS",
             "num_alunos": 22,
             "grades": [
@@ -4494,10 +4438,10 @@
                     "slice_f": 174
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Análise de Sinais e Sistemas": {
+        "37": {
             "nome": "Análise de Sinais e Sistemas",
             "num_alunos": 22,
             "grades": [
@@ -4651,10 +4595,10 @@
                     "slice_f": 179
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Sólidos II": {
+        "38": {
             "nome": "Sólidos II",
             "num_alunos": 22,
             "grades": [
@@ -4741,10 +4685,10 @@
                     "slice_f": 184
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Economia I": {
+        "39": {
             "nome": "Economia I",
             "num_alunos": 22,
             "grades": [
@@ -4831,10 +4775,10 @@
                     "slice_f": 189
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": true
+            "sem_professor": 2,
+            "sem_sala": 2
         },
-        "Mecânica dos Flúidos": {
+        "40": {
             "nome": "Mecânica dos Flúidos",
             "num_alunos": 22,
             "grades": [
@@ -4954,10 +4898,10 @@
                     "slice_f": 194
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": false
+            "sem_professor": 2,
+            "sem_sala": 0
         },
-        "Ciências do Ambiente": {
+        "41": {
             "nome": "Ciências do Ambiente",
             "num_alunos": 22,
             "grades": [
@@ -5057,10 +5001,10 @@
                     "slice_f": 197
                 }
             ],
-            "sem_professor": true,
-            "sem_sala": false
+            "sem_professor": 2,
+            "sem_sala": 0
         },
-        "Teoria do Controle": {
+        "42": {
             "nome": "Teoria do Controle",
             "num_alunos": 22,
             "grades": [
@@ -5216,7 +5160,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Eletrônica": {
+        "43": {
             "nome": "Eletrônica",
             "num_alunos": 22,
             "grades": [
@@ -5382,10 +5326,10 @@
                     "slice_f": 209
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Materiais Elétricos": {
+        "44": {
             "nome": "Materiais Elétricos",
             "num_alunos": 22,
             "grades": [
@@ -5544,10 +5488,10 @@
                     "slice_f": 216
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Conversão": {
+        "45": {
             "nome": "Conversão",
             "num_alunos": 22,
             "grades": [
@@ -5733,7 +5677,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Pesquisa": {
+        "46": {
             "nome": "Pesquisa",
             "num_alunos": 22,
             "grades": [
@@ -5857,10 +5801,10 @@
                     "slice_f": 227
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Instrumentação Eletrônica": {
+        "47": {
             "nome": "Instrumentação Eletrônica",
             "num_alunos": 10,
             "grades": [
@@ -5985,7 +5929,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Máquinas Elétricas": {
+        "48": {
             "nome": "Máquinas Elétricas",
             "num_alunos": 20,
             "grades": [
@@ -6155,7 +6099,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Controle I": {
+        "49": {
             "nome": "Controle I",
             "num_alunos": 15,
             "grades": [
@@ -6336,7 +6280,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Princípios de Comunicações": {
+        "50": {
             "nome": "Princípios de Comunicações",
             "num_alunos": 12,
             "grades": [
@@ -6490,10 +6434,10 @@
                     "slice_f": 253
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Sistemas Elétricos": {
+        "51": {
             "nome": "Sistemas Elétricos",
             "num_alunos": 20,
             "grades": [
@@ -6637,10 +6581,10 @@
                     "slice_f": 258
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Eletrônica de Potência": {
+        "52": {
             "nome": "Eletrônica de Potência",
             "num_alunos": 25,
             "grades": [
@@ -6782,10 +6726,10 @@
                     "slice_f": 263
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Instalações Elétricas": {
+        "53": {
             "nome": "Instalações Elétricas",
             "num_alunos": 20,
             "grades": [
@@ -6943,10 +6887,10 @@
                     "slice_f": 268
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Técnicas de Medição": {
+        "54": {
             "nome": "Técnicas de Medição",
             "num_alunos": 22,
             "grades": [
@@ -7104,7 +7048,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Análise de Sistemas Elétricos": {
+        "55": {
             "nome": "Análise de Sistemas Elétricos",
             "num_alunos": 15,
             "grades": [
@@ -7259,7 +7203,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Filtros": {
+        "56": {
             "nome": "Filtros",
             "num_alunos": 15,
             "grades": [
@@ -7451,7 +7395,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Métodos Numéricos": {
+        "57": {
             "nome": "Métodos Numéricos",
             "num_alunos": 22,
             "grades": [
@@ -7604,10 +7548,10 @@
                     "slice_f": 288
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Instrumentação Industrial": {
+        "58": {
             "nome": "Instrumentação Industrial",
             "num_alunos": 15,
             "grades": [
@@ -7774,10 +7718,10 @@
                     "slice_f": 293
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Acionamentos e Circuitos Elétricos": {
+        "59": {
             "nome": "Acionamentos e Circuitos Elétricos",
             "num_alunos": 15,
             "grades": [
@@ -7930,10 +7874,10 @@
                     "slice_f": 298
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Microc e Microp": {
+        "60": {
             "nome": "Microc e Microp",
             "num_alunos": 15,
             "grades": [
@@ -8087,10 +8031,10 @@
                     "slice_f": 303
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Automação Inteligente": {
+        "61": {
             "nome": "Automação Inteligente",
             "num_alunos": 15,
             "grades": [
@@ -8249,7 +8193,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Conversores Estaticos e Eletromecânicos": {
+        "62": {
             "nome": "Conversores Estaticos e Eletromecânicos",
             "num_alunos": 15,
             "grades": [
@@ -8405,7 +8349,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Informática Industrial": {
+        "63": {
             "nome": "Informática Industrial",
             "num_alunos": 15,
             "grades": [
@@ -8559,10 +8503,10 @@
                     "slice_f": 318
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Sistemas de Aquisição": {
+        "64": {
             "nome": "Sistemas de Aquisição",
             "num_alunos": 15,
             "grades": [
@@ -8719,7 +8663,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Sistemas de Automação Industrial": {
+        "65": {
             "nome": "Sistemas de Automação Industrial",
             "num_alunos": 15,
             "grades": [
@@ -8872,10 +8816,10 @@
                     "slice_f": 328
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Eventos Discretos": {
+        "66": {
             "nome": "Eventos Discretos",
             "num_alunos": 15,
             "grades": [
@@ -9050,10 +8994,10 @@
                     "slice_f": 333
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Tempo Real": {
+        "67": {
             "nome": "Tempo Real",
             "num_alunos": 15,
             "grades": [
@@ -9213,10 +9157,10 @@
                     "slice_f": 338
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "PDS": {
+        "68": {
             "nome": "PDS",
             "num_alunos": 15,
             "grades": [
@@ -9386,7 +9330,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Audio e Vídeo": {
+        "69": {
             "nome": "Audio e Vídeo",
             "num_alunos": 15,
             "grades": [
@@ -9558,7 +9502,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Concepção de CI": {
+        "70": {
             "nome": "Concepção de CI",
             "num_alunos": 15,
             "grades": [
@@ -9715,7 +9659,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Comunicação Digital": {
+        "71": {
             "nome": "Comunicação Digital",
             "num_alunos": 15,
             "grades": [
@@ -9872,10 +9816,10 @@
                     "slice_f": 358
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Arquitetura Avançada": {
+        "72": {
             "nome": "Arquitetura Avançada",
             "num_alunos": 15,
             "grades": [
@@ -10051,7 +9995,7 @@
             "sem_professor": false,
             "sem_sala": false
         },
-        "Circuitos para Comunicações": {
+        "73": {
             "nome": "Circuitos para Comunicações",
             "num_alunos": 15,
             "grades": [
@@ -10218,10 +10162,10 @@
                     "slice_f": 368
                 }
             ],
-            "sem_professor": false,
+            "sem_professor": 0,
             "sem_sala": false
         },
-        "Proteção de Sistemas": {
+        "74": {
             "nome": "Proteção de Sistemas",
             "num_alunos": 15,
             "grades": [
@@ -10386,10 +10330,10 @@
                     "slice_f": 373
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Distribuição": {
+        "75": {
             "nome": "Distribuição",
             "num_alunos": 15,
             "grades": [
@@ -10541,10 +10485,10 @@
                     "slice_f": 378
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Equipamentos": {
+        "76": {
             "nome": "Equipamentos",
             "num_alunos": 15,
             "grades": [
@@ -10714,10 +10658,10 @@
                     "slice_f": 383
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Gestão": {
+        "77": {
             "nome": "Gestão",
             "num_alunos": 15,
             "grades": [
@@ -10882,10 +10826,10 @@
                     "slice_f": 388
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Geração": {
+        "78": {
             "nome": "Geração",
             "num_alunos": 15,
             "grades": [
@@ -11039,10 +10983,10 @@
                     "slice_f": 393
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Fontes": {
+        "79": {
             "nome": "Fontes",
             "num_alunos": 15,
             "grades": [
@@ -11198,10 +11142,10 @@
                     "slice_f": 398
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "Acionamentos e Controles Elétricos": {
+        "80": {
             "nome": "Acionamentos e Controles Elétricos",
             "num_alunos": 15,
             "grades": [
@@ -11359,10 +11303,10 @@
                     "slice_f": 403
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
-        "ACIONAMENTOS DE MÁQUINAS ELÉTRICAS PÓS": {
+        "81": {
             "nome": "ACIONAMENTOS DE MÁQUINAS ELÉTRICAS PÓS",
             "num_alunos": 15,
             "grades": [
@@ -11523,168 +11467,188 @@
             "sem_sala": false
         }
     },
-    "horarios": [
-        "2M1",
-        "2M2",
-        "2M3",
-        "2M4",
-        "2M5",
-        "2T1",
-        "2T2",
-        "2T3",
-        "2T4",
-        "2T5",
-        "3M1",
-        "3M2",
-        "3M3",
-        "3M4",
-        "3M5",
-        "3T1",
-        "3T2",
-        "3T3",
-        "3T4",
-        "3T5",
-        "4M1",
-        "4M2",
-        "4M3",
-        "4M4",
-        "4M5",
-        "4T1",
-        "4T2",
-        "4T3",
-        "4T4",
-        "4T5",
-        "5M1",
-        "5M2",
-        "5M3",
-        "5M4",
-        "5M5",
-        "5T1",
-        "5T2",
-        "5T3",
-        "5T4",
-        "5T5",
-        "6M1",
-        "6M2",
-        "6M3",
-        "6M4",
-        "6M5",
-        "6T1",
-        "6T2",
-        "6T3",
-        "6T4",
-        "6T5",
-        "7M1",
-        "7M2",
-        "7M3",
-        "7M4",
-        "7M5",
-        "7T1",
-        "7T2",
-        "7T3",
-        "7T4",
-        "7T5"
-    ],
-    "distancias": {
-        "CTJ201": {
-            "CTM1": 100,
-            "CTM2": 100,
-            "CTM3": 100,
-            "CTM4": 100,
-            "LMI": 100,
-            "LMA": 100,
-            "CTJ201": 0,
-            "CTJ202": 10,
-            "CTJ203": 20
+    "salas": {
+        "1": {
+            "nome": "CTJ201",
+            "capacidade": 40,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTJ202": {
-            "CTM1": 100,
-            "CTM2": 100,
-            "CTM3": 100,
-            "CTM4": 100,
-            "LMI": 100,
-            "LMA": 100,
-            "CTJ201": 10,
-            "CTJ202": 0,
-            "CTJ203": 10
+        "2": {
+            "nome": "CTJ202",
+            "capacidade": 40,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTJ203": {
-            "CTM1": 100,
-            "CTM2": 100,
-            "CTM3": 100,
-            "CTM4": 100,
-            "LMI": 100,
-            "LMA": 100,
-            "CTJ201": 20,
-            "CTJ202": 10,
-            "CTJ203": 0
+        "3": {
+            "nome": "CTJ203",
+            "capacidade": 40,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTM1": {
-            "CTM1": 0,
-            "CTM2": 10,
-            "CTM3": 20,
-            "CTM4": 30,
-            "LMI": 40,
-            "LMA": 50,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "4": {
+            "nome": "CTM1",
+            "capacidade": 30,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTM2": {
-            "CTM1": 10,
-            "CTM2": 0,
-            "CTM3": 10,
-            "CTM4": 20,
-            "LMI": 40,
-            "LMA": 50,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "5": {
+            "nome": "CTM2",
+            "capacidade": 30,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTM3": {
-            "CTM1": 20,
-            "CTM2": 10,
-            "CTM3": 0,
-            "CTM4": 10,
-            "LMI": 40,
-            "LMA": 50,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "6": {
+            "nome": "CTM3",
+            "capacidade": 30,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "CTM4": {
-            "CTM1": 30,
-            "CTM2": 20,
-            "CTM3": 10,
-            "CTM4": 0,
-            "LMI": 40,
-            "LMA": 50,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "7": {
+            "nome": "CTM4",
+            "capacidade": 30,
+            "laboratorio": false,
+            "afinidade_horarios": {}
         },
-        "LMI": {
-            "CTM1": 30,
-            "CTM2": 20,
-            "CTM3": 10,
-            "CTM4": 0,
-            "LMI": 0,
-            "LMA": 50,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "8": {
+            "nome": "LMI",
+            "capacidade": 30,
+            "laboratorio": true,
+            "afinidade_horarios": {}
         },
-        "LMA": {
-            "CTM1": 40,
-            "CTM2": 30,
-            "CTM3": 20,
-            "CTM4": 10,
-            "LMI": 0,
-            "LMA": 0,
-            "CTJ201": 100,
-            "CTJ202": 100,
-            "CTJ203": 100
+        "9": {
+            "nome": "LMA",
+            "capacidade": 30,
+            "laboratorio": true,
+            "afinidade_horarios": {}
         }
     },
-    "choques": {}
+    "distancias": {
+        "1": {
+            "sala": "CTJ201",
+            "distancias": {
+                "CTM1": 100,
+                "CTM2": 100,
+                "CTM3": 100,
+                "CTM4": 100,
+                "LMI": 100,
+                "LMA": 100,
+                "CTJ201": 0,
+                "CTJ202": 10,
+                "CTJ203": 20
+            }
+        },
+        "2": {
+            "sala": "CTJ202",
+            "distancias": {
+                "CTM1": 100,
+                "CTM2": 100,
+                "CTM3": 100,
+                "CTM4": 100,
+                "LMI": 100,
+                "LMA": 100,
+                "CTJ201": 10,
+                "CTJ202": 0,
+                "CTJ203": 10
+            }
+        },
+        "3": {
+            "sala": "CTJ203",
+            "distancias": {
+                "CTM1": 100,
+                "CTM2": 100,
+                "CTM3": 100,
+                "CTM4": 100,
+                "LMI": 100,
+                "LMA": 100,
+                "CTJ201": 20,
+                "CTJ202": 10,
+                "CTJ203": 0
+            }
+        },
+        "4": {
+            "sala": "CTM1",
+            "distancias": {
+                "CTM1": 0,
+                "CTM2": 10,
+                "CTM3": 20,
+                "CTM4": 30,
+                "LMI": 40,
+                "LMA": 50,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        },
+        "5": {
+            "sala": "CTM2",
+            "distancias": {
+                "CTM1": 10,
+                "CTM2": 0,
+                "CTM3": 10,
+                "CTM4": 20,
+                "LMI": 40,
+                "LMA": 50,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        },
+        "6": {
+            "sala": "CTM3",
+            "distancias": {
+                "CTM1": 20,
+                "CTM2": 10,
+                "CTM3": 0,
+                "CTM4": 10,
+                "LMI": 40,
+                "LMA": 50,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        },
+        "7": {
+            "sala": "CTM4",
+            "distancias": {
+                "CTM1": 30,
+                "CTM2": 20,
+                "CTM3": 10,
+                "CTM4": 0,
+                "LMI": 40,
+                "LMA": 50,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        },
+        "8": {
+            "sala": "LMI",
+            "distancias": {
+                "CTM1": 30,
+                "CTM2": 20,
+                "CTM3": 10,
+                "CTM4": 0,
+                "LMI": 0,
+                "LMA": 50,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        },
+        "9": {
+            "sala": "LMA",
+            "distancias": {
+                "CTM1": 40,
+                "CTM2": 30,
+                "CTM3": 20,
+                "CTM4": 10,
+                "LMI": 0,
+                "LMA": 0,
+                "CTJ201": 100,
+                "CTJ202": 100,
+                "CTJ203": 100
+            }
+        }
+    }
 }

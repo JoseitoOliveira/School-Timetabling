@@ -108,31 +108,33 @@ class Fitness:
              qtd_horas, horarios,
              grades, professor) = extrair_dados(disciplina, individuo)
 
-            nome_disciplina = disciplina.nome
-
-            fit.choque_salas += self.fit_choque_salas(salas,
-                                                      horarios, nome_disciplina)
-            fit.choque_professor += self.fit_choque_profe(professor, horarios)
             fit.choque_grade += self.fit_choque_grade(grades, horarios)
             fit.choque_laboratorios += self.fit_choque_laboratorios(laboratorios,
                                                                     horarios,
-                                                                    nome_disciplina)
-            fit.afinidade_professor_disciplina += self.fit_afinidade_professor_disciplina(
-                professor, nome_disciplina)
-            fit.afinidade_professor_horarios += self.fit_afinidade_professor_horarios(
-                professor, horarios)
+                                                                    disciplina.nome)
 
-            fit.afinidade_professor_salas += self.fit_afinidade_professor_salas(
-                professor, salas)
-            fit.afinidade_salas_horarios += self.fit_afinidade_salas_horarios(
-                salas, horarios)
             fit.mesmo_turno += self.fit_mesmo_turno(i_h)
             fit.aulas_no_mesmo_dia += self.fit_aulas_no_mesmo_dia(i_h)
             fit.aulas_aos_sabados += self.fit_aulas_aos_sabados(i_h)
             fit.aulas_em_dias_seguidos += self.fit_aulas_em_dias_seguidos(i_h)
 
-            self.contabilizar_horas_professor(professor, disciplina.horas)
-            self.adicionar_grade_dia_sala(salas, horarios, grades)
+            if not disciplina.sem_sala:
+                fit.choque_salas += self.fit_choque_salas(
+                    salas, horarios, disciplina.nome)
+                fit.afinidade_salas_horarios += self.fit_afinidade_salas_horarios(
+                    salas, horarios)
+                self.adicionar_grade_dia_sala(salas, horarios, grades)
+
+            if not disciplina.sem_professor:
+                fit.afinidade_professor_disciplina += self.fit_afinidade_professor_disciplina(
+                    professor, disciplina.nome)
+                fit.choque_professor += self.fit_choque_profe(
+                    professor, horarios)
+                fit.afinidade_professor_horarios += self.fit_afinidade_professor_horarios(
+                    professor, horarios)
+                fit.afinidade_professor_salas += self.fit_afinidade_professor_salas(
+                    professor, salas)
+                self.contabilizar_horas_professor(professor, disciplina.horas)
 
         fit.distancia_percorrida += self.fit_distancia_percorrida()
         fit.choque_disciplinas += self.fit_choque_disciplinas(individuo)
@@ -152,14 +154,11 @@ class Fitness:
         return fit
 
     def contabilizar_horas_professor(self, professor: Professor, horas):
-        if not professor.sem_professor:
-            self.horas_professor[professor.nome] += sum(horas)
+        self.horas_professor[professor.nome] += sum(horas)
 
     def fit_choque_profe(self, profe: Professor, horarios: list[list[int]]):
         """Verifica se o professor está ocupada no horário"""
         fit = 0
-        if profe.sem_professor:
-            return 0
         nome_professor = profe.nome
         for h in chain(*horarios):
             tag = f'{nome_professor}{h}'
@@ -187,7 +186,13 @@ class Fitness:
         mudanca_turno = reduce(lambda x, y: x != y, turnos,)
         return MUDANCA_DE_TURNO if mudanca_turno else 0
 
-    def fit_choque_laboratorios(self, laboratorios: list[Sala], horarios: list[list[int]], nome_disciplina: str):
+    def fit_choque_laboratorios(self, laboratorios: list[Sala],
+                                horarios: list[list[int]],
+                                nome_disciplina: str):
+        """
+        Verifica se o laboratório está ocupado no horário por
+        mais de NUM_DISCIPLINA_POR_LAB disciplinas
+        """
         fit = 0
         for lab, _horarios in zip(laboratorios, horarios):
             for h in _horarios:
@@ -214,6 +219,10 @@ class Fitness:
         return fit
 
     def fit_choque_disciplinas(self, ind):
+        """
+        Verifica se disciplinas que não devem chocar se choram no mesmo horário.
+        Essas disciplinas são definidas na chave "choques" no metadada.
+        """
         fit = 0
         for nome_disciplina, nome_outras in self.metadata.choques.items():
             disciplina = self.metadata.disciplinas[nome_disciplina]
@@ -230,10 +239,7 @@ class Fitness:
 
     def fit_afinidade_professor_disciplina(self, profe: Professor, nome_disciplina: str):
         """Verifica se o professor tem afinidade com a disciplina"""
-        if profe.sem_professor:
-            return 0
-        else:
-            return profe.afinidade_disciplinas[nome_disciplina]
+        return profe.afinidade_disciplinas[nome_disciplina]
 
     def fit_afinidade_professor_horarios(self, professor: Professor, horarios: list[list[int]]):
         """Verifica a afinidade do professor com o horário"""
@@ -264,8 +270,8 @@ class Fitness:
         """
         fit = 0
         for h1, h2 in pairwise(sorted(ini_horas)):
-            dia1 = int(h1/10)
-            dia2 = int(h2/10)
+            dia1 = int(h1 / 10)
+            dia2 = int(h2 / 10)
             if abs(dia1 - dia2) <= 1:
                 fit += AULAS_DIAS_SEGUIDOS
         return fit
@@ -275,7 +281,7 @@ class Fitness:
         fit = 0
         dias = []
         for h in ini_horas:
-            dia = int(h/10)
+            dia = int(h / 10)
             if dia in dias:
                 fit += AULAS_MESMO_DIA
             else:
@@ -290,19 +296,16 @@ class Fitness:
                 fit += AULAS_AOS_SABADOS
         return fit
 
-    def adicionar_grade_dia_sala(self, salas: list[Sala], horarios: list[list[int]], grades: list[str]):
+    def adicionar_grade_dia_sala(self, salas: list[Sala],
+                                 horarios: list[list[int]],
+                                 grades: list[str]):
         for _horarios, sala in zip(horarios, salas):
             for h in _horarios:
-                turno = int(h/5)
+                turno = int(h / 5)
                 for grade in grades:
                     self.grade_dia_sala[grade][turno].append((h, sala))
 
     def fit_distancia_percorrida(self):
-        def calc_distancia(s1: Sala, s2: Sala):
-            if s1.sem_sala or s2.sem_sala:
-                return 0
-            else:
-                return self.metadata.distancias[s1.nome][s2.nome]
         distancia = 0
         for grade in self.metadata.grades:
             _grade = self.grade_dia_sala[grade]
@@ -311,7 +314,7 @@ class Fitness:
                 if h_salas != []:
                     distancia += 1000
                 for (_, s1), (_, s2) in pairwise(h_salas):
-                    distancia += calc_distancia(s1, s2)
+                    distancia += self.metadata.distancias[s1.nome][s2.nome]
         return distancia * DISTANCIA_ENTRE_SALAS
 
 
