@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from tinydb import where
 
@@ -9,27 +9,61 @@ from src.horarios import horarios_str as horarios_1_str
 from src.horarios import sabado, todos
 
 
-@dataclass
 class Professor:
-    nome: str
-    afinidade_disciplinas: dict[str, int]
-    hrs_min: int = 8
-    hrs_max: int = 12
-    afinidade_horarios: dict[str, int] = field(default_factory=lambda: {})
-    afinidade_salas: dict[str, int] = field(default_factory=lambda: {})
 
-    __sem_professor__: bool = False
+    def __init__(
+        self,
+        nome: str,
+        afinidade_disciplinas: dict[str, int],
+        hrs_min: int = 8,
+        hrs_max: int = 12,
+        afinidade_horarios: dict[str, int] = {},
+        afinidade_salas: dict[str, int] = {}
+    ):
+        self._nome = nome
+        self._afinidade_disciplinas = afinidade_disciplinas
+        self._hrs_min = hrs_min
+        self._hrs_max = hrs_max
+        self._afinidade_horarios = afinidade_horarios
+        self._afinidade_salas = afinidade_salas
 
-    def set_nome(self, nome):
-        professores.update({'nome': nome}, where('nome') == self.nome)
-        self.nome = nome
+    @property
+    def nome(self):
+        return self._nome
 
-    def set_hrs_min(self, hrs_min):
-        self.hrs_min = hrs_min
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+        professores.update({'nome': self.nome}, where('nome') == self.nome)
+
+    @property
+    def afinidade_disciplinas(self):
+        return self._afinidade_disciplinas
+
+    @property
+    def afinidade_horarios(self):
+        return self._afinidade_horarios
+
+    @property
+    def afinidade_salas(self):
+        return self._afinidade_salas
+
+    @property
+    def hrs_min(self):
+        return self._hrs_min
+
+    @hrs_min.setter
+    def hrs_min(self, hrs_min):
+        self._hrs_min = hrs_min
         professores.update({'hrs_min': hrs_min}, where('nome') == self.nome)
 
-    def set_hrs_max(self, hrs_max):
-        self.hrs_max = hrs_max
+    @property
+    def hrs_max(self):
+        return self._hrs_max
+
+    @hrs_max.setter
+    def hrs_max(self, hrs_max):
+        self._hrs_max = hrs_max
         professores.update({'hrs_max': hrs_max}, where('nome') == self.nome)
 
     def set_afinidade_disciplinas(self, disciplina, afinidade):
@@ -56,10 +90,6 @@ class Professor:
         professores.update({'afinidade_salas': self.afinidade_salas},
                            where('nome') == self.nome)
 
-    @property
-    def sem_professor(self):
-        return self.__sem_professor__
-
     def as_json(self):
         return {
             'nome': self.nome,
@@ -82,18 +112,58 @@ class Professor:
         )
 
 
-@dataclass
 class Sala:
-    nome: str
-    capacidade: int
-    laboratorio: bool = False
-    afinidade_horarios: dict[str, int] = field(default_factory=lambda: {})
 
-    __sem_sala__: bool = False
+    def __init__(
+        self,
+        nome: str,
+        capacidade: int,
+        laboratorio: bool,
+        afinidade_horarios: dict[str, int] = {}
+    ):
+        self._nome = nome
+        self._capacidade = capacidade
+        self._laboratorio = laboratorio
+        self._afinidade_horarios = afinidade_horarios
 
     @property
-    def sem_sala(self):
-        return self.__sem_sala__
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+        salas.update({'nome': self.nome}, where('nome') == self.nome)
+
+    @property
+    def capacidade(self):
+        return self._capacidade
+
+    @capacidade.setter
+    def capacidade(self, capacidade):
+        self._capacidade = capacidade
+        salas.update({'capacidade': self.capacidade},
+                     where('nome') == self.nome)
+
+    @property
+    def laboratorio(self):
+        return self._laboratorio
+
+    @laboratorio.setter
+    def laboratorio(self, laboratorio):
+        self._laboratorio = laboratorio
+        salas.update({'laboratorio': self.laboratorio},
+                     where('nome') == self.nome)
+
+    @property
+    def afinidade_horarios(self):
+        return self._afinidade_horarios
+
+    @afinidade_horarios.setter
+    def afinidade_horarios(self, afinidade_horarios):
+        self._afinidade_horarios = afinidade_horarios
+        salas.update({'afinidade_horarios': self.afinidade_horarios},
+                     where('nome') == self.nome)
 
     def as_json(self):
         return {
@@ -142,32 +212,22 @@ class Cromossomo:
 
 
 class Disciplina:
-    nome: str
-    num_alunos: int
-    grades: list[str]
-    horas: list[int]
-    horarios: list[list[str]] = field(default_factory=lambda: [])
-    laboratorios: list[Sala] = field(default_factory=lambda: [])
-    salas: list[Sala] = field(default_factory=lambda: [])
-    professores: list[Professor] = field(default_factory=lambda: [])
-    cromossomos: list[Cromossomo] = field(default_factory=lambda: [])
-    aulas_aos_sabados: bool = False
-    sem_professor: bool = False
-    sem_sala: bool = False
 
-    def __init__(self,
-                 nome: str,
-                 num_alunos: int,
-                 grades: list[str],
-                 horas: list[int],
-                 horarios: list[list[str]],
-                 laboratorios: list[Sala],
-                 salas: list[Sala],
-                 professores: list[Professor],
-                 cromossomos: list[Cromossomo],
-                 aulas_aos_sabados: bool,
-                 sem_professor: bool,
-                 sem_sala: bool):
+    def __init__(
+            self,
+            nome: str,
+            num_alunos: int,
+            grades: list[str],
+            horas: list[int],
+            horarios: list[list[str]],
+            laboratorios: list[Sala],
+            salas: list[Sala],
+            professores: list[Professor],
+            cromossomos: list[Cromossomo],
+            aulas_aos_sabados: bool,
+            sem_professor: bool,
+            sem_sala: bool
+    ):
         self._nome = nome
         self._num_alunos = num_alunos
         self._grades = grades
@@ -186,27 +246,123 @@ class Disciplina:
 
         assert len(self.horarios) == len(self.horas)
 
-    def set_nome(self, nome):
-        disciplinas.update({'nome': nome}, where('nome') == self.nome)
-        self.nome = nome
+    @property
+    def nome(self):
+        return self._nome
 
-    def set_grades(self, grades):
-        self.grades = grades
-        disciplinas.update({'grades': grades}, where('nome') == self.nome)
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+        disciplinas.update({'nome': self.nome}, where('nome') == self.nome)
 
-    def set_num_alunos(self, num_alunos):
-        self.num_alunos = num_alunos
-        disciplinas.update({'num_alunos': num_alunos},
+    @property
+    def num_alunos(self):
+        return self._num_alunos
+
+    @num_alunos.setter
+    def num_alunos(self, num_alunos):
+        self._num_alunos = num_alunos
+        disciplinas.update({'num_alunos': self.num_alunos},
                            where('nome') == self.nome)
 
-    def set_sem_sala(self, sem_sala):
-        self.sem_sala = sem_sala
-        disciplinas.update({'sem_sala': sem_sala},
+    @property
+    def grades(self):
+        return self._grades
+
+    @grades.setter
+    def grades(self, grades):
+        self._grades = grades
+        disciplinas.update({'grades': self.grades},
                            where('nome') == self.nome)
 
-    def set_sem_professor(self, sem_professor):
-        self.sem_professor = sem_professor
-        disciplinas.update({'sem_professor': sem_professor},
+    @property
+    def horas(self):
+        return self._horas
+
+    @horas.setter
+    def horas(self, horas):
+        self._horas = horas
+        disciplinas.update({'horas': self.horas},
+                           where('nome') == self.nome)
+
+    @property
+    def horarios(self):
+        return self._horarios
+
+    @horarios.setter
+    def horarios(self, horarios):
+        self._horarios = horarios
+        disciplinas.update({'horarios': self.horarios},
+                           where('nome') == self.nome)
+
+    @property
+    def laboratorios(self):
+        return self._laboratorios
+
+    @laboratorios.setter
+    def laboratorios(self, laboratorios):
+        self._laboratorios = laboratorios
+        disciplinas.update({'laboratorios': self.laboratorios},
+                           where('nome') == self.nome)
+
+    @property
+    def salas(self):
+        return self._salas
+
+    @salas.setter
+    def salas(self, salas):
+        self._salas = salas
+        disciplinas.update({'salas': self.salas},
+                           where('nome') == self.nome)
+
+    @property
+    def professores(self):
+        return self._professores
+
+    @professores.setter
+    def professores(self, professores):
+        self._professores = professores
+        disciplinas.update({'professores': self.professores},
+                           where('nome') == self.nome)
+
+    @property
+    def cromossomos(self):
+        return self._cromossomos
+
+    @cromossomos.setter
+    def cromossomos(self, cromossomos):
+        self._cromossomos = cromossomos
+        disciplinas.update({'cromossomos': self.cromossomos},
+                           where('nome') == self.nome)
+
+    @property
+    def aulas_aos_sabados(self):
+        return self._aulas_aos_sabados
+
+    @aulas_aos_sabados.setter
+    def aulas_aos_sabados(self, aulas_aos_sabados):
+        self._aulas_aos_sabados = aulas_aos_sabados
+        disciplinas.update({'aulas_aos_sabados': self.aulas_aos_sabados},
+                           where('nome') == self.nome)
+
+    @property
+    def sem_professor(self):
+        return self._sem_professor
+
+    @sem_professor.setter
+    def sem_professor(self, sem_professor):
+        self._sem_professor = sem_professor
+        disciplinas.update({'sem_professor': self.sem_professor},
+                           where('nome') == self.nome)
+
+    @property
+    def sem_sala(self):
+        return self._sem_sala
+
+    @sem_sala.setter
+    def sem_sala(self, sem_sala):
+        self._sem_sala = sem_sala
+        disciplinas.update({'sem_sala': self.sem_sala},
                            where('nome') == self.nome)
 
     def add_aula(self, creditos):

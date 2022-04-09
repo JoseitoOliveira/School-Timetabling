@@ -242,7 +242,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.tab_profs)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.form_professor = QtWidgets.QGroupBox(self.tab_profs)
-        self.form_professor.setEnabled(False)
+        self.form_professor.setEnabled(True)
         self.form_professor.setStyleSheet("QGroupBox{border: 0px;}")
         self.form_professor.setObjectName("form_professor")
         self.layout_2 = QtWidgets.QFormLayout(self.form_professor)
@@ -331,7 +331,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.tab_salas)
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.form_sala = QtWidgets.QGroupBox(self.tab_salas)
-        self.form_sala.setEnabled(False)
+        self.form_sala.setEnabled(True)
         self.form_sala.setStyleSheet("QGroupBox{border: 0px;}")
         self.form_sala.setObjectName("form_sala")
         self.layout_3 = QtWidgets.QFormLayout(self.form_sala)
@@ -452,7 +452,7 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionsobre)
 
         self.retranslateUi(MainWindow)
-        self.tab_telas.setCurrentIndex(1)
+        self.tab_telas.setCurrentIndex(3)
         self.tab_horarios.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
