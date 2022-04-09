@@ -33,8 +33,8 @@ class Professor:
 
     @nome.setter
     def nome(self, nome):
+        professores.update({'nome': nome}, where('nome') == self.nome)
         self._nome = nome
-        professores.update({'nome': self.nome}, where('nome') == self.nome)
 
     @property
     def afinidade_disciplinas(self):
@@ -132,8 +132,8 @@ class Sala:
 
     @nome.setter
     def nome(self, nome):
+        salas.update({'nome': nome}, where('nome') == self.nome)
         self._nome = nome
-        salas.update({'nome': self.nome}, where('nome') == self.nome)
 
     @property
     def capacidade(self):
@@ -252,8 +252,8 @@ class Disciplina:
 
     @nome.setter
     def nome(self, nome):
+        disciplinas.update({'nome': nome}, where('nome') == self.nome)
         self._nome = nome
-        disciplinas.update({'nome': self.nome}, where('nome') == self.nome)
 
     @property
     def num_alunos(self):
