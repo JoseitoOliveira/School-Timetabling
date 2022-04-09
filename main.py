@@ -295,6 +295,7 @@ class Window(QMainWindow):
             )
 
     def grades_changed(self, grades):
+        grades = grades.split(' ')
         self.disciplina_atual.grades = grades
 
     def num_alunos_changed(self, value):
@@ -410,6 +411,20 @@ class Window(QMainWindow):
                 i, 1, cell_afinidade
             )
 
+    def carregar_distancia_salas(self):
+        self.ui.sala_distancias.setRowCount(0)
+        sala_distancias = distancias.get(
+            where('sala') == self.sala_atual.nome
+        )['distancias']
+
+        for i, outra_sala in enumerate(sala_distancias):
+            self.ui.sala_distancias.insertRow(i)
+            cell_sala = QTableWidgetItem(outra_sala)
+            cell_sala.setFlags(Qt.ItemFlag.ItemIsEnabled)
+            cell_dist = QTableWidgetItem(str(sala_distancias[outra_sala]))
+            self.ui.sala_distancias.setItem(i, 0, cell_sala)
+            self.ui.sala_distancias.setItem(i, 1, cell_dist)
+
     def exibir_professor_atual(self):
         self.ui.nome_professor.setText(self.professor_atual.nome)
         self.ui.horas_min_professor.setValue(self.professor_atual.hrs_min)
@@ -437,6 +452,7 @@ class Window(QMainWindow):
         self.ui.capacidade_sala.setValue(self.sala_atual.capacidade)
         self.ui.eh_laboratorio.setChecked(self.sala_atual.laboratorio)
         self.carregar_afinidade_sala_horarios()
+        self.carregar_distancia_salas()
 
     def set_disciplina_atual(self, *args, **kwargs):
         current_item = self.ui.list_disciplinas.currentItem()
