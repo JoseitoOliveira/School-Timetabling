@@ -1,0 +1,1350 @@
+19:23:25::INFO::olá mundo
+19:28:19::INFO::olá mundo
+19:37:09::INFO::olá mundo
+19:40:37::INFO::olá mundo
+19:43:38::INFO::olá mundo
+19:43:38::INFO::error catched!:
+19:43:38::INFO::error message:
+
+19:43:38::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 344, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 54, in __init__
+    QAbstractItemView.Stretch)
+AttributeError: type object 'QAbstractItemView' has no attribute 'Stretch'
+
+19:44:01::INFO::olá mundo
+19:47:14::INFO::olá mundo
+19:47:14::INFO::error catched!:
+19:47:14::INFO::error message:
+
+19:47:14::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 344, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 57, in __init__
+    self.tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 296, in tab_professores
+    self.ui.professor_afinidade_disciplina.addItems(
+AttributeError: 'Ui_MainWindow' object has no attribute 'professor_afinidade_disciplina'
+
+19:47:57::INFO::olá mundo
+19:47:57::INFO::error catched!:
+19:47:57::INFO::error message:
+
+19:47:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 344, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 52, in __init__
+    self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+AttributeError: 'Ui_MainWindow' object has no attribute 'tableWidget'
+
+19:49:21::INFO::olá mundo
+19:49:21::INFO::error catched!:
+19:49:21::INFO::error message:
+
+19:49:21::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 355, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 55, in __init__
+    self.tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 307, in tab_professores
+    self.ui.professor_afinidade_disciplina.addItems(
+AttributeError: 'QTableWidget' object has no attribute 'addItems'
+
+19:49:38::INFO::olá mundo
+19:50:15::INFO::olá mundo
+19:50:43::INFO::olá mundo
+20:00:55::INFO::olá mundo
+20:19:53::INFO::olá mundo
+20:20:36::INFO::error catched!:
+20:20:36::INFO::error message:
+
+20:20:36::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 388, in <module>
+    sys.exit(root.exec_())
+KeyboardInterrupt
+
+20:20:39::INFO::olá mundo
+20:26:09::INFO::olá mundo
+20:28:58::INFO::olá mundo
+20:29:23::INFO::olá mundo
+20:29:43::INFO::olá mundo
+20:31:06::INFO::olá mundo
+20:31:55::INFO::olá mundo
+20:54:52::INFO::olá mundo
+20:56:19::INFO::olá mundo
+20:56:19::INFO::error catched!:
+20:56:19::INFO::error message:
+
+20:56:19::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 443, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 53, in __init__
+    self.init_tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 111, in init_tab_professores
+    self.ui.professor_afinidade_disciplina.item.connect(
+AttributeError: 'builtin_function_or_method' object has no attribute 'connect'
+
+20:56:22::INFO::olá mundo
+20:56:22::INFO::error catched!:
+20:56:22::INFO::error message:
+
+20:56:22::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 443, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 53, in __init__
+    self.init_tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 111, in init_tab_professores
+    self.ui.professor_afinidade_disciplina.item.connect(
+AttributeError: 'builtin_function_or_method' object has no attribute 'connect'
+
+20:56:38::INFO::olá mundo
+20:56:39::INFO::Valor inválido
+20:56:45::INFO::Valor inválido
+20:56:53::INFO::Valor inválido
+20:56:54::INFO::Valor inválido
+20:56:58::INFO::Valor inválido
+20:56:58::INFO::Valor inválido
+20:57:05::INFO::Valor inválido
+20:57:06::INFO::Valor inválido
+20:57:21::INFO::olá mundo
+20:57:22::INFO::Valor inválido
+20:57:48::INFO::Valor inválido
+20:57:49::INFO::Valor inválido
+20:57:53::INFO::Valor inválido
+20:57:53::INFO::Valor inválido
+20:58:24::INFO::olá mundo
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__abs__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__add__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__and__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__bool__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__ceil__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__divmod__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__float__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__floor__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__floordiv__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__getnewargs__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__index__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__int__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__invert__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__lshift__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__mod__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__mul__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__neg__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__or__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__pos__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__pow__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__radd__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rand__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rdivmod__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rfloordiv__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rlshift__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rmod__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rmul__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__ror__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__round__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rpow__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rrshift__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rshift__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rsub__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rtruediv__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rxor__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:23::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:23::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__sub__'
+
+20:59:23::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__truediv__'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__trunc__'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__xor__'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'as_integer_ratio'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'bit_length'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'conjugate'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'denominator'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'from_bytes'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'imag'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'numerator'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'real'
+
+20:59:24::INFO::Traceback (most recent call last):
+
+20:59:24::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:24::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'to_bytes'
+
+20:59:36::INFO::Valor inválido
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__abs__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__add__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__and__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__bool__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__ceil__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__divmod__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:53::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__float__'
+
+20:59:53::INFO::Traceback (most recent call last):
+
+20:59:53::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__floor__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__floordiv__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__getnewargs__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__index__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__int__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__invert__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__lshift__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__mod__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__mul__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__neg__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__or__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__pos__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__pow__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__radd__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rand__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rdivmod__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rfloordiv__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rlshift__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rmod__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rmul__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__ror__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__round__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rpow__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rrshift__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rshift__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rsub__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rtruediv__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__rxor__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__sub__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__truediv__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__trunc__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member '__xor__'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'as_integer_ratio'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'bit_length'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'conjugate'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'denominator'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'from_bytes'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'imag'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'numerator'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'real'
+
+20:59:54::INFO::Traceback (most recent call last):
+
+20:59:54::INFO::  File "c:\Users\Joseito\.vscode\extensions\ms-python.python-2022.4.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py", line 192, in _get_py_dictionary
+    attr = getattr(var, name)
+
+20:59:54::INFO::AttributeError: sip.enumtype object 'ItemType' has no member 'to_bytes'
+
+21:00:37::INFO::olá mundo
+21:00:39::INFO::Vetorial I
+21:00:51::INFO::Valor inválido
+21:00:51::INFO::0
+21:01:17::INFO::Vetorial I
+21:01:46::INFO::olá mundo
+21:01:48::INFO::0
+21:01:55::INFO::0
+21:01:58::INFO::0
+21:01:58::INFO::0
+21:01:58::INFO::0
+21:01:58::INFO::0
+21:01:58::INFO::0
+21:01:58::INFO::0
+21:01:59::INFO::0
+21:01:59::INFO::0
+21:01:59::INFO::0
+21:01:59::INFO::0
+21:01:59::INFO::0
+21:01:59::INFO::0
+21:02:00::INFO::0
+21:02:00::INFO::0
+21:02:00::INFO::3
+21:02:00::INFO::0
+21:02:00::INFO::0
+21:02:01::INFO::0
+21:02:01::INFO::0
+21:02:01::INFO::0
+21:02:01::INFO::0
+21:02:01::INFO::0
+21:02:02::INFO::0
+21:02:02::INFO::0
+21:02:02::INFO::0
+21:02:02::INFO::0
+21:02:03::INFO::0
+21:02:03::INFO::0
+21:02:03::INFO::0
+21:02:03::INFO::0
+21:02:03::INFO::0
+21:02:03::INFO::0
+21:02:04::INFO::1
+21:02:04::INFO::0
+21:02:04::INFO::0
+21:02:04::INFO::0
+21:02:04::INFO::0
+21:02:04::INFO::0
+21:02:05::INFO::0
+21:02:05::INFO::0
+21:02:05::INFO::0
+21:02:05::INFO::0
+21:02:06::INFO::0
+21:02:06::INFO::0
+21:02:06::INFO::0
+21:02:06::INFO::0
+21:02:06::INFO::0
+21:02:07::INFO::0
+21:02:07::INFO::0
+21:02:07::INFO::0
+21:02:07::INFO::0
+21:02:08::INFO::0
+21:02:08::INFO::0
+21:02:08::INFO::0
+21:02:09::INFO::0
+21:02:09::INFO::1
+21:02:09::INFO::0
+21:02:09::INFO::0
+21:02:09::INFO::0
+21:02:10::INFO::0
+21:02:10::INFO::1
+21:02:10::INFO::0
+21:02:10::INFO::0
+21:02:10::INFO::0
+21:02:11::INFO::0
+21:02:11::INFO::0
+21:02:11::INFO::0
+21:02:11::INFO::0
+21:02:12::INFO::0
+21:02:12::INFO::0
+21:02:12::INFO::0
+21:02:12::INFO::0
+21:02:12::INFO::0
+21:02:13::INFO::0
+21:02:13::INFO::0
+21:02:13::INFO::0
+21:02:13::INFO::0
+21:02:13::INFO::0
+21:02:14::INFO::0
+21:02:17::INFO::0
+21:02:17::INFO::0
+21:02:17::INFO::0
+21:02:17::INFO::0
+21:02:17::INFO::0
+21:02:18::INFO::0
+21:02:18::INFO::0
+21:02:18::INFO::0
+21:02:18::INFO::0
+21:02:18::INFO::0
+21:02:18::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:19::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:20::INFO::0
+21:02:21::INFO::0
+21:02:21::INFO::0
+21:02:21::INFO::0
+21:02:21::INFO::0
+21:02:21::INFO::0
+21:02:21::INFO::0
+21:02:22::INFO::0
+21:02:22::INFO::0
+21:02:22::INFO::0
+21:02:22::INFO::0
+21:02:22::INFO::3
+21:02:22::INFO::0
+21:02:23::INFO::0
+21:02:23::INFO::0
+21:02:23::INFO::0
+21:02:23::INFO::0
+21:02:23::INFO::0
+21:02:24::INFO::0
+21:02:24::INFO::0
+21:02:24::INFO::0
+21:02:24::INFO::0
+21:02:24::INFO::0
+21:02:24::INFO::0
+21:02:25::INFO::0
+21:02:25::INFO::0
+21:02:25::INFO::0
+21:02:25::INFO::0
+21:02:25::INFO::0
+21:02:25::INFO::1
+21:02:26::INFO::0
+21:02:26::INFO::0
+21:02:26::INFO::0
+21:02:26::INFO::0
+21:02:26::INFO::0
+21:02:26::INFO::0
+21:02:27::INFO::0
+21:02:27::INFO::0
+21:02:27::INFO::0
+21:02:27::INFO::0
+21:02:27::INFO::0
+21:02:28::INFO::0
+21:02:28::INFO::0
+21:02:28::INFO::0
+21:02:28::INFO::0
+21:02:28::INFO::0
+21:02:28::INFO::0
+21:02:29::INFO::0
+21:02:29::INFO::0
+21:02:29::INFO::0
+21:02:29::INFO::0
+21:02:29::INFO::0
+21:02:30::INFO::1
+21:02:30::INFO::0
+21:02:30::INFO::0
+21:02:30::INFO::0
+21:02:30::INFO::0
+21:02:31::INFO::1
+21:02:31::INFO::0
+21:02:31::INFO::0
+21:02:31::INFO::0
+21:02:31::INFO::0
+21:02:31::INFO::0
+21:02:32::INFO::0
+21:02:32::INFO::0
+21:02:32::INFO::0
+21:02:32::INFO::0
+21:02:32::INFO::0
+21:02:33::INFO::0
+21:02:33::INFO::0
+21:02:33::INFO::0
+21:02:33::INFO::0
+21:02:33::INFO::0
+21:02:33::INFO::0
+21:02:34::INFO::0
+21:02:34::INFO::0
+21:02:34::INFO::error catched!:
+21:02:34::INFO::error message:
+
+21:02:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 120, in professor_afinidade_disciplina_changed
+    except ValueError:
+RuntimeError: wrapped C/C++ object of type QTableWidgetItem has been deleted
+
+21:02:34::INFO::0
+21:02:34::INFO::0
+21:02:34::INFO::0
+21:02:34::INFO::0
+21:02:35::INFO::0
+21:02:35::INFO::0
+21:02:35::INFO::0
+21:02:35::INFO::0
+21:02:35::INFO::0
+21:02:35::INFO::0
+21:02:36::INFO::0
+21:02:36::INFO::0
+21:02:36::INFO::0
+21:02:36::INFO::0
+21:02:36::INFO::0
+21:02:36::INFO::0
+21:02:37::INFO::0
+21:02:37::INFO::0
+21:02:37::INFO::0
+21:02:37::INFO::0
+21:02:37::INFO::0
+21:02:37::INFO::0
+21:02:38::INFO::0
+21:02:38::INFO::0
+21:02:38::INFO::0
+21:02:38::INFO::0
+21:02:38::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:39::INFO::0
+21:02:40::INFO::0
+21:02:40::INFO::0
+21:02:40::INFO::0
+21:02:40::INFO::0
+21:02:40::INFO::0
+21:02:40::INFO::0
+21:02:41::INFO::0
+21:02:41::INFO::0
+21:02:41::INFO::0
+21:02:41::INFO::0
+21:02:41::INFO::2
+21:02:41::INFO::0
+21:02:42::INFO::0
+21:02:42::INFO::0
+21:02:42::INFO::0
+21:02:42::INFO::0
+21:02:42::INFO::0
+21:02:42::INFO::0
+21:02:43::INFO::0
+21:02:43::INFO::0
+21:02:43::INFO::0
+21:02:43::INFO::0
+21:02:43::INFO::0
+21:02:43::INFO::0
+21:02:44::INFO::0
+21:02:44::INFO::0
+21:02:44::INFO::0
+21:02:44::INFO::0
+21:02:45::INFO::0
+21:02:45::INFO::0
+21:02:45::INFO::0
+21:02:45::INFO::0
+21:02:45::INFO::0
+21:02:45::INFO::1
+21:02:46::INFO::0
+21:02:46::INFO::2
+21:02:46::INFO::0
+21:02:46::INFO::2
+21:02:46::INFO::0
+21:02:46::INFO::0
+21:02:47::INFO::0
+21:02:47::INFO::error catched!:
+21:02:47::INFO::error message:
+
+21:02:47::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 120, in professor_afinidade_disciplina_changed
+    except ValueError:
+RuntimeError: wrapped C/C++ object of type QTableWidgetItem has been deleted
+
+21:02:47::INFO::0
+21:02:47::INFO::0
+21:02:47::INFO::0
+21:02:47::INFO::0
+21:02:47::INFO::0
+21:02:48::INFO::0
+21:02:48::INFO::0
+21:02:48::INFO::0
+21:02:48::INFO::0
+21:02:48::INFO::0
+21:02:48::INFO::0
+21:02:49::INFO::0
+21:02:49::INFO::3
+21:02:49::INFO::0
+21:02:49::INFO::0
+21:02:49::INFO::0
+21:02:49::INFO::0
+21:02:50::INFO::0
+21:02:50::INFO::0
+21:02:50::INFO::0
+21:02:50::INFO::0
+21:02:50::INFO::0
+21:02:50::INFO::0
+21:02:51::INFO::0
+21:02:51::INFO::0
+21:02:51::INFO::0
+21:02:51::INFO::0
+21:02:51::INFO::0
+21:02:51::INFO::0
+21:02:52::INFO::0
+21:02:52::INFO::1
+21:02:52::INFO::0
+21:02:52::INFO::0
+21:02:52::INFO::0
+21:02:52::INFO::0
+21:02:53::INFO::0
+21:02:53::INFO::0
+21:02:53::INFO::0
+21:02:53::INFO::0
+21:02:53::INFO::0
+21:02:53::INFO::0
+21:02:54::INFO::0
+21:02:54::INFO::0
+21:02:54::INFO::0
+21:02:54::INFO::0
+21:02:54::INFO::0
+21:02:54::INFO::0
+21:02:55::INFO::0
+21:02:55::INFO::0
+21:02:55::INFO::0
+21:02:55::INFO::0
+21:02:55::INFO::0
+21:02:55::INFO::0
+21:02:56::INFO::1
+21:02:56::INFO::0
+21:02:56::INFO::0
+21:02:56::INFO::0
+21:02:56::INFO::0
+21:02:56::INFO::1
+21:02:57::INFO::0
+21:02:57::INFO::0
+21:02:57::INFO::0
+21:02:57::INFO::0
+21:02:57::INFO::0
+21:02:57::INFO::0
+21:02:58::INFO::0
+21:02:58::INFO::0
+21:02:58::INFO::0
+21:02:58::INFO::0
+21:02:58::INFO::0
+21:02:58::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::0
+21:02:59::INFO::error catched!:
+21:02:59::INFO::error message:
+
+21:02:59::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 120, in professor_afinidade_disciplina_changed
+    except ValueError:
+RuntimeError: wrapped C/C++ object of type QTableWidgetItem has been deleted
+
+21:02:59::INFO::0
+21:03:00::INFO::0
+21:03:00::INFO::0
+21:03:00::INFO::0
+21:03:00::INFO::0
+21:03:00::INFO::0
+21:03:01::INFO::0
+21:03:01::INFO::0
+21:03:01::INFO::0
+21:03:01::INFO::0
+21:03:01::INFO::0
+21:03:01::INFO::0
+21:03:02::INFO::0
+21:03:02::INFO::0
+21:03:02::INFO::2
+21:03:02::INFO::0
+21:03:02::INFO::0
+21:03:02::INFO::0
+21:03:03::INFO::0
+21:03:03::INFO::0
+21:03:03::INFO::0
+21:03:03::INFO::0
+21:03:03::INFO::0
+21:03:03::INFO::0
+21:03:04::INFO::0
+21:03:04::INFO::0
+21:03:04::INFO::0
+21:03:04::INFO::0
+21:03:04::INFO::0
+21:03:05::INFO::0
+21:03:05::INFO::0
+21:03:05::INFO::0
+21:03:05::INFO::0
+21:03:05::INFO::0
+21:03:05::INFO::0
+21:03:06::INFO::0
+21:03:06::INFO::0
+21:03:06::INFO::0
+21:03:06::INFO::0
+21:03:06::INFO::0
+21:03:06::INFO::0
+21:03:07::INFO::0
+21:03:07::INFO::0
+21:03:07::INFO::0
+21:03:07::INFO::0
+21:03:07::INFO::0
+21:03:07::INFO::1
+21:03:08::INFO::0
+21:03:08::INFO::0
+21:03:08::INFO::0
+21:03:08::INFO::1
+21:03:08::INFO::0
+21:03:08::INFO::0
+21:03:09::INFO::0
+21:03:09::INFO::0
+21:03:09::INFO::0
+21:03:09::INFO::1
+21:03:09::INFO::2
+21:03:09::INFO::0
+21:03:10::INFO::0
+21:03:10::INFO::0
+21:03:10::INFO::0
+21:03:10::INFO::1
+21:03:10::INFO::0
+21:03:10::INFO::0
+21:03:11::INFO::0
+21:03:11::INFO::0
+21:03:11::INFO::0
+21:03:11::INFO::0
+21:03:11::INFO::0
+21:03:11::INFO::0
+21:03:12::INFO::0
+21:03:19::INFO::10
+21:03:22::INFO::0
+21:03:22::INFO::0
+21:03:22::INFO::0
+21:03:22::INFO::0
+21:03:22::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:23::INFO::0
+21:03:24::INFO::0
+21:03:24::INFO::0
+21:03:24::INFO::0
+21:03:24::INFO::0
+21:03:24::INFO::0
+21:03:24::INFO::0
+21:03:25::INFO::0
+21:03:25::INFO::0
+21:03:25::INFO::0
+21:03:25::INFO::0
+21:03:25::INFO::0
+21:03:25::INFO::2
+21:03:26::INFO::0
+21:03:26::INFO::0
+21:03:26::INFO::0
+21:03:26::INFO::0
+21:03:26::INFO::0
+21:03:26::INFO::0
+21:03:27::INFO::0
+21:03:27::INFO::0
+21:03:27::INFO::0
+21:03:27::INFO::0
+21:03:28::INFO::0
+21:03:28::INFO::0
+21:03:28::INFO::0
+21:03:28::INFO::0
+21:03:28::INFO::0
+21:03:28::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:29::INFO::0
+21:03:30::INFO::0
+21:03:30::INFO::0
+21:03:30::INFO::0
+21:03:31::INFO::0
+21:03:31::INFO::0
+21:03:31::INFO::0
+21:03:31::INFO::0
+21:03:31::INFO::0
+21:03:32::INFO::1
+21:03:32::INFO::0
+21:03:32::INFO::0
+21:03:32::INFO::0
+21:03:32::INFO::1
+21:03:32::INFO::0
+21:03:32::INFO::0
+21:03:33::INFO::0
+21:03:33::INFO::0
+21:03:33::INFO::0
+21:03:33::INFO::1
+21:03:33::INFO::2
+21:03:33::INFO::0
+21:03:34::INFO::0
+21:03:34::INFO::0
+21:03:34::INFO::0
+21:03:34::INFO::1
+21:03:34::INFO::0
+21:03:34::INFO::0
+21:03:35::INFO::0
+21:03:35::INFO::0
+21:03:35::INFO::0
+21:03:35::INFO::0
+21:03:35::INFO::0
+21:03:36::INFO::0
+21:03:36::INFO::0
+21:03:42::INFO::olá mundo
+21:05:13::INFO::olá mundo
+21:07:46::INFO::olá mundo
+21:07:49::INFO::error catched!:
+21:07:49::INFO::error message:
+
+21:07:49::INFO::TypeError: professor_afinidade_disciplina_changed() missing 1 required positional argument: 'item'
+
+21:07:56::INFO::error catched!:
+21:07:56::INFO::error message:
+
+21:07:56::INFO::TypeError: professor_afinidade_disciplina_changed() missing 1 required positional argument: 'item'
+
+21:08:27::INFO::olá mundo
+21:08:34::INFO::error catched!:
+21:08:34::INFO::error message:
+
+21:08:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 117, in professor_afinidade_disciplina_changed
+    if item.column() != 1:
+AttributeError: 'NoneType' object has no attribute 'column'
+
+21:08:42::INFO::error catched!:
+21:08:42::INFO::error message:
+
+21:08:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 117, in professor_afinidade_disciplina_changed
+    if item.column() != 1:
+AttributeError: 'NoneType' object has no attribute 'column'
+
+21:10:25::INFO::olá mundo
+21:10:37::INFO::olá mundo
+21:11:09::INFO::olá mundo
+21:13:28::INFO::olá mundo
+21:13:41::INFO::olá mundo
+21:13:55::INFO::olá mundo
+21:17:48::INFO::olá mundo
+21:18:11::INFO::olá mundo
+21:21:30::INFO::olá mundo
+21:21:53::INFO::olá mundo
+21:28:36::INFO::olá mundo
+21:29:51::INFO::olá mundo
+21:30:20::INFO::olá mundo
+21:35:03::INFO::olá mundo

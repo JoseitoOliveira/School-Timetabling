@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1228</width>
+    <width>1227</width>
     <height>845</height>
    </rect>
   </property>
@@ -60,29 +60,32 @@
      <height>9999</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0" columnstretch="0,0">
     <property name="sizeConstraint">
      <enum>QLayout::SetDefaultConstraint</enum>
     </property>
     <property name="leftMargin">
-     <number>6</number>
+     <number>0</number>
     </property>
     <property name="topMargin">
-     <number>6</number>
+     <number>0</number>
     </property>
     <property name="rightMargin">
-     <number>6</number>
+     <number>0</number>
     </property>
     <property name="bottomMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="spacing">
-     <number>2</number>
+     <number>0</number>
     </property>
+    <item row="4" column="1">
+     <widget class="QTextEdit" name="console"/>
+    </item>
     <item row="3" column="1">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="value">
-       <number>24</number>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
@@ -95,10 +98,7 @@
        <enum>Qt::ElideMiddle</enum>
       </property>
       <property name="documentMode">
-       <bool>false</bool>
-      </property>
-      <property name="tabBarAutoHide">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab_exec">
        <attribute name="title">
@@ -185,6 +185,9 @@
               <height>24</height>
              </size>
             </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -192,203 +195,226 @@
        </layout>
       </widget>
       <widget class="QWidget" name="tab_disc">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <attribute name="title">
         <string>Disciplinas</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
         <item>
-         <layout class="QFormLayout" name="formLayout">
-          <property name="labelAlignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <widget class="QGroupBox" name="form_disciplina">
+          <property name="enabled">
+           <bool>true</bool>
           </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Nome:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="nome_disciplina"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Número de Alunos:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QSpinBox" name="num_alunos"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>Grades:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="grades_disciplinas"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Horários</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0,0">
-              <item>
-               <widget class="QLabel" name="label_6">
-                <property name="text">
-                 <string>Créditos da aula:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="num_credidos_aula">
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-                <property name="maximum">
-                 <number>3</number>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btn_add_aula">
-                <property name="text">
-                 <string>Adicionar aula</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btn_rmv_aula">
-                <property name="text">
-                 <string>Remover aula</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <widget class="QTabWidget" name="tab_horarios">
-                <property name="currentIndex">
-                 <number>-1</number>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QListWidget" name="list_horarios_todos">
-                <property name="dragDropMode">
-                 <enum>QAbstractItemView::DragDrop</enum>
-                </property>
-                <property name="defaultDropAction">
-                 <enum>Qt::CopyAction</enum>
-                </property>
-                <property name="viewMode">
-                 <enum>QListView::IconMode</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Laboratórios</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
-            <item>
-             <widget class="QListWidget" name="list_laboratorios_disciplinas">
-              <property name="dragDropMode">
-               <enum>QAbstractItemView::DragDrop</enum>
-              </property>
-              <property name="defaultDropAction">
-               <enum>Qt::MoveAction</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QListWidget" name="list_laboratorios">
-              <property name="dragDropMode">
-               <enum>QAbstractItemView::DragDrop</enum>
-              </property>
-              <property name="defaultDropAction">
-               <enum>Qt::MoveAction</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_11">
-            <item>
-             <widget class="QCheckBox" name="disciplina_sem_sala">
-              <property name="text">
-               <string>Sem Sala</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="disciplina_sem_professor">
-              <property name="text">
-               <string>Sem Professor</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox{border: 0px;}</string>
+          </property>
+          <layout class="QFormLayout" name="layout">
+           <property name="labelAlignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Nome:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nome_disciplina"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Número de Alunos:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="num_alunos"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Grades:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="grades_disciplinas"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Horários</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0,0">
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Créditos da aula:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="num_credidos_aula">
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>3</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_add_aula">
+                 <property name="text">
+                  <string>Adicionar aula</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>24</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_rmv_aula">
+                 <property name="text">
+                  <string>Remover aula</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>24</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QTabWidget" name="tab_horarios">
+                 <property name="currentIndex">
+                  <number>-1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QListWidget" name="list_horarios_todos">
+                 <property name="dragDropMode">
+                  <enum>QAbstractItemView::DragDrop</enum>
+                 </property>
+                 <property name="defaultDropAction">
+                  <enum>Qt::CopyAction</enum>
+                 </property>
+                 <property name="viewMode">
+                  <enum>QListView::IconMode</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Laboratórios</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+             <item>
+              <widget class="QListWidget" name="list_laboratorios_disciplinas">
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::NoDragDrop</enum>
+               </property>
+               <property name="defaultDropAction">
+                <enum>Qt::IgnoreAction</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="list_laboratorios">
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::DragDrop</enum>
+               </property>
+               <property name="defaultDropAction">
+                <enum>Qt::MoveAction</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="5" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QCheckBox" name="disciplina_sem_sala">
+               <property name="text">
+                <string>Sem Sala</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="disciplina_sem_professor">
+               <property name="text">
+                <string>Sem Professor</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -449,170 +475,187 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="2,1">
         <item>
-         <layout class="QFormLayout" name="formLayout_2">
-          <property name="labelAlignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <widget class="QGroupBox" name="form_professor">
+          <property name="enabled">
+           <bool>false</bool>
           </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_9">
-            <property name="text">
-             <string>Nome:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="nome_professor"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Mínimo de Horas:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QSpinBox" name="horas_min_professor"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>Máximo de Horas:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QSpinBox" name="horas_max_professor"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>Afinidade com Disciplinas:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_6">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,0">
-              <item>
-               <widget class="QComboBox" name="comboBox_3"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_7">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox{border: 0px;}</string>
+          </property>
+          <layout class="QFormLayout" name="layout_2">
+           <property name="labelAlignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Nome:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nome_professor"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Mínimo de Horas:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="horas_min_professor"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Máximo de Horas:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="horas_max_professor"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Afinidades:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QTableWidget" name="professor_afinidade_disciplina">
+             <property name="rowCount">
+              <number>3</number>
+             </property>
+             <row/>
+             <row/>
+             <row/>
+             <column>
+              <property name="text">
+               <string>Disciplina</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Afinidade</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QTableWidget" name="professor_afinidade_horario">
+               <property name="rowCount">
+                <number>3</number>
+               </property>
+               <row/>
+               <row/>
+               <row/>
+               <column>
                 <property name="text">
-                 <string/>
+                 <string>Horário</string>
                 </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Afinidade</string>
                 </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
+               </column>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="professor_afinidade_sala">
+               <property name="rowCount">
+                <number>3</number>
+               </property>
+               <row/>
+               <row/>
+               <row/>
+               <column>
+                <property name="text">
+                 <string>Sala</string>
                 </property>
-                <property name="flat">
-                 <bool>true</bool>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Afinidade</string>
                 </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QListWidget" name="listWidget_8"/>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_10">
-            <property name="text">
-             <string>Afinidade com Salas:</string>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QListWidget" name="list_professores">
+            <property name="showDropIndicator" stdset="0">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0">
-              <item>
-               <widget class="QComboBox" name="comboBox"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_5">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <widget class="QPushButton" name="btn_add_professor">
+              <property name="text">
+               <string>Adicionar Professor</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
             <item>
-             <widget class="QListWidget" name="listWidget_6"/>
-            </item>
-           </layout>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_11">
-            <property name="text">
-             <string>Afinidade com Horários:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_5">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,0">
-              <item>
-               <widget class="QComboBox" name="comboBox_2"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_6">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="default">
-                 <bool>false</bool>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QListWidget" name="listWidget_7"/>
+             <widget class="QPushButton" name="btn_rmv_professor">
+              <property name="text">
+               <string>Remover Professor</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
          </layout>
-        </item>
-        <item>
-         <widget class="QListWidget" name="list_professores"/>
         </item>
        </layout>
       </widget>
@@ -622,92 +665,145 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="2,1">
         <item>
-         <layout class="QFormLayout" name="formLayout_3">
-          <property name="labelAlignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <widget class="QGroupBox" name="form_sala">
+          <property name="enabled">
+           <bool>false</bool>
           </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_13">
-            <property name="text">
-             <string>Nome:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="nome_sala"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Capacidade:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QSpinBox" name="capacidade_sala"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_15">
-            <property name="text">
-             <string>Afinidade Horários:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_7">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,0">
-              <item>
-               <widget class="QComboBox" name="comboBox_4"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_8">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox{border: 0px;}</string>
+          </property>
+          <layout class="QFormLayout" name="layout_3">
+           <property name="labelAlignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Nome:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nome_sala"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Capacidade:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="capacidade_sala"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0">
+             <item>
+              <widget class="QTableWidget" name="sala_afinidade_horarios">
+               <column>
                 <property name="text">
-                 <string/>
+                 <string>Horário</string>
                 </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Afinidade</string>
                 </property>
-                <property name="iconSize">
-                 <size>
-                  <width>24</width>
-                  <height>24</height>
-                 </size>
+               </column>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="sala_distancias">
+               <column>
+                <property name="text">
+                 <string>Sala</string>
                 </property>
-                <property name="flat">
-                 <bool>true</bool>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Distância</string>
                 </property>
-               </widget>
-              </item>
-             </layout>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="eh_laboratorio">
+             <property name="text">
+              <string>Laboratório</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QListWidget" name="list_salas"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QPushButton" name="btn_add_sala">
+              <property name="text">
+               <string>Adicionar Sala</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/add_48px.png</normaloff>../images/add_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
             <item>
-             <widget class="QListWidget" name="listWidget_10"/>
+             <widget class="QPushButton" name="btn_rmv_sala">
+              <property name="text">
+               <string>Remover Sala</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../images/cancel_48px.png</normaloff>../images/cancel_48px.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_16">
-            <property name="text">
-             <string>Distâncias:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QListWidget" name="listWidget_11"/>
-          </item>
-          <item row="4" column="1">
-           <widget class="QCheckBox" name="checkBox_4">
-            <property name="text">
-             <string>Laboratório</string>
-            </property>
-           </widget>
-          </item>
          </layout>
-        </item>
-        <item>
-         <widget class="QListWidget" name="list_salas"/>
         </item>
        </layout>
       </widget>
@@ -718,51 +814,92 @@
       </widget>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Console</string>
+    <item row="5" column="1">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QTextEdit" name="console"/>
-       </item>
-      </layout>
      </widget>
     </item>
    </layout>
   </widget>
-  <action name="action_execute">
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonFollowStyle</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionExecute"/>
+   <addaction name="actionDisciplinas"/>
+   <addaction name="actionProfessores"/>
+   <addaction name="actionSalas"/>
+   <addaction name="actionsobre"/>
+  </widget>
+  <action name="actionExecute">
    <property name="icon">
     <iconset>
-     <normaloff>../images/circled_play_48px.png</normaloff>../images/circled_play_48px.png</iconset>
+     <normaloff>../images/play_button_circled_48px.png</normaloff>../images/play_button_circled_48px.png</iconset>
    </property>
    <property name="text">
     <string>Execute</string>
    </property>
   </action>
-  <action name="action_save">
+  <action name="actionDisciplinas">
    <property name="icon">
     <iconset>
-     <normaloff>../images/save_all_48px.png</normaloff>../images/save_all_48px.png</iconset>
+     <normaloff>../images/books2_48px.png</normaloff>../images/books2_48px.png</iconset>
    </property>
    <property name="text">
-    <string>Save</string>
+    <string>Disciplinas</string>
+   </property>
+  </action>
+  <action name="actionProfessores">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/team2_48px.png</normaloff>../images/team2_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Professores</string>
+   </property>
+  </action>
+  <action name="actionSalas">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/room_48px.png</normaloff>../images/room_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salas</string>
+   </property>
+  </action>
+  <action name="actionsobre">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/info2_48px.png</normaloff>../images/info2_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>sobre</string>
    </property>
   </action>
  </widget>

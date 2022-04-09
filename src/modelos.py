@@ -1,6 +1,12 @@
 from dataclasses import dataclass, field
 
-from src.horarios import horarios_str, horarios_2, horarios_3, sabado, todos
+from tinydb import where
+
+from src.data import disciplinas, professores, salas
+from src.horarios import horarios_2, horarios_2_str, horarios_3, horarios_3_str
+from src.horarios import horarios_str
+from src.horarios import horarios_str as horarios_1_str
+from src.horarios import sabado, todos
 
 
 @dataclass
@@ -13,6 +19,42 @@ class Professor:
     afinidade_salas: dict[str, int] = field(default_factory=lambda: {})
 
     __sem_professor__: bool = False
+
+    def set_nome(self, nome):
+        professores.update({'nome': nome}, where('nome') == self.nome)
+        self.nome = nome
+
+    def set_hrs_min(self, hrs_min):
+        self.hrs_min = hrs_min
+        professores.update({'hrs_min': hrs_min}, where('nome') == self.nome)
+
+    def set_hrs_max(self, hrs_max):
+        self.hrs_max = hrs_max
+        professores.update({'hrs_max': hrs_max}, where('nome') == self.nome)
+
+    def set_afinidade_disciplinas(self, disciplina, afinidade):
+        if afinidade == 0 and disciplina in self.afinidade_disciplinas:
+            del self.afinidade_disciplinas[disciplina]
+        else:
+            self.afinidade_disciplinas[disciplina] = afinidade
+        professores.update({'afinidade_disciplinas': self.afinidade_disciplinas},
+                           where('nome') == self.nome)
+
+    def set_afinidade_horarios(self, horario, afinidade):
+        if afinidade == 0 and horario in self.afinidade_horarios:
+            del self.afinidade_horarios[horario]
+        else:
+            self.afinidade_horarios[horario] = afinidade
+        professores.update({'afinidade_horarios': self.afinidade_horarios},
+                           where('nome') == self.nome)
+
+    def set_afinidade_salas(self, sala, afinidade):
+        if afinidade == 0 and sala in self.afinidade_salas:
+            del self.afinidade_salas[sala]
+        else:
+            self.afinidade_salas[sala] = afinidade
+        professores.update({'afinidade_salas': self.afinidade_salas},
+                           where('nome') == self.nome)
 
     @property
     def sem_professor(self):
@@ -99,7 +141,6 @@ class Cromossomo:
         )
 
 
-@dataclass
 class Disciplina:
     nome: str
     num_alunos: int
@@ -114,11 +155,104 @@ class Disciplina:
     sem_professor: bool = False
     sem_sala: bool = False
 
-    def __post_init__(self):
+    def __init__(self,
+                 nome: str,
+                 num_alunos: int,
+                 grades: list[str],
+                 horas: list[int],
+                 horarios: list[list[str]],
+                 laboratorios: list[Sala],
+                 salas: list[Sala],
+                 professores: list[Professor],
+                 cromossomos: list[Cromossomo],
+                 aulas_aos_sabados: bool,
+                 sem_professor: bool,
+                 sem_sala: bool):
+        self._nome = nome
+        self._num_alunos = num_alunos
+        self._grades = grades
+        self._horas = horas
+        self._horarios = horarios
+        self._laboratorios = laboratorios
+        self._salas = salas
+        self._professores = professores
+        self._cromossomos = cromossomos
+        self._aulas_aos_sabados = aulas_aos_sabados
+        self._sem_professor = sem_professor
+        self._sem_sala = sem_sala
+
         if self.horarios == []:
             self.make_horarios()
 
         assert len(self.horarios) == len(self.horas)
+
+    def set_nome(self, nome):
+        disciplinas.update({'nome': nome}, where('nome') == self.nome)
+        self.nome = nome
+
+    def set_grades(self, grades):
+        self.grades = grades
+        disciplinas.update({'grades': grades}, where('nome') == self.nome)
+
+    def set_num_alunos(self, num_alunos):
+        self.num_alunos = num_alunos
+        disciplinas.update({'num_alunos': num_alunos},
+                           where('nome') == self.nome)
+
+    def set_sem_sala(self, sem_sala):
+        self.sem_sala = sem_sala
+        disciplinas.update({'sem_sala': sem_sala},
+                           where('nome') == self.nome)
+
+    def set_sem_professor(self, sem_professor):
+        self.sem_professor = sem_professor
+        disciplinas.update({'sem_professor': sem_professor},
+                           where('nome') == self.nome)
+
+    def add_aula(self, creditos):
+        creditos_horarios = {
+            1: horarios_1_str,
+            2: horarios_2_str,
+            3: horarios_3_str
+        }
+        self.horas.append(creditos)
+        self.horarios.append(creditos_horarios[creditos])
+        disciplinas.update({'horas': self.horas, 'horarios': self.horarios},
+                           where('nome') == self.nome)
+
+    def rmv_aula(self, index):
+        self.horas.pop(index)
+        self.horarios.pop(index)
+        disciplinas.update({'horas': self.horas, 'horarios': self.horarios},
+                           where('nome') == self.nome)
+
+    def add_horario(self, aula, horario_str):
+        if horario_str not in self.horarios[aula]:
+            self.horarios[aula].append(horario_str)
+            disciplinas.update({'horarios': self.horarios},
+                               where('nome') == self.nome)
+
+    def rmv_horario(self, aula, horario_str):
+        if horario_str in self.horarios[aula]:
+            self.horarios[aula].remove(horario_str)
+            disciplinas.update({'horarios': self.horarios},
+                               where('nome') == self.nome)
+
+    def add_laboratorio(self, sala_nome):
+        labs_nomes = [lab['nome'] for lab in self.laboratorios]
+        if sala_nome not in labs_nomes:
+            sala = salas.get(where('nome') == sala_nome)
+            self.laboratorios.append(sala)
+            disciplinas.update({'laboratorios': self.laboratorios},
+                               where('nome') == self.nome)
+
+    def rmv_laboratorio(self, sala_nome):
+        for lab in self.laboratorios:
+            if lab['nome'] == sala_nome:
+                self.laboratorios.remove(lab)
+                break
+        disciplinas.update({'laboratorios': self.laboratorios},
+                           where('nome') == self.nome)
 
     def make_horarios(self):
         for h in self.horas:

@@ -1,4 +1,5 @@
 {
+    "_default": {},
     "professores": {
         "1": {
             "nome": "Lucas Hartmann",
@@ -2879,7 +2880,14 @@
                     "6T4"
                 ]
             ],
-            "laboratorios": [],
+            "laboratorios": [
+                {
+                    "nome": "LMI",
+                    "capacidade": 30,
+                    "laboratorio": true,
+                    "afinidade_horarios": {}
+                }
+            ],
             "salas": [
                 {
                     "nome": "CTJ201",
@@ -2982,7 +2990,7 @@
                     "slice_f": 116
                 }
             ],
-            "sem_professor": 0,
+            "sem_professor": false,
             "sem_sala": 0
         },
         "25": {
@@ -4595,8 +4603,8 @@
                     "slice_f": 179
                 }
             ],
-            "sem_professor": 0,
-            "sem_sala": 0
+            "sem_professor": false,
+            "sem_sala": false
         },
         "38": {
             "nome": "Sólidos II",
@@ -7723,7 +7731,7 @@
         },
         "59": {
             "nome": "Acionamentos e Circuitos Elétricos",
-            "num_alunos": 15,
+            "num_alunos": 11,
             "grades": [
                 "p8_ge",
                 "p8_ca"
@@ -7754,7 +7762,7 @@
                     "6M2",
                     "6M4",
                     "6T2",
-                    "6T4"
+                    "2M1"
                 ],
                 [
                     "2M2",
@@ -9499,8 +9507,8 @@
                     "slice_f": 348
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false
+            "sem_professor": 0,
+            "sem_sala": 0
         },
         "70": {
             "nome": "Concepção de CI",
@@ -11471,19 +11479,19 @@
         "1": {
             "nome": "CTJ201",
             "capacidade": 40,
-            "laboratorio": false,
+            "laboratorio": 0,
             "afinidade_horarios": {}
         },
         "2": {
             "nome": "CTJ202",
             "capacidade": 40,
-            "laboratorio": false,
+            "laboratorio": 0,
             "afinidade_horarios": {}
         },
         "3": {
             "nome": "CTJ203",
             "capacidade": 40,
-            "laboratorio": false,
+            "laboratorio": 0,
             "afinidade_horarios": {}
         },
         "4": {

@@ -1,0 +1,123 @@
+19:46:55::INFO::olá mundo
+21:46:29::INFO::olá mundo
+21:51:22::INFO::olá mundo
+21:52:28::INFO::olá mundo
+21:54:33::INFO::olá mundo
+21:55:02::INFO::olá mundo
+21:56:55::INFO::olá mundo
+21:59:38::INFO::olá mundo
+22:02:29::INFO::olá mundo
+22:04:52::INFO::olá mundo
+22:05:39::INFO::olá mundo
+22:05:54::INFO::olá mundo
+22:06:31::INFO::olá mundo
+22:08:28::INFO::olá mundo
+22:09:37::INFO::olá mundo
+22:12:44::INFO::olá mundo
+22:13:31::INFO::olá mundo
+22:14:07::INFO::olá mundo
+22:14:45::INFO::olá mundo
+22:14:45::INFO::error catched!:
+22:14:45::INFO::error message:
+
+22:14:45::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 503, in <module>
+    apply_stylesheet(app,
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 224, in apply_stylesheet
+    stylesheet = build_stylesheet(
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 150, in build_stylesheet
+    return stylesheet.render(environ)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\material.css.template", line 12, in top-level template code
+    font-size: {{font_size|density(density_scale, density_interval=1)}}px;
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 259, in density
+    value = float(value.replace('px', ''))
+ValueError: could not convert string to float: '12pt'
+
+22:14:53::INFO::olá mundo
+22:15:05::INFO::olá mundo
+22:15:15::INFO::olá mundo
+22:15:35::INFO::olá mundo
+22:15:42::INFO::olá mundo
+22:16:14::INFO::olá mundo
+22:17:24::INFO::olá mundo
+22:17:39::INFO::olá mundo
+22:18:20::INFO::olá mundo
+22:18:56::INFO::olá mundo
+22:19:15::INFO::olá mundo
+22:19:32::INFO::olá mundo
+22:20:33::INFO::olá mundo
+22:21:09::INFO::olá mundo
+22:23:14::INFO::olá mundo
+22:23:14::INFO::error catched!:
+22:23:14::INFO::error message:
+
+22:23:14::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 503, in <module>
+    apply_stylesheet(app,
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 224, in apply_stylesheet
+    stylesheet = build_stylesheet(
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 150, in build_stylesheet
+    return stylesheet.render(environ)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\material.css.template", line 172, in top-level template code
+    background-color: {{secondaryColor|opacity(0.75)}};
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 243, in opacity
+    r, g, b = int(r, 16), int(g, 16), int(b, 16)
+ValueError: invalid literal for int() with base 16: 'rg'
+
+22:23:29::INFO::olá mundo
+22:25:25::INFO::olá mundo
+22:27:01::INFO::olá mundo
+22:28:38::INFO::olá mundo
+22:29:05::INFO::olá mundo
+22:31:10::INFO::olá mundo
+22:31:11::INFO::error catched!:
+22:31:11::INFO::error message:
+
+22:31:11::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 509, in <module>
+    apply_stylesheet(app,
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 224, in apply_stylesheet
+    stylesheet = build_stylesheet(
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 91, in build_stylesheet
+    theme = get_theme(theme, invert_secondary)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\qt_material\__init__.py", line 172, in get_theme
+    document = parse(theme)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\xml\dom\minidom.py", line 1988, in parse
+    return expatbuilder.parse(file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\xml\dom\expatbuilder.py", line 910, in parse
+    with open(file, 'rb') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Joseito\\Documents\\GitHub\\TCC\\.venv\\lib\\site-packages\\qt_material\\themes\\'
+
+22:31:24::INFO::olá mundo
+22:32:09::INFO::olá mundo
+22:32:29::INFO::olá mundo
+22:33:51::INFO::olá mundo
+22:34:09::INFO::olá mundo
+22:35:15::INFO::olá mundo
+22:36:04::INFO::olá mundo
+22:36:51::INFO::olá mundo
+22:38:20::INFO::olá mundo
+22:38:58::INFO::olá mundo
+22:40:00::INFO::olá mundo
+22:44:50::INFO::olá mundo
+22:50:26::INFO::olá mundo
+22:52:29::INFO::olá mundo
+22:55:25::INFO::olá mundo
+22:55:37::INFO::olá mundo
+22:56:59::INFO::olá mundo
+22:58:15::INFO::olá mundo
+22:58:43::INFO::olá mundo
+22:58:54::INFO::olá mundo
+23:03:13::INFO::olá mundo
+23:04:57::INFO::olá mundo
+23:06:30::INFO::olá mundo
+23:11:19::INFO::olá mundo
+23:12:39::INFO::olá mundo

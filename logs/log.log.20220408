@@ -1,0 +1,745 @@
+20:07:25::INFO::olá mundo
+20:16:12::INFO::olá mundo
+20:16:17::INFO::error catched!:
+20:16:17::INFO::error message:
+
+20:16:17::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 369, in nome_professor_edited
+    self.ui.nome_professore.setStyleSheet('')
+AttributeError: 'Ui_MainWindow' object has no attribute 'nome_professore'
+
+20:17:11::INFO::olá mundo
+20:24:41::INFO::olá mundo
+20:24:45::INFO::error catched!:
+20:24:45::INFO::error message:
+
+20:24:45::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 424, in professor_clicado
+    self.ui.nome_professor.setText(professor[0]['nome'])
+IndexError: list index out of range
+
+20:24:45::INFO::error catched!:
+20:24:45::INFO::error message:
+
+20:24:45::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 424, in professor_clicado
+    self.ui.nome_professor.setText(professor[0]['nome'])
+IndexError: list index out of range
+
+20:24:52::INFO::error catched!:
+20:24:52::INFO::error message:
+
+20:24:52::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 442, in disciplina_clicada
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 307, in disciplina_atual
+    nome = self.nome_disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 284, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:24:59::INFO::error catched!:
+20:24:59::INFO::error message:
+
+20:24:59::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 424, in professor_clicado
+    self.ui.nome_professor.setText(professor[0]['nome'])
+IndexError: list index out of range
+
+20:25:00::INFO::error catched!:
+20:25:00::INFO::error message:
+
+20:25:00::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 424, in professor_clicado
+    self.ui.nome_professor.setText(professor[0]['nome'])
+IndexError: list index out of range
+
+20:26:46::INFO::olá mundo
+20:26:54::INFO::error catched!:
+20:26:54::INFO::error message:
+
+20:26:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 432, in sala_clicada
+    sala = salas.search(where('nome') == nome)[0]
+IndexError: list index out of range
+
+20:29:33::INFO::olá mundo
+20:29:45::INFO::olá mundo
+20:29:47::INFO::error catched!:
+20:29:47::INFO::error message:
+
+20:29:47::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 434, in sala_clicada
+    sala = salas.search(where('nome') == row)[0]
+IndexError: list index out of range
+
+20:30:01::INFO::olá mundo
+20:30:11::INFO::olá mundo
+20:30:22::INFO::olá mundo
+20:32:28::INFO::olá mundo
+20:33:00::INFO::olá mundo
+20:40:12::INFO::olá mundo
+20:40:35::INFO::error catched!:
+20:40:35::INFO::error message:
+
+20:40:35::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 329, in add_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:40:39::INFO::error catched!:
+20:40:39::INFO::error message:
+
+20:40:39::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 329, in add_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:42:56::INFO::olá mundo
+20:44:22::INFO::error catched!:
+20:44:22::INFO::error message:
+
+20:44:22::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 329, in add_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:49:28::INFO::olá mundo
+20:49:31::INFO::error catched!:
+20:49:31::INFO::error message:
+
+20:49:31::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:49:34::INFO::error catched!:
+20:49:34::INFO::error message:
+
+20:49:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 338, in rmv_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:49:39::INFO::error catched!:
+20:49:39::INFO::error message:
+
+20:49:39::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 338, in rmv_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:49:43::INFO::error catched!:
+20:49:43::INFO::error message:
+
+20:49:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 329, in add_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:49:43::INFO::error catched!:
+20:49:43::INFO::error message:
+
+20:49:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 329, in add_aula
+    self.disciplina_clicada(self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.addItems(disciplina['horarios'][i])
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:50:45::INFO::olá mundo
+20:56:01::INFO::error catched!:
+20:56:01::INFO::error message:
+
+20:56:01::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.setViewMode(QListWidget.IconMode)
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:56:05::INFO::error catched!:
+20:56:05::INFO::error message:
+
+20:56:05::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 466, in disciplina_clicada
+    new_tab.setViewMode(QListWidget.IconMode)
+TypeError: addItems(self, Iterable[str]): argument 1 has unexpected type 'int'
+
+20:58:11::INFO::olá mundo
+20:58:11::INFO::error catched!:
+20:58:11::INFO::error message:
+
+20:58:11::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 550, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 59, in __init__
+    self.tab_discilina()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 501, in tab_discilina
+    self.ui.list_horarios_todos.addItems(horarios_str)
+NameError: name 'horarios_str' is not defined
+
+20:58:26::INFO::olá mundo
+20:59:23::INFO::error catched!:
+20:59:23::INFO::error message:
+
+20:59:23::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 446, in disciplina_clicada
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:42::INFO::error catched!:
+20:59:42::INFO::error message:
+
+20:59:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:44::INFO::error catched!:
+20:59:44::INFO::error message:
+
+20:59:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:47::INFO::error catched!:
+20:59:47::INFO::error message:
+
+20:59:47::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:48::INFO::error catched!:
+20:59:48::INFO::error message:
+
+20:59:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:50::INFO::error catched!:
+20:59:50::INFO::error message:
+
+20:59:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:51::INFO::error catched!:
+20:59:51::INFO::error message:
+
+20:59:51::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:52::INFO::error catched!:
+20:59:52::INFO::error message:
+
+20:59:52::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:53::INFO::error catched!:
+20:59:53::INFO::error message:
+
+20:59:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:53::INFO::error catched!:
+20:59:53::INFO::error message:
+
+20:59:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:54::INFO::error catched!:
+20:59:54::INFO::error message:
+
+20:59:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:54::INFO::error catched!:
+20:59:54::INFO::error message:
+
+20:59:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:55::INFO::error catched!:
+20:59:55::INFO::error message:
+
+20:59:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+20:59:55::INFO::error catched!:
+20:59:55::INFO::error message:
+
+20:59:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 406, in list_laboratorios_item_clicked
+    self.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 486, in atualizar_laboratorios
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:00:15::INFO::error catched!:
+21:00:15::INFO::error message:
+
+21:00:15::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 446, in disciplina_clicada
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:01:24::INFO::olá mundo
+21:01:27::INFO::1
+21:01:27::INFO::error catched!:
+21:01:27::INFO::error message:
+
+21:01:27::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 444, in disciplina_clicada
+    print(row)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\logger.py", line 52, in logger_print
+    logger.info(value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1446, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\console.py", line 61, in emit
+    for line in record.msg.split('<br>'):
+AttributeError: 'int' object has no attribute 'split'
+
+21:01:28::INFO::2
+21:01:28::INFO::error catched!:
+21:01:28::INFO::error message:
+
+21:01:28::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 444, in disciplina_clicada
+    print(row)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\logger.py", line 52, in logger_print
+    logger.info(value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1446, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\console.py", line 61, in emit
+    for line in record.msg.split('<br>'):
+AttributeError: 'int' object has no attribute 'split'
+
+21:02:01::INFO::olá mundo
+21:02:02::INFO::2
+21:02:03::INFO::error catched!:
+21:02:03::INFO::error message:
+
+21:02:03::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 463, in disciplina_clicada
+    partial(self.atualizar_horarios, nome, i)
+NameError: name 'nome' is not defined
+
+21:02:20::INFO::-1
+21:02:20::INFO::error catched!:
+21:02:20::INFO::error message:
+
+21:02:20::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 445, in disciplina_clicada
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:02:57::INFO::0
+21:02:57::INFO::error catched!:
+21:02:57::INFO::error message:
+
+21:02:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 463, in disciplina_clicada
+    new_tab.itemDoubleClicked.connect(
+NameError: name 'nome' is not defined
+
+21:03:02::INFO::olá mundo
+21:03:08::INFO::error catched!:
+21:03:08::INFO::error message:
+
+21:03:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 433, in professor_clicado
+    self.carregar_afinidade_professor_horarios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 261, in carregar_afinidade_professor_horarios
+    for i, horario in enumerate(horarios_str):
+NameError: name 'horarios_str' is not defined
+
+21:04:02::INFO::olá mundo
+21:04:16::INFO::error catched!:
+21:04:16::INFO::error message:
+
+21:04:16::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 288, in sem_sala_changed
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:05:03::INFO::error catched!:
+21:05:03::INFO::error message:
+
+21:05:03::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 288, in sem_sala_changed
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:07:22::INFO::error catched!:
+21:07:22::INFO::error message:
+
+21:07:22::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 558, in <module>
+    sys.exit(root.exec_())
+KeyboardInterrupt
+
+21:09:26::INFO::olá mundo
+21:09:37::INFO::error catched!:
+21:09:37::INFO::error message:
+
+21:09:37::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 288, in sem_sala_changed
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:09:56::INFO::olá mundo
+21:10:03::INFO::olá mundo
+21:10:12::INFO::error catched!:
+21:10:12::INFO::error message:
+
+21:10:12::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 356, in nome_disciplina_edited
+    disciplina = self.disciplina_atual()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 315, in disciplina_atual
+    return disciplinas.get(where('nome') == self.nome_disciplina_atual())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 312, in nome_disciplina_atual
+    return self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+21:15:00::INFO::olá mundo
+21:16:33::INFO::olá mundo
+21:18:15::INFO::olá mundo
+21:19:50::INFO::olá mundo
+21:20:49::INFO::olá mundo
+21:21:33::INFO::olá mundo
+21:31:27::INFO::olá mundo
+21:31:30::INFO::error catched!:
+21:31:30::INFO::error message:
+
+21:31:30::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 407, in adicionar_laboratorio
+    self.disciplina_clicada(0)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 481, in disciplina_clicada
+    [lab['nome'] for lab in disciplina['laboratorios']]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 481, in <listcomp>
+    [lab['nome'] for lab in disciplina['laboratorios']]
+TypeError: string indices must be integers
+
+21:31:32::INFO::error catched!:
+21:31:32::INFO::error message:
+
+21:31:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 407, in adicionar_laboratorio
+    self.disciplina_clicada(0)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 481, in disciplina_clicada
+    [lab['nome'] for lab in disciplina['laboratorios']]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 481, in <listcomp>
+    [lab['nome'] for lab in disciplina['laboratorios']]
+TypeError: string indices must be integers
+
+21:42:08::INFO::olá mundo
+21:42:15::INFO::error catched!:
+21:42:15::INFO::error message:
+
+21:42:15::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 500, in remover_laboratorio
+    disciplina['laboratorios'].remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:46:03::INFO::olá mundo
+21:46:25::INFO::olá mundo
+22:02:26::INFO::olá mundo
+22:02:26::INFO::error catched!:
+22:02:26::INFO::error message:
+
+22:02:26::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 584, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 56, in __init__
+    self.init_tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 154, in init_tab_professores
+    self.ui.btn_add_professor.clicked.connect(self.add_professor)
+AttributeError: 'Ui_MainWindow' object has no attribute 'btn_add_professor'
+
+22:02:36::INFO::olá mundo
+22:02:39::INFO::error catched!:
+22:02:39::INFO::error message:
+
+22:02:39::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 160, in horas_min_professor_changed
+    professores[professor['id']] = professor
+KeyError: 'id'
+
+22:02:40::INFO::error catched!:
+22:02:40::INFO::error message:
+
+22:02:40::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 160, in horas_min_professor_changed
+    professores[professor['id']] = professor
+KeyError: 'id'
+
+22:03:16::INFO::olá mundo
+22:03:19::INFO::error catched!:
+22:03:19::INFO::error message:
+
+22:03:19::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 160, in horas_min_professor_changed
+    professores[professor.doc_id] = professor
+TypeError: 'Table' object does not support item assignment
+
+22:03:19::INFO::error catched!:
+22:03:19::INFO::error message:
+
+22:03:19::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 160, in horas_min_professor_changed
+    professores[professor.doc_id] = professor
+TypeError: 'Table' object does not support item assignment
+
+22:03:22::INFO::error catched!:
+22:03:22::INFO::error message:
+
+22:03:22::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 160, in horas_min_professor_changed
+    professores[professor.doc_id] = professor
+TypeError: 'Table' object does not support item assignment
+
+22:05:11::INFO::olá mundo
+22:05:36::INFO::olá mundo
+22:07:21::INFO::olá mundo
+22:10:54::INFO::olá mundo
+22:11:33::INFO::error catched!:
+22:11:33::INFO::error message:
+
+22:11:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 508, in disciplina_clicada
+    [lab['nome'] for lab in disciplina['laboratorios']]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 508, in <listcomp>
+    [lab['nome'] for lab in disciplina['laboratorios']]
+TypeError: string indices must be integers
+
+22:11:49::INFO::error catched!:
+22:11:49::INFO::error message:
+
+22:11:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 508, in disciplina_clicada
+    [lab['nome'] for lab in disciplina['laboratorios']]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 508, in <listcomp>
+    [lab['nome'] for lab in disciplina['laboratorios']]
+TypeError: string indices must be integers
+
+22:15:16::INFO::olá mundo
+22:24:13::INFO::olá mundo
+22:24:13::INFO::error catched!:
+22:24:13::INFO::error message:
+
+22:24:13::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 604, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 55, in __init__
+    self.init_tab_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 111, in init_tab_salas
+    self.ui.salas_afinidade_horarios.horizontalHeader().setSectionResizeMode(
+AttributeError: 'Ui_MainWindow' object has no attribute 'salas_afinidade_horarios'
+
+22:24:38::INFO::olá mundo
+22:24:38::INFO::error catched!:
+22:24:38::INFO::error message:
+
+22:24:38::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 604, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 55, in __init__
+    self.init_tab_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 114, in init_tab_salas
+    self.ui.sala_distancias.horizontalHeader().setSectionResizeMode(
+AttributeError: 'Ui_MainWindow' object has no attribute 'sala_distancias'
+
+22:24:42::INFO::olá mundo
+22:24:42::INFO::error catched!:
+22:24:42::INFO::error message:
+
+22:24:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 604, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 55, in __init__
+    self.init_tab_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 114, in init_tab_salas
+    self.ui.sala_distancias.horizontalHeader().setSectionResizeMode(
+AttributeError: 'Ui_MainWindow' object has no attribute 'sala_distancias'
+
+22:25:14::INFO::olá mundo
+22:25:55::INFO::olá mundo
+22:25:56::INFO::error catched!:
+22:25:56::INFO::error message:
+
+22:25:56::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 496, in sala_clicada
+    self.carregar_afinidade_sala_horarios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 458, in carregar_afinidade_sala_horarios
+    self.ui.sala_afinidade_horario.setRowCount(0)
+AttributeError: 'Ui_MainWindow' object has no attribute 'sala_afinidade_horario'
+
+22:26:39::INFO::olá mundo
+22:27:56::INFO::olá mundo
+22:28:20::INFO::olá mundo
+22:42:23::INFO::olá mundo
+22:44:19::INFO::olá mundo
+22:55:01::INFO::olá mundo
+23:37:53::INFO::olá mundo
+23:51:03::INFO::olá mundo
+23:51:08::INFO::error catched!:
+23:51:08::INFO::error message:
+
+23:51:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 452, in list_horarios_todos_item_clicked
+    disciplina = Disciplina.from_json(disciplina)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 204, in from_json
+    nome=d['nome'],
+TypeError: string indices must be integers
+
+23:52:10::INFO::olá mundo
+23:52:17::INFO::error catched!:
+23:52:17::INFO::error message:
+
+23:52:17::INFO::TypeError: atualizar_horarios() takes 2 positional arguments but 4 were given
+
+23:58:48::INFO::olá mundo
+23:58:53::INFO::error catched!:
+23:58:53::INFO::error message:
+
+23:58:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 460, in disciplina_rmv_horario
+    disciplina.remover_horario(aula, item.text())
+AttributeError: 'Disciplina' object has no attribute 'remover_horario'
+
+23:59:14::INFO::olá mundo
