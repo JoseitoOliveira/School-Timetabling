@@ -314,7 +314,9 @@ class Fitness:
                 if h_salas != []:
                     distancia += 1000
                 for (_, s1), (_, s2) in pairwise(h_salas):
-                    distancia += self.metadata.distancias[s1.nome][s2.nome]
+                    if s1 != s2:
+                        distancia += self.metadata.distancias[s1.nome][s2.nome]
+
         return distancia * DISTANCIA_ENTRE_SALAS
 
 

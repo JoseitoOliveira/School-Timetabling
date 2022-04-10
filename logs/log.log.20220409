@@ -1,0 +1,197 @@
+00:13:13::INFO::olá mundo
+00:19:49::INFO::olá mundo
+00:20:44::INFO::error catched!:
+00:20:44::INFO::error message:
+
+00:20:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 534, in disciplina_rmv_laboratorio
+    disciplina.rmv_laboratorio(item.text())
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 188, in rmv_laboratorio
+    where('nome') == disciplina['nome'])
+NameError: name 'disciplina' is not defined
+
+00:52:29::INFO::olá mundo
+00:52:36::INFO::error catched!:
+00:52:36::INFO::error message:
+
+00:52:36::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 306, in num_alunos_changed
+    self.disciplina_atual.set_num_alunos(value)
+AttributeError: 'Window' object has no attribute 'disciplina_atual'
+
+00:53:42::INFO::olá mundo
+00:55:31::INFO::olá mundo
+00:56:08::INFO::olá mundo
+00:56:08::INFO::error catched!:
+00:56:08::INFO::error message:
+
+00:56:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 543, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 53, in __init__
+    self.init_tab_disciplinas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 111, in init_tab_disciplinas
+    self.ui.list_disciplinas.setCurrentIndex(0)
+TypeError: setCurrentIndex(self, QModelIndex): argument 1 has unexpected type 'int'
+
+00:57:28::INFO::olá mundo
+00:57:28::INFO::error catched!:
+00:57:28::INFO::error message:
+
+00:57:28::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 543, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 53, in __init__
+    self.init_tab_disciplinas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 111, in init_tab_disciplinas
+    self.ui.list_disciplinas.setCurrentIndex(0)
+TypeError: setCurrentIndex(self, QModelIndex): argument 1 has unexpected type 'int'
+
+00:57:43::INFO::olá mundo
+00:57:49::INFO::error catched!:
+00:57:49::INFO::error message:
+
+00:57:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 456, in set_disciplina_atual
+    nome_disciplina = self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+00:57:51::INFO::error catched!:
+00:57:51::INFO::error message:
+
+00:57:51::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 456, in set_disciplina_atual
+    nome_disciplina = self.ui.list_disciplinas.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+
+00:59:23::INFO::olá mundo
+00:59:26::INFO::error catched!:
+00:59:26::INFO::error message:
+
+00:59:26::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 309, in num_alunos_changed
+    self.disciplina_atual.set_num_alunos(value)
+AttributeError: 'Window' object has no attribute 'disciplina_atual'
+
+11:11:51::INFO::olá mundo
+11:13:19::INFO::olá mundo
+11:13:24::INFO::error catched!:
+11:13:24::INFO::error message:
+
+11:13:24::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 182, in horas_min_professor_changed
+    self.professor_atual.hrs_min = value
+AttributeError: 'Window' object has no attribute 'professor_atual'
+
+11:19:37::INFO::olá mundo
+11:25:25::INFO::olá mundo
+11:25:27::INFO::error catched!:
+11:25:27::INFO::error message:
+
+11:25:27::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 173, in capacidade_sala_changed
+    sala = self.sala_atual()
+TypeError: 'Sala' object is not callable
+
+11:25:27::INFO::error catched!:
+11:25:27::INFO::error message:
+
+11:25:27::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 447, in exibir_sala_atual
+    self.carregar_afinidade_sala_horarios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 402, in carregar_afinidade_sala_horarios
+    sala = self.sala_atual()
+TypeError: 'Sala' object is not callable
+
+11:27:11::INFO::olá mundo
+11:30:35::INFO::olá mundo
+11:30:53::INFO::error catched!:
+11:30:53::INFO::error message:
+
+11:30:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 426, in set_professor_atual
+    self.professor_atual = Professor(**professor)
+TypeError: src.modelos.Professor() argument after ** must be a mapping, not NoneType
+
+11:31:07::INFO::error catched!:
+11:31:07::INFO::error message:
+
+11:31:07::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 426, in set_professor_atual
+    self.professor_atual = Professor(**professor)
+TypeError: src.modelos.Professor() argument after ** must be a mapping, not NoneType
+
+11:31:09::INFO::error catched!:
+11:31:09::INFO::error message:
+
+11:31:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 426, in set_professor_atual
+    self.professor_atual = Professor(**professor)
+TypeError: src.modelos.Professor() argument after ** must be a mapping, not NoneType
+
+11:32:54::INFO::olá mundo
+11:34:12::INFO::error catched!:
+11:34:12::INFO::error message:
+
+11:34:12::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 446, in set_disciplina_atual
+    self.disciplina_atual = Disciplina(**disciplina)
+TypeError: src.modelos.Disciplina() argument after ** must be a mapping, not NoneType
+
+11:36:04::INFO::olá mundo
+11:37:28::INFO::olá mundo
+11:45:38::INFO::olá mundo
+11:51:58::INFO::olá mundo
+11:59:03::INFO::olá mundo
+11:59:07::INFO::error catched!:
+11:59:07::INFO::error message:
+
+11:59:07::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 453, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 416, in carregar_distancia_salas
+    sala_distancias = distancias[self.sala_atual.nome]
+TypeError: 'Table' object is not subscriptable
+
+12:01:07::INFO::olá mundo
+12:01:09::INFO::error catched!:
+12:01:09::INFO::error message:
+
+12:01:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 453, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 418, in carregar_distancia_salas
+    for i, (sala, distancia) in enumerate(sala_distancias.items()):
+AttributeError: 'NoneType' object has no attribute 'items'
+
+12:01:42::INFO::olá mundo
+12:01:44::INFO::error catched!:
+12:01:44::INFO::error message:
+
+12:01:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 453, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 422, in carregar_distancia_salas
+    cell_dist = QTableWidgetItem(distancia)
+TypeError: arguments did not match any overloaded call:
+  QTableWidgetItem(type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'dict'
+  QTableWidgetItem(str, type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'dict'
+  QTableWidgetItem(QIcon, str, type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'dict'
+  QTableWidgetItem(QTableWidgetItem): argument 1 has unexpected type 'dict'
+
+12:03:33::INFO::olá mundo
+12:04:05::INFO::olá mundo
+12:04:57::INFO::olá mundo
+12:05:20::INFO::olá mundo
+12:08:43::INFO::olá mundo
+12:08:44::INFO::error catched!:
+12:08:44::INFO::error message:
+
+12:08:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 455, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 417, in carregar_distancia_salas
+    sala_distancias = sala_distancias.sort_values(by='distancia')
+AttributeError: 'Document' object has no attribute 'sort_values'
+
+12:09:45::INFO::olá mundo

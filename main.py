@@ -18,7 +18,7 @@ from tinydb import where
 import src.aa_update  # noqa
 from resources.ui_files.main import Ui_MainWindow
 from src.console import Console
-from src.data import disciplinas, distancias, professores, salas  # noqa
+from src.data import disciplinas, professores, salas  # noqa
 from src.horarios import horarios_str as horarios_1_str
 from src.logger import logger_print, print_exception_locals
 from src.modelos import Disciplina, Professor, Sala  # noqa
@@ -44,6 +44,12 @@ class Window(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        self.setWindowFlags(self.windowFlags() |
+                            Qt.CustomizeWindowHint |
+                            Qt.WindowMinimizeButtonHint |
+                            Qt.WindowMaximizeButtonHint |
+                            Qt.WindowCloseButtonHint)
+
         self.console = Console(self.ui.console)
         self.console.add_logging()
         print('olá mundo')
@@ -64,12 +70,18 @@ class Window(QMainWindow):
             lambda: self.ui.tab_telas.setCurrentIndex(2))
         self.ui.actionSalas.triggered.connect(
             lambda: self.ui.tab_telas.setCurrentIndex(3))
-        self.ui.actionsobre.triggered.connect(
+        self.ui.actionSobre.triggered.connect(
             lambda: self.ui.tab_telas.setCurrentIndex(4))
 
         self.ui.tab_telas.currentChanged.connect(self.change_tab)
 
     def init_tab_disciplinas(self):
+
+        self.ui.choques.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Stretch)
+
+        self.ui.choques.horizontalHeader().hide()
+        self.ui.choques.verticalHeader().hide()
 
         self.ui.list_disciplinas.currentRowChanged.connect(
             self.set_disciplina_atual)
@@ -116,13 +128,21 @@ class Window(QMainWindow):
         # self.ui.btn_add_sala.clicked.connect(self.add_sala)
         # self.ui.btn_rmv_sala.clicked.connect(self.rmv_sala)
 
+        self.ui.sala_afinidade_horario.itemChanged.connect(
+            self.sala_afinidade_horario_changed
+        )
+
+        self.ui.sala_distancias.itemChanged.connect(
+            self.sala_distancias_changed
+        )
+
         self.ui.capacidade_sala.valueChanged.connect(
             self.capacidade_sala_changed)
 
         self.ui.list_salas.currentRowChanged.connect(self.set_sala_atual)
         self.ui.list_salas.currentRowChanged.connect(self.exibir_sala_atual)
 
-        self.ui.sala_afinidade_horarios.horizontalHeader().setSectionResizeMode(
+        self.ui.sala_afinidade_horario.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch)
 
         self.ui.sala_distancias.horizontalHeader().setSectionResizeMode(
@@ -166,8 +186,8 @@ class Window(QMainWindow):
         self.ui.horas_max_professor.valueChanged.connect(
             self.horas_max_professor_changed)
 
-        # self.ui.btn_add_professor.clicked.connect(self.add_professor)
-        # self.ui.btn_rmv_professor.clicked.connect(self.rmv_professor)
+        self.ui.btn_add_professor.clicked.connect(self.add_professor)
+        self.ui.btn_rmv_professor.clicked.connect(self.rmv_professor)
 
     def capacidade_sala_changed(self, value):
         self.sala_atual.capacidade = value
@@ -182,10 +202,16 @@ class Window(QMainWindow):
         self.professor_atual.hrs_max = value
 
     def add_professor(self):
-        ...
+        novo_professor = Professor(nome='Novo professor')
+        professores.insert(novo_professor.as_json())
+        self.ui.list_professores.insertItem(0, novo_professor.nome)
+        self.ui.list_professores.setCurrentRow(0)
 
     def rmv_professor(self):
-        ...
+        nome = self.nome_professor_atual()
+        professores.remove(where('nome') == nome)  # type: ignore
+        self.ui.list_professores.takeItem(
+            self.ui.list_professores.currentRow())
 
     def professor_afinidade_sala_changed(self, item: QTableWidgetItem):
         current_item = self.ui.professor_afinidade_sala.currentItem()
@@ -198,8 +224,7 @@ class Window(QMainWindow):
             print('Valor inválido')
             return
 
-        sala = self.ui.professor_afinidade_sala.itemAt(
-            0, item.column()).text()
+        sala = self.ui.professor_afinidade_sala.item(item.row(), 0).text()
         self.professor_atual.set_afinidade_salas(sala, afinidade)
 
     def professor_afinidade_horario_changed(self, item: QTableWidgetItem):
@@ -213,10 +238,40 @@ class Window(QMainWindow):
             print('Valor inválido')
             return
 
-        horario = self.ui.professor_afinidade_horario.itemAt(
-            0, item.column()).text()
+        horario = self.ui.professor_afinidade_horario.item(
+            item.row(), 0).text()
 
         self.professor_atual.set_afinidade_horarios(horario, afinidade)
+
+    def sala_afinidade_horario_changed(self, item: QTableWidgetItem):
+        current_item = self.ui.sala_afinidade_horario.currentItem()
+        if item != current_item or item.column() != 1:
+            return
+
+        try:
+            afinidade = int(item.text())
+        except ValueError:
+            print('Valor inválido')
+            return
+
+        horario = self.ui.sala_afinidade_horario.item(item.row(), 0).text()
+
+        self.sala_atual.set_afinidade_horarios(horario, afinidade)
+
+    def sala_distancias_changed(self, item: QTableWidgetItem):
+        current_item = self.ui.sala_distancias.currentItem()
+        if item != current_item or item.column() != 1:
+            return
+
+        try:
+            distancia = int(item.text())
+        except ValueError:
+            print('Valor inválido')
+            return
+
+        sala = self.ui.sala_distancias.item(item.row(), 0).text()
+
+        self.sala_atual.set_distancia(sala, distancia)
 
     def professor_afinidade_disciplina_changed(self, item: QTableWidgetItem):
         current_item = self.ui.professor_afinidade_disciplina.currentItem()
@@ -229,8 +284,8 @@ class Window(QMainWindow):
             print('Valor inválido')
             return
 
-        disciplina = self.ui.professor_afinidade_disciplina.itemAt(
-            0, item.column()).text()
+        disciplina = self.ui.professor_afinidade_disciplina.item(
+            item.row(), 0).text()
         self.professor_atual.set_afinidade_disciplinas(disciplina, afinidade)
 
     def carregar_afinidade_professor_disciplina(self):
@@ -395,35 +450,39 @@ class Window(QMainWindow):
     def carregar_afinidade_sala_horarios(self):
         afinidade_horarios = self.sala_atual.afinidade_horarios
 
-        self.ui.sala_afinidade_horarios.setRowCount(0)
+        self.ui.sala_afinidade_horario.setRowCount(0)
 
         for i, horario in enumerate(horarios_1_str):
-            self.ui.sala_afinidade_horarios.insertRow(i)
+            self.ui.sala_afinidade_horario.insertRow(i)
             afinidade = afinidade_horarios.get(horario, 0)
             cell_nome = QTableWidgetItem(horario)
             cell_nome.setFlags(Qt.ItemFlag.ItemIsEnabled)
             cell_afinidade = QTableWidgetItem(str(afinidade))
-            self.ui.sala_afinidade_horarios.setItem(
+            self.ui.sala_afinidade_horario.setItem(
                 i, 0, cell_nome
             )
 
-            self.ui.sala_afinidade_horarios.setItem(
+            self.ui.sala_afinidade_horario.setItem(
                 i, 1, cell_afinidade
             )
 
     def carregar_distancia_salas(self):
         self.ui.sala_distancias.setRowCount(0)
-        sala_distancias = distancias.get(
-            where('sala') == self.sala_atual.nome
-        )['distancias']
+        distancias = self.sala_atual.distancias
+        outras_salas = [
+            sala['nome']
+            for sala in salas.all()
+            if sala['nome'] != self.sala_atual.nome
+        ]
 
-        for i, outra_sala in enumerate(sala_distancias):
-            self.ui.sala_distancias.insertRow(i)
+        for outra_sala in sorted(outras_salas):
+            index = self.ui.sala_distancias.rowCount()
+            self.ui.sala_distancias.insertRow(index)
             cell_sala = QTableWidgetItem(outra_sala)
             cell_sala.setFlags(Qt.ItemFlag.ItemIsEnabled)
-            cell_dist = QTableWidgetItem(str(sala_distancias[outra_sala]))
-            self.ui.sala_distancias.setItem(i, 0, cell_sala)
-            self.ui.sala_distancias.setItem(i, 1, cell_dist)
+            cell_dist = QTableWidgetItem(str(distancias.get(outra_sala, 1000)))
+            self.ui.sala_distancias.setItem(index, 0, cell_sala)
+            self.ui.sala_distancias.setItem(index, 1, cell_dist)
 
     def exibir_professor_atual(self):
         self.ui.nome_professor.setText(self.professor_atual.nome)
@@ -488,6 +547,20 @@ class Window(QMainWindow):
             [lab['nome'] for lab in self.disciplina_atual.laboratorios]
         )
 
+        self.ui.choques.setRowCount(0)
+        for disciplina in sorted(disciplinas.all(), key=lambda d: d['nome']):
+            if set(self.disciplina_atual.grades).intersection(
+                    set(disciplina['grades'])
+            ):
+                continue
+            cell = QTableWidgetItem(disciplina['nome'])
+            cell.setFlags(Qt.ItemFlag.ItemIsEnabled |
+                          Qt.ItemFlag.ItemIsUserCheckable)
+            cell.setCheckState(Qt.CheckState.Unchecked)
+            index = self.ui.choques.rowCount()
+            self.ui.choques.insertRow(index)
+            self.ui.choques.setItem(index, 0, cell)
+
     def disciplina_rmv_laboratorio(self, item):
         self.disciplina_atual.rmv_laboratorio(item.text())
         self.exibir_disciplina_atual()
@@ -495,6 +568,7 @@ class Window(QMainWindow):
     def tab_discilina(self):
         self.carregar_discplinas()
         self.carregar_laboratorios()
+        self.ui.list_horarios_todos.clear()
         self.ui.list_horarios_todos.addItems(horarios_1_str)
 
     def tab_professores(self):
@@ -519,7 +593,7 @@ class Window(QMainWindow):
 
     def carregar_salas(self):
         self.ui.list_salas.clear()
-        for sala in salas.all():
+        for sala in sorted(salas.all(), key=lambda x: x['nome']):
             self.ui.list_salas.addItem(sala['nome'])
 
     def carregar_discplinas(self):
@@ -529,7 +603,7 @@ class Window(QMainWindow):
 
     def carregar_professores(self):
         self.ui.list_professores.clear()
-        for professor in professores.all():
+        for professor in sorted(professores.all(), key=lambda x: x['nome']):
             self.ui.list_professores.addItem(professor['nome'])
 
 
@@ -549,5 +623,6 @@ if __name__ == '__main__':
     apply_stylesheet(app,
                      extra=theme_extra,
                      theme='dark_teal.xml')
-    app.show()
+
+    app.showMaximized()
     sys.exit(root.exec_())

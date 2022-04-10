@@ -89,10 +89,17 @@
       </property>
      </widget>
     </item>
+    <item row="5" column="1">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="1">
      <widget class="QTabWidget" name="tab_telas">
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideMiddle</enum>
@@ -104,7 +111,7 @@
        <attribute name="title">
         <string>Executar</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
         <item>
          <layout class="QFormLayout" name="formLayout_4">
           <property name="labelAlignment">
@@ -201,7 +208,7 @@
        <attribute name="title">
         <string>Disciplinas</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1,1">
         <item>
          <widget class="QGroupBox" name="form_disciplina">
           <property name="enabled">
@@ -417,7 +424,49 @@
          </widget>
         </item>
         <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Evitar choques com</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="choques">
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::DashDotLine</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="columnCount">
+             <number>1</number>
+            </property>
+            <column>
+             <property name="text">
+              <string>Disciplina</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
          <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Disciplinas</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QListWidget" name="list_disciplinas"/>
           </item>
@@ -426,7 +475,7 @@
             <item>
              <widget class="QPushButton" name="btn_add_disciplina">
               <property name="text">
-               <string>Adicionar Disciplina</string>
+               <string>Adicionar</string>
               </property>
               <property name="icon">
                <iconset>
@@ -446,7 +495,7 @@
             <item>
              <widget class="QPushButton" name="btn_rmv_disciplina">
               <property name="text">
-               <string>Remover Disciplina</string>
+               <string>Remover</string>
               </property>
               <property name="icon">
                <iconset>
@@ -616,7 +665,7 @@
             <item>
              <widget class="QPushButton" name="btn_add_professor">
               <property name="text">
-               <string>Adicionar Professor</string>
+               <string>Adicionar</string>
               </property>
               <property name="icon">
                <iconset>
@@ -636,7 +685,7 @@
             <item>
              <widget class="QPushButton" name="btn_rmv_professor">
               <property name="text">
-               <string>Remover Professor</string>
+               <string>Remover</string>
               </property>
               <property name="icon">
                <iconset>
@@ -715,7 +764,7 @@
            <item row="2" column="1">
             <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0">
              <item>
-              <widget class="QTableWidget" name="sala_afinidade_horarios">
+              <widget class="QTableWidget" name="sala_afinidade_horario">
                <column>
                 <property name="text">
                  <string>Horário</string>
@@ -764,7 +813,7 @@
             <item>
              <widget class="QPushButton" name="btn_add_sala">
               <property name="text">
-               <string>Adicionar Sala</string>
+               <string>Adicionar</string>
               </property>
               <property name="icon">
                <iconset>
@@ -784,7 +833,7 @@
             <item>
              <widget class="QPushButton" name="btn_rmv_sala">
               <property name="text">
-               <string>Remover Sala</string>
+               <string>Remover</string>
               </property>
               <property name="icon">
                <iconset>
@@ -812,13 +861,6 @@
         <string>Sobre</string>
        </attribute>
       </widget>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="value">
-       <number>24</number>
-      </property>
      </widget>
     </item>
    </layout>
@@ -855,7 +897,7 @@
    <addaction name="actionDisciplinas"/>
    <addaction name="actionProfessores"/>
    <addaction name="actionSalas"/>
-   <addaction name="actionsobre"/>
+   <addaction name="actionSobre"/>
   </widget>
   <action name="actionExecute">
    <property name="icon">
@@ -893,13 +935,13 @@
     <string>Salas</string>
    </property>
   </action>
-  <action name="actionsobre">
+  <action name="actionSobre">
    <property name="icon">
     <iconset>
      <normaloff>../images/info2_48px.png</normaloff>../images/info2_48px.png</iconset>
    </property>
    <property name="text">
-    <string>sobre</string>
+    <string>Sobre</string>
    </property>
   </action>
  </widget>

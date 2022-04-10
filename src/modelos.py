@@ -3,10 +3,8 @@ from dataclasses import dataclass
 from tinydb import where
 
 from src.data import disciplinas, professores, salas
-from src.horarios import horarios_2, horarios_2_str, horarios_3, horarios_3_str
-from src.horarios import horarios_str
+from src.horarios import horarios_2_str, horarios_3_str
 from src.horarios import horarios_str as horarios_1_str
-from src.horarios import sabado, todos
 
 
 class Professor:
@@ -14,18 +12,18 @@ class Professor:
     def __init__(
         self,
         nome: str,
-        afinidade_disciplinas: dict[str, int],
+        afinidade_disciplinas: dict[str, int] = None,
         hrs_min: int = 8,
         hrs_max: int = 12,
-        afinidade_horarios: dict[str, int] = {},
-        afinidade_salas: dict[str, int] = {}
+        afinidade_horarios: dict[str, int] = None,
+        afinidade_salas: dict[str, int] = None
     ):
         self._nome = nome
-        self._afinidade_disciplinas = afinidade_disciplinas
+        self._afinidade_disciplinas = afinidade_disciplinas or {}
         self._hrs_min = hrs_min
         self._hrs_max = hrs_max
-        self._afinidade_horarios = afinidade_horarios
-        self._afinidade_salas = afinidade_salas
+        self._afinidade_horarios = afinidade_horarios or {}
+        self._afinidade_salas = afinidade_salas or {}
 
     @property
     def nome(self):
@@ -118,45 +116,47 @@ class Sala:
         self,
         nome: str,
         capacidade: int,
-        laboratorio: bool,
-        afinidade_horarios: dict[str, int] = {}
+        laboratorio: bool = False,
+        afinidade_horarios: dict[str, int] = None,
+        distancias: dict[str, int] = None
     ):
         self._nome = nome
         self._capacidade = capacidade
         self._laboratorio = laboratorio
-        self._afinidade_horarios = afinidade_horarios
+        self._afinidade_horarios = afinidade_horarios or {}
+        self._distancias = distancias or {}
 
     @property
-    def nome(self):
+    def nome(self) -> str:
         return self._nome
 
     @nome.setter
-    def nome(self, nome):
+    def nome(self, nome) -> None:
         salas.update({'nome': nome}, where('nome') == self.nome)
         self._nome = nome
 
     @property
-    def capacidade(self):
+    def capacidade(self) -> int:
         return self._capacidade
 
     @capacidade.setter
-    def capacidade(self, capacidade):
+    def capacidade(self, capacidade) -> None:
         self._capacidade = capacidade
         salas.update({'capacidade': self.capacidade},
                      where('nome') == self.nome)
 
     @property
-    def laboratorio(self):
+    def laboratorio(self) -> bool:
         return self._laboratorio
 
     @laboratorio.setter
-    def laboratorio(self, laboratorio):
+    def laboratorio(self, laboratorio) -> None:
         self._laboratorio = laboratorio
         salas.update({'laboratorio': self.laboratorio},
                      where('nome') == self.nome)
 
     @property
-    def afinidade_horarios(self):
+    def afinidade_horarios(self) -> dict[str, int]:
         return self._afinidade_horarios
 
     @afinidade_horarios.setter
@@ -165,21 +165,51 @@ class Sala:
         salas.update({'afinidade_horarios': self.afinidade_horarios},
                      where('nome') == self.nome)
 
-    def as_json(self):
+    @property
+    def distancias(self) -> dict[str, int]:
+        return self._distancias
+
+    @distancias.setter
+    def distancias(self, distancias) -> None:
+        self._distancias = distancias
+        salas.update({'distancias': self.distancias},
+                     where('nome') == self.nome)
+
+    def set_afinidade_horarios(self, horario, afinidade) -> None:
+        if afinidade == 0 and horario in self.afinidade_horarios:
+            del self.afinidade_horarios[horario]
+        else:
+            self.afinidade_horarios[horario] = afinidade
+        salas.update({'afinidade_horarios': self.afinidade_horarios},
+                     where('nome') == self.nome)
+
+    def set_distancia(self, nome_outra_sala, distancia) -> None:
+        self.distancias[nome_outra_sala] = distancia
+        salas.update({'distancias': self.distancias},
+                     where('nome') == self.nome)
+
+        outra_sala = salas.get(where('nome') == nome_outra_sala)
+        outra_sala['distancias'][self.nome] = distancia
+        salas.update({'distancias': outra_sala['distancias']},
+                     where('nome') == nome_outra_sala)
+
+    def as_json(self) -> dict:
         return {
             'nome': self.nome,
             'capacidade': self.capacidade,
             'laboratorio': self.laboratorio,
             'afinidade_horarios': self.afinidade_horarios,
+            'distancias': self.distancias,
         }
 
     @classmethod
-    def from_json(cls, d):
+    def from_json(cls, d) -> 'Sala':
         return cls(
             nome=d['nome'],
             capacidade=d['capacidade'],
             laboratorio=d['laboratorio'],
             afinidade_horarios=d['afinidade_horarios'],
+            distancias=d['distancias'],
         )
 
 
@@ -219,25 +249,23 @@ class Disciplina:
             num_alunos: int,
             grades: list[str],
             horas: list[int],
-            horarios: list[list[str]],
-            laboratorios: list[Sala],
-            salas: list[Sala],
-            professores: list[Professor],
-            cromossomos: list[Cromossomo],
-            aulas_aos_sabados: bool,
-            sem_professor: bool,
-            sem_sala: bool
+            horarios: list[list[str]] = None,
+            laboratorios: list[Sala] = None,
+            salas: list[Sala] = None,
+            professores: list[Professor] = None,
+            cromossomos: list[Cromossomo] = None,
+            sem_professor: bool = False,
+            sem_sala: bool = False
     ):
         self._nome = nome
         self._num_alunos = num_alunos
         self._grades = grades
         self._horas = horas
-        self._horarios = horarios
-        self._laboratorios = laboratorios
-        self._salas = salas
-        self._professores = professores
-        self._cromossomos = cromossomos
-        self._aulas_aos_sabados = aulas_aos_sabados
+        self._horarios = horarios or []
+        self._laboratorios = laboratorios or []
+        self._salas = salas or []
+        self._professores = professores or []
+        self._cromossomos = cromossomos or []
         self._sem_professor = sem_professor
         self._sem_sala = sem_sala
 
@@ -302,8 +330,9 @@ class Disciplina:
     @laboratorios.setter
     def laboratorios(self, laboratorios):
         self._laboratorios = laboratorios
-        disciplinas.update({'laboratorios': self.laboratorios},
-                           where('nome') == self.nome)
+        disciplinas.update(
+            {'laboratorios': [lab.as_json for lab in self.laboratorios]},
+            where('nome') == self.nome)
 
     @property
     def salas(self):
@@ -312,7 +341,7 @@ class Disciplina:
     @salas.setter
     def salas(self, salas):
         self._salas = salas
-        disciplinas.update({'salas': self.salas},
+        disciplinas.update({'salas': [s.as_json() for s in self.salas]},
                            where('nome') == self.nome)
 
     @property
@@ -322,7 +351,7 @@ class Disciplina:
     @professores.setter
     def professores(self, professores):
         self._professores = professores
-        disciplinas.update({'professores': self.professores},
+        disciplinas.update({'professores': [p.as_json() for p in self.professores]},
                            where('nome') == self.nome)
 
     @property
@@ -332,17 +361,7 @@ class Disciplina:
     @cromossomos.setter
     def cromossomos(self, cromossomos):
         self._cromossomos = cromossomos
-        disciplinas.update({'cromossomos': self.cromossomos},
-                           where('nome') == self.nome)
-
-    @property
-    def aulas_aos_sabados(self):
-        return self._aulas_aos_sabados
-
-    @aulas_aos_sabados.setter
-    def aulas_aos_sabados(self, aulas_aos_sabados):
-        self._aulas_aos_sabados = aulas_aos_sabados
-        disciplinas.update({'aulas_aos_sabados': self.aulas_aos_sabados},
+        disciplinas.update({'cromossomos': [c.as_json() for c in self.cromossomos]},
                            where('nome') == self.nome)
 
     @property
@@ -412,40 +431,12 @@ class Disciplina:
 
     def make_horarios(self):
         for h in self.horas:
-            if h == 2:
-                horarios_binarios = (horarios_2
-                                     if self.aulas_aos_sabados
-                                     else horarios_2 & ~sabado)
-                self.horarios.append(
-                    [
-                        horario_str
-                        for i, horario_str in enumerate(horarios_str)
-                        if horarios_binarios & (0x1 << i)
-                    ]
-                )
-            elif h == 3:
-                horarios_binarios = (horarios_3
-                                     if self.aulas_aos_sabados
-                                     else horarios_3 & ~sabado)
-
-                self.horarios.append(
-                    [
-                        horario_str
-                        for i, horario_str in enumerate(horarios_str)
-                        if horarios_binarios & (0x1 << i)
-                    ]
-                )
-            else:
-                horarios_binarios = (todos
-                                     if self.aulas_aos_sabados
-                                     else todos & ~sabado)
-                self.horarios.append(
-                    [
-                        horario_str
-                        for i, horario_str in enumerate(horarios_str)
-                        if horarios_binarios & (0x1 << i)
-                    ]
-                )
+            horarios_str = {
+                1: horarios_1_str,
+                2: horarios_2_str,
+                3: horarios_3_str
+            }
+            self.horarios.append(horarios_str.get(h, horarios_str))
 
     def as_json(self):
         return {
@@ -453,7 +444,6 @@ class Disciplina:
             'num_alunos': self.num_alunos,
             'grades': self.grades,
             'horas': self.horas,
-            'aulas_aos_sabados': self.aulas_aos_sabados,
             'horarios': self.horarios,
             'laboratorios': [s.as_json() for s in self.laboratorios],
             'salas': [s.as_json() for s in self.salas],
@@ -470,7 +460,6 @@ class Disciplina:
             num_alunos=d['num_alunos'],
             grades=d['grades'],
             horas=d['horas'],
-            aulas_aos_sabados=d['aulas_aos_sabados'],
             horarios=d['horarios'],
             laboratorios=[Sala.from_json(s) for s in d['laboratorios']],
             salas=[Sala.from_json(s) for s in d['salas']],

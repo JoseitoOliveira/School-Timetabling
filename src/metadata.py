@@ -315,6 +315,7 @@ disciplinas = [
         nome="Vetorial I",
         grades=["p1"],
         num_alunos=20,
+        horarios=[],
         horas=[2, 2],
         sem_professor=True,
         sem_sala=True
@@ -675,14 +676,14 @@ disciplinas = [
         grades=["p7"],
         num_alunos=20,
         horas=[2, 3],
-        aulas_aos_sabados=False,
+
     ),
     Disciplina(
         nome="Eletrônica de Potência",
         grades=["p7"],
         num_alunos=25,
         horas=[2, 3],
-        aulas_aos_sabados=False
+
     ),
     Disciplina(
         nome="Instalações Elétricas",
@@ -701,14 +702,14 @@ disciplinas = [
         grades=[P8_SE],
         num_alunos=15,
         horas=[2, 2],
-        aulas_aos_sabados=False
+
     ),
     Disciplina(
         nome="Filtros",
         grades=[P8_EL, P8_CA],
         num_alunos=15,
         horas=[2, 2],
-        aulas_aos_sabados=False
+
     ),
     Disciplina(
         nome="Métodos Numéricos",
@@ -721,14 +722,14 @@ disciplinas = [
         grades=[P8_EL, P8_CA],
         num_alunos=15,
         horas=[2, 2],
-        aulas_aos_sabados=False
+
     ),
     Disciplina(
         nome="Acionamentos e Circuitos Elétricos",
         grades=[P8_GE, P8_CA],
         num_alunos=15,
         horas=[2, 2],
-        aulas_aos_sabados=False
+
     ),
     Disciplina(
         nome="Microc e Microp",
@@ -1091,7 +1092,3 @@ metadata = completar_metadata(metadata)
 with open('out/metadata_c.py', mode='w', encoding='utf8') as f:
     from pprint import pprint
     pprint(asdict(metadata), stream=f)
-
-
-with open('data.json', mode='w', encoding='utf8') as f:
-    json.dump(metadata.as_json(), f, ensure_ascii=False, indent=4)
