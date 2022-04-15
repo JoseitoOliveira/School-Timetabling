@@ -60,7 +60,7 @@
      <height>9999</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0" columnstretch="0,0">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0" columnstretch="0,0">
     <property name="sizeConstraint">
      <enum>QLayout::SetDefaultConstraint</enum>
     </property>
@@ -79,27 +79,10 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="4" column="1">
-     <widget class="QTextEdit" name="console"/>
-    </item>
-    <item row="3" column="1">
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="value">
-       <number>24</number>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="1">
      <widget class="QTabWidget" name="tab_telas">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideMiddle</enum>
@@ -125,7 +108,14 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSpinBox" name="spinBox_4"/>
+           <widget class="QSpinBox" name="tam_pop">
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+            <property name="value">
+             <number>1024</number>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_18">
@@ -135,7 +125,14 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSpinBox" name="spinBox_5"/>
+           <widget class="QSpinBox" name="num_ger">
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+            <property name="value">
+             <number>500</number>
+            </property>
+           </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_19">
@@ -145,7 +142,11 @@
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QSpinBox" name="spinBox_6"/>
+           <widget class="QSpinBox" name="num_rep">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+           </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_20">
@@ -155,7 +156,17 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+           <widget class="QDoubleSpinBox" name="taxa_mut">
+            <property name="maximum">
+             <double>0.990000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.010000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.200000000000000</double>
+            </property>
+           </widget>
           </item>
           <item row="4" column="0">
            <widget class="QLabel" name="label_21">
@@ -165,7 +176,17 @@
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+           <widget class="QDoubleSpinBox" name="taxa_cruz">
+            <property name="maximum">
+             <double>0.990000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.010000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.800000000000000</double>
+            </property>
+           </widget>
           </item>
           <item row="5" column="0">
            <widget class="QLabel" name="label_22">
@@ -175,10 +196,20 @@
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QSpinBox" name="spinBox_7"/>
+           <widget class="QSpinBox" name="tournsize">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+           </widget>
           </item>
           <item row="6" column="1">
-           <widget class="QPushButton" name="pushButton_9">
+           <widget class="QPushButton" name="btn_executar">
             <property name="text">
              <string>Iniciar</string>
             </property>
@@ -381,23 +412,24 @@
            <item row="4" column="1">
             <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
              <item>
-              <widget class="QListWidget" name="list_laboratorios_disciplinas">
-               <property name="dragDropMode">
-                <enum>QAbstractItemView::NoDragDrop</enum>
-               </property>
-               <property name="defaultDropAction">
-                <enum>Qt::IgnoreAction</enum>
-               </property>
+              <widget class="QTableWidget" name="disciplina_labs">
+               <column>
+                <property name="text">
+                 <string>Laboratório</string>
+                </property>
+               </column>
               </widget>
              </item>
              <item>
-              <widget class="QListWidget" name="list_laboratorios">
-               <property name="dragDropMode">
-                <enum>QAbstractItemView::DragDrop</enum>
+              <widget class="QTableWidget" name="disciplina_salas">
+               <property name="showGrid">
+                <bool>false</bool>
                </property>
-               <property name="defaultDropAction">
-                <enum>Qt::MoveAction</enum>
-               </property>
+               <column>
+                <property name="text">
+                 <string>Sala</string>
+                </property>
+               </column>
               </widget>
              </item>
             </layout>
@@ -861,6 +893,13 @@
         <string>Sobre</string>
        </attribute>
       </widget>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
+      </property>
      </widget>
     </item>
    </layout>

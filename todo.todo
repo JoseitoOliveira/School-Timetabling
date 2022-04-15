@@ -12,6 +12,9 @@
 ☐ Mantendo o produto TAM_POP x NUM_GER constantes, variar a divisão
 ☐ Testar a mutação variável como uma rampa
 
+☐ consertar criação das distancias entre salas
+
+
 ✔ alterar nome da key "horarios" em "professor" para "afinidade_horarios" @done(22-02-14 18:43)
 ✔ Como lidar com disciplinas que possuem laboratórios? @done(22-02-07 18:47)
 ✔ Criar laboratórios com possibilidade de N choques de horários @done(21-11-18 15:00)

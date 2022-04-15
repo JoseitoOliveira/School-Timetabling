@@ -1,0 +1,392 @@
+12:10:54::INFO::olá mundo
+12:15:42::INFO::olá mundo
+12:16:46::INFO::olá mundo
+12:25:44::INFO::olá mundo
+12:26:04::INFO::olá mundo
+12:35:16::INFO::olá mundo
+12:36:37::INFO::olá mundo
+12:36:37::INFO::error catched!:
+12:36:37::INFO::error message:
+
+12:36:37::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 556, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 56, in __init__
+    self.tab_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 510, in tab_professores
+    self.carregar_professores()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 541, in carregar_professores
+    for professor in sorted(professores.all()):
+TypeError: '<' not supported between instances of 'Document' and 'Document'
+
+12:36:50::INFO::olá mundo
+12:37:23::INFO::olá mundo
+12:37:57::INFO::olá mundo
+12:38:50::INFO::olá mundo
+12:39:53::INFO::olá mundo
+12:47:04::INFO::error catched!:
+12:47:04::INFO::error message:
+
+12:47:04::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 557, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 46, in __init__
+    self.setWindowFlag(Qt.Window.WindowCloseButtonHint, False)
+AttributeError: 'WindowType' object has no attribute 'WindowCloseButtonHint'
+
+12:47:32::INFO::error catched!:
+12:47:32::INFO::error message:
+
+12:47:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 558, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 46, in __init__
+    flags = Qt.WindowFlags(Qt.Window.WindowCloseButtonHint)
+AttributeError: 'WindowType' object has no attribute 'WindowCloseButtonHint'
+
+12:47:40::INFO::error catched!:
+12:47:40::INFO::error message:
+
+12:47:40::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 558, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 46, in __init__
+    flags = Qt.WindowFlags(Qt.Window.WindowCloseButtonHint)
+AttributeError: 'WindowType' object has no attribute 'WindowCloseButtonHint'
+
+12:47:56::INFO::error catched!:
+12:47:56::INFO::error message:
+
+12:47:56::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 558, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 47, in __init__
+    self.setWindowFlag(flags, False)
+TypeError: setWindowFlag(self, Qt.WindowType, on: bool = True): argument 1 has unexpected type 'WindowFlags'
+
+12:48:25::INFO::error catched!:
+12:48:25::INFO::error message:
+
+12:48:25::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 559, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 48, in __init__
+    self.setWindowFlag(flags, False)
+TypeError: setWindowFlag(self, Qt.WindowType, on: bool = True): argument 1 has unexpected type 'WindowFlags'
+
+12:48:57::INFO::olá mundo
+12:49:45::INFO::olá mundo
+12:53:05::INFO::olá mundo
+12:54:45::INFO::olá mundo
+12:55:47::INFO::olá mundo
+12:57:01::INFO::olá mundo
+13:00:25::INFO::olá mundo
+13:01:15::INFO::<sip.voidptr object at 0x000001BBFDA2F2A0>
+13:01:15::INFO::olá mundo
+13:02:26::INFO::olá mundo
+13:03:06::INFO::olá mundo
+13:04:58::INFO::olá mundo
+13:05:41::INFO::olá mundo
+13:06:08::INFO::olá mundo
+13:06:28::INFO::error catched!:
+13:06:28::INFO::error message:
+
+13:06:28::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 365, in nome_professor_edited
+    self.professor_atual.nome = nome
+AttributeError: 'Window' object has no attribute 'professor_atual'
+
+13:06:30::INFO::error catched!:
+13:06:30::INFO::error message:
+
+13:06:30::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 365, in nome_professor_edited
+    self.professor_atual.nome = nome
+AttributeError: 'Window' object has no attribute 'professor_atual'
+
+13:07:02::INFO::olá mundo
+13:07:02::INFO::error catched!:
+13:07:02::INFO::error message:
+
+13:07:02::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 564, in <module>
+    blur(app.winId(), hexColor=True, Acrylic=False, Dark=True)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\BlurWindow\blurWindow.py", line 122, in blur
+    gradientColor = HEXtoRGBAint(hexColor)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\BlurWindow\blurWindow.py", line 106, in HEXtoRGBAint
+    alpha = HEX[7:]
+TypeError: 'bool' object is not subscriptable
+
+13:07:15::INFO::olá mundo
+13:07:46::INFO::olá mundo
+13:08:02::INFO::olá mundo
+13:08:36::INFO::olá mundo
+13:08:51::INFO::olá mundo
+13:09:05::INFO::olá mundo
+13:10:06::INFO::olá mundo
+13:10:06::INFO::error catched!:
+13:10:06::INFO::error message:
+
+13:10:06::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 564, in <module>
+    blur(app.winId(), Dark=True, QWidget=app)
+TypeError: blur() got an unexpected keyword argument 'QWidget'
+
+13:10:35::INFO::olá mundo
+13:10:36::INFO::error catched!:
+13:10:36::INFO::error message:
+
+13:10:36::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 564, in <module>
+    blur(app.winId(), Dark=True, QWidget=app.widget)
+AttributeError: 'Window' object has no attribute 'widget'
+
+13:11:28::INFO::olá mundo
+13:11:28::INFO::error catched!:
+13:11:28::INFO::error message:
+
+13:11:28::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 564, in <module>
+    BlurLinux(app.winId(), Dark=True)
+TypeError: BlurLinux() got an unexpected keyword argument 'Dark'
+
+13:11:35::INFO::olá mundo
+13:11:44::INFO::olá mundo
+13:11:55::INFO::olá mundo
+13:12:05::INFO::olá mundo
+13:13:11::INFO::olá mundo
+13:14:59::INFO::error catched!:
+13:14:59::INFO::error message:
+
+13:14:59::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 557, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 46, in __init__
+    self.ui.setupUi(self)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\resources\ui_files\main.py", line 31, in setupUi
+    MainWindow.setDockOptions(QtWidgets.QMainWindow.AllowTabbedDocks|QtWidgets.QMainWindow.AnimatedDocks)
+AttributeError: 'Window' object has no attribute 'setDockOptions'
+
+13:15:25::INFO::error catched!:
+13:15:25::INFO::error message:
+
+13:15:25::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 557, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 46, in __init__
+    self.ui.setupUi(self)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\resources\ui_files\main.py", line 31, in setupUi
+    MainWindow.setDockOptions(QtWidgets.QMainWindow.AllowTabbedDocks|QtWidgets.QMainWindow.AnimatedDocks)
+AttributeError: 'Window' object has no attribute 'setDockOptions'
+
+13:16:25::INFO::olá mundo
+13:16:58::INFO::olá mundo
+13:19:20::INFO::olá mundo
+13:22:21::INFO::olá mundo
+13:22:34::INFO::olá mundo
+13:23:23::INFO::olá mundo
+13:25:02::INFO::olá mundo
+13:26:14::INFO::olá mundo
+13:26:14::INFO::error catched!:
+13:26:14::INFO::error message:
+
+13:26:14::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 568, in <module>
+    app.ui.tab_disc.hide()
+AttributeError: 'Ui_MainWindow' object has no attribute 'tab_disc'
+
+13:28:48::INFO::olá mundo
+13:29:47::INFO::olá mundo
+13:32:17::INFO::olá mundo
+13:32:54::INFO::olá mundo
+13:33:49::INFO::olá mundo
+13:34:01::INFO::olá mundo
+13:38:36::INFO::olá mundo
+13:40:38::INFO::olá mundo
+13:41:57::INFO::olá mundo
+14:01:30::INFO::olá mundo
+14:02:12::INFO::olá mundo
+14:08:40::INFO::olá mundo
+14:16:03::INFO::olá mundo
+14:17:40::INFO::olá mundo
+14:25:44::INFO::olá mundo
+14:26:47::INFO::olá mundo
+14:26:48::INFO::error catched!:
+14:26:48::INFO::error message:
+
+14:26:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 491, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 449, in carregar_distancia_salas
+    outras_salas = [
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 452, in <listcomp>
+    if sala.nome != self.sala_atual.nome
+AttributeError: 'Document' object has no attribute 'nome'
+
+14:27:10::INFO::olá mundo
+14:27:11::INFO::error catched!:
+14:27:11::INFO::error message:
+
+14:27:11::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 491, in exibir_sala_atual
+    self.carregar_distancia_salas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 449, in carregar_distancia_salas
+    outras_salas = [
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 452, in <listcomp>
+    if sala.nome != self.sala_atual.nome
+AttributeError: 'Document' object has no attribute 'nome'
+
+14:27:28::INFO::olá mundo
+14:27:43::INFO::olá mundo
+14:34:11::INFO::olá mundo
+14:39:34::INFO::olá mundo
+14:40:56::INFO::olá mundo
+14:41:01::INFO::error catched!:
+14:41:01::INFO::error message:
+
+14:41:01::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 271, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 194, in set_distancia
+    outra_sala.distancias[self.nome] = distancia
+AttributeError: 'Document' object has no attribute 'distancias'
+
+14:41:37::INFO::olá mundo
+14:41:43::INFO::error catched!:
+14:41:43::INFO::error message:
+
+14:41:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 271, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 194, in set_distancia
+    outra_sala['distancias'][self.nome] = distancia
+KeyError: 'distancias'
+
+14:41:48::INFO::error catched!:
+14:41:48::INFO::error message:
+
+14:41:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 271, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 194, in set_distancia
+    outra_sala['distancias'][self.nome] = distancia
+KeyError: 'distancias'
+
+18:13:55::INFO::olá mundo
+18:32:34::INFO::olá mundo
+18:32:34::INFO::error catched!:
+18:32:34::INFO::error message:
+
+18:32:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 605, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 75, in __init__
+    self.ui.actionSobre.triggered.connect(
+AttributeError: 'Ui_MainWindow' object has no attribute 'actionSobre'
+
+18:32:43::INFO::olá mundo
+18:32:43::INFO::error catched!:
+18:32:43::INFO::error message:
+
+18:32:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 605, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 75, in __init__
+    self.ui.actionSobre.triggered.connect(
+AttributeError: 'Ui_MainWindow' object has no attribute 'actionSobre'
+
+18:33:57::INFO::olá mundo
+18:33:57::INFO::error catched!:
+18:33:57::INFO::error message:
+
+18:33:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 605, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 75, in __init__
+    self.ui.actionSobre.triggered.connect(
+AttributeError: 'Ui_MainWindow' object has no attribute 'actionSobre'
+
+18:34:07::INFO::olá mundo
+18:35:04::INFO::olá mundo
+18:37:23::INFO::olá mundo
+18:38:36::INFO::error catched!:
+18:38:36::INFO::error message:
+
+18:38:36::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 273, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 193, in set_distancia
+    salas.update({'distancias': outra_sala.distancias},
+AttributeError: 'Document' object has no attribute 'distancias'
+
+18:39:25::INFO::olá mundo
+18:39:40::INFO::error catched!:
+18:39:40::INFO::error message:
+
+18:39:40::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 273, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 194, in set_distancia
+    where('nome') == outra_sala.nome)
+AttributeError: 'Document' object has no attribute 'nome'
+
+18:39:45::INFO::error catched!:
+18:39:45::INFO::error message:
+
+18:39:45::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 273, in sala_distancias_changed
+    self.sala_atual.set_distancia(sala, distancia)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 194, in set_distancia
+    where('nome') == outra_sala.nome)
+AttributeError: 'Document' object has no attribute 'nome'
+
+18:40:13::INFO::olá mundo
+18:45:16::INFO::olá mundo
+18:50:04::INFO::olá mundo
+18:51:39::INFO::olá mundo
+18:54:26::INFO::olá mundo
+18:57:12::INFO::olá mundo
+18:57:33::INFO::olá mundo
+19:00:12::INFO::olá mundo
+19:01:50::INFO::olá mundo
+19:02:33::INFO::olá mundo
+19:25:53::INFO::olá mundo
+19:26:48::INFO::olá mundo
+19:27:51::INFO::olá mundo
+19:28:14::INFO::olá mundo
+19:29:26::INFO::olá mundo
+19:39:55::INFO::olá mundo
+19:41:05::INFO::olá mundo
+19:41:32::INFO::olá mundo
+19:42:17::INFO::olá mundo
+19:43:07::INFO::olá mundo
+19:43:08::INFO::error catched!:
+19:43:08::INFO::error message:
+
+19:43:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 552, in exibir_disciplina_atual
+    cell.setCheckState(Qt.ItemFlag.Unchecked)
+AttributeError: sip.enumtype object 'ItemFlag' has no member 'Unchecked'
+
+19:43:47::INFO::olá mundo
+19:44:27::INFO::olá mundo
+19:47:48::INFO::olá mundo
+19:50:34::INFO::olá mundo
+19:51:50::INFO::olá mundo
+19:52:52::INFO::olá mundo
+19:52:52::INFO::error catched!:
+19:52:52::INFO::error message:
+
+19:52:52::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 621, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 57, in __init__
+    self.init_tab_disciplinas()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 83, in init_tab_disciplinas
+    self.ui.choques.horizontalHeader().hinde()
+AttributeError: 'QHeaderView' object has no attribute 'hinde'
+
+19:52:59::INFO::olá mundo
+19:58:06::INFO::olá mundo
+19:58:28::INFO::olá mundo
+19:58:43::INFO::olá mundo

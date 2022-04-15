@@ -11,7 +11,7 @@ PATH_ICON = "resources/images/icone.ico"
 build_exe_options = {
     "packages": [],
     "optimize": 0,
-    "excludes": ["tkinter", "ssl", "bz2", "asyncio", "numpy.random._examples"],
+    "excludes": ["tkinter", "ssl", "bz2", "numpy.random._examples"],
     "include_files": ['resources/']
 }
 
@@ -41,6 +41,12 @@ executables = [
         icon=PATH_ICON,
         shortcut_name=NAME,
         shortcut_dir="DesktopFolder"
+    ),
+    Executable(
+        "otimizador.py",
+        targetName="otimizador",
+        base=None,
+        shortcut_name="otimizador",
     )
 ]
 

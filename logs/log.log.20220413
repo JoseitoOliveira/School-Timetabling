@@ -1,0 +1,273 @@
+00:21:12::INFO::error catched!:
+00:21:12::INFO::error message:
+
+00:21:12::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 207, in executar
+    metadata = get_metadata()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 567, in get_metadata
+    return MetaData(
+TypeError: __init__() missing 1 required positional argument: 'choques'
+
+00:23:21::INFO::error catched!:
+00:23:21::INFO::error message:
+
+00:23:21::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 207, in executar
+    metadata = get_metadata()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 573, in get_metadata
+    choques={s1['nome']: s1['choques'] for s1 in salas.all()}
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 573, in <dictcomp>
+    choques={s1['nome']: s1['choques'] for s1 in salas.all()}
+KeyError: 'choques'
+
+00:23:56::INFO::error catched!:
+00:23:56::INFO::error message:
+
+00:23:56::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 684, in <module>
+    sys.exit(root.exec_())
+KeyboardInterrupt
+
+00:30:10::INFO::error catched!:
+00:30:10::INFO::error message:
+
+00:30:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 207, in executar
+    metadata = get_metadata()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 573, in get_metadata
+    choques={s1['nome']: s1['choques'] for s1 in salas.all()}
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 573, in <dictcomp>
+    choques={s1['nome']: s1['choques'] for s1 in salas.all()}
+KeyError: 'choques'
+
+00:31:21::INFO::error catched!:
+00:31:21::INFO::error message:
+
+00:31:21::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 207, in executar
+    metadata = get_metadata()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 567, in get_metadata
+    return MetaData(
+  File "<string>", line 9, in __init__
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 529, in __post_init__
+    for disciplina in self.disciplinas.values()
+AttributeError: 'list' object has no attribute 'values'
+
+00:32:45::INFO::error catched!:
+00:32:45::INFO::error message:
+
+00:32:45::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 213, in executar
+    self.otimizador = Otimizador(
+TypeError: __init__() got an unexpected keyword argument 'turnsize'
+
+00:33:37::INFO::error catched!:
+00:33:37::INFO::error message:
+
+00:33:37::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 205, in executar
+    tournsize = self.ui.tournsize.value()
+AttributeError: 'Ui_MainWindow' object has no attribute 'tournsize'
+
+22:15:12::INFO::error catched!:
+22:15:12::INFO::error message:
+
+22:15:12::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 208, in executar
+    metadata = processar_metadata(metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 142, in processar_metadata
+    disc.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 335, in atualizar_laboratorios
+    lab_dicts = salas.select().where(salas.nome.in_(nomes))
+AttributeError: 'Table' object has no attribute 'select'
+
+22:17:07::INFO::error catched!:
+22:17:07::INFO::error message:
+
+22:17:07::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 208, in executar
+    metadata = processar_metadata(metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 142, in processar_metadata
+    disc.atualizar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 336, in atualizar_laboratorios
+    self.laboratorios = [Sala.from_json(lab) for lab in lab_dicts]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 394, in laboratorios
+    disciplinas.update(
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\table.py", line 415, in update
+    self._update_table(updater)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\table.py", line 747, in _update_table
+    self._storage.write(tables)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\storages.py", line 132, in write
+    serialized = json.dumps(data, **self.kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type method is not JSON serializable
+
+22:27:23::INFO::error catched!:
+22:27:23::INFO::error message:
+
+22:27:23::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 223, in executar
+    self.otimizador.finished.connect(self.thread_executar.quit)
+AttributeError: 'PyQt5.QtCore.pyqtSignal' object has no attribute 'connect'
+
+22:28:10::INFO::error catched!:
+22:28:10::INFO::error message:
+
+22:28:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 167, in executa
+    pop: list = self._population(n=npop)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in _population
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in <listcomp>
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 57, in _cria_individuo
+    aux = fcn(limite_inf, limite_sup, nro_genes)
+  File "mtrand.pyx", line 746, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1338, in numpy.random._bounded_integers._rand_int32
+ValueError: high <= 0
+
+22:29:21::INFO::error catched!:
+22:29:21::INFO::error message:
+
+22:29:21::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 167, in executa
+    pop: list = self._population(n=npop)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in _population
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in <listcomp>
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 57, in _cria_individuo
+    aux = fcn(limite_inf, limite_sup, nro_genes)
+  File "mtrand.pyx", line 746, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1338, in numpy.random._bounded_integers._rand_int32
+ValueError: high <= 0
+
+22:31:09::INFO::error catched!:
+22:31:09::INFO::error message:
+
+22:31:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 167, in executa
+    pop: list = self._population(n=npop)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in _population
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in <listcomp>
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 57, in _cria_individuo
+    aux = fcn(limite_inf, limite_sup, nro_genes)
+  File "mtrand.pyx", line 746, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1338, in numpy.random._bounded_integers._rand_int32
+ValueError: high <= 0
+
+22:32:23::INFO::error catched!:
+22:32:23::INFO::error message:
+
+22:32:23::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 167, in executa
+    pop: list = self._population(n=npop)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in _population
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 113, in <listcomp>
+    return [Individual(self._cria_individuo()) for _ in range(n)]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 57, in _cria_individuo
+    aux = fcn(limite_inf, limite_sup, nro_genes)
+  File "mtrand.pyx", line 746, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1338, in numpy.random._bounded_integers._rand_int32
+ValueError: high <= 0
+
+22:56:26::INFO::error catched!:
+22:56:26::INFO::error message:
+
+22:56:26::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 108, in __call__
+    grades, professor) = extrair_dados(disciplina, individuo)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 124, in extrair_dados
+    professor = disciplina.professores[i_p[0]]
+IndexError: tuple index out of range
+
+22:59:05::INFO::error catched!:
+22:59:05::INFO::error message:
+
+22:59:05::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 108, in __call__
+    grades, professor) = extrair_dados(disciplina, individuo)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 128, in extrair_dados
+    horarios, i_h = get_horarios(disciplina, ind)
+TypeError: get_horarios() missing 1 required positional argument: 'ind'
+
+23:01:44::INFO::error catched!:
+23:01:44::INFO::error message:
+
+23:01:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 121, in __call__
+    fit.choque_salas += self.fit_choque_salas(
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 209, in fit_choque_salas
+    if sala.sem_sala:
+AttributeError: 'Sala' object has no attribute 'sem_sala'
+
+23:04:59::INFO::error catched!:
+23:04:59::INFO::error message:
+
+23:04:59::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTM3'
+

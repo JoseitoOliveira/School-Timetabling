@@ -1,0 +1,3692 @@
+21:26:48::INFO::olá mundo
+21:39:02::INFO::olá mundo
+21:39:43::INFO::olá mundo
+21:52:06::INFO::olá mundo
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:08::INFO::error catched!:
+21:52:08::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:09::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:09::INFO::error catched!:
+21:52:09::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:10::INFO::error catched!:
+21:52:10::INFO::error message:
+
+21:52:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:32::INFO::error message:
+
+21:52:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:32::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:33::INFO::error catched!:
+21:52:33::INFO::error message:
+
+21:52:33::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:34::INFO::error catched!:
+21:52:34::INFO::error message:
+
+21:52:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:42::INFO::error message:
+
+21:52:42::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:42::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:43::INFO::error message:
+
+21:52:43::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:43::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:44::INFO::error catched!:
+21:52:44::INFO::error message:
+
+21:52:44::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:48::INFO::error catched!:
+21:52:48::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:49::INFO::error message:
+
+21:52:49::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:49::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:50::INFO::error catched!:
+21:52:50::INFO::error message:
+
+21:52:50::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:53::INFO::error message:
+
+21:52:53::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:53::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:54::INFO::error message:
+
+21:52:54::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:54::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:55::INFO::error catched!:
+21:52:55::INFO::error message:
+
+21:52:55::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:56::INFO::error catched!:
+21:52:56::INFO::error message:
+
+21:52:56::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:57::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:57::INFO::error catched!:
+21:52:57::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:52:58::INFO::error catched!:
+21:52:58::INFO::error message:
+
+21:52:58::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques.remove(item.text())
+ValueError: list.remove(x): x not in list
+
+21:53:35::INFO::olá mundo
+21:57:05::INFO::olá mundo
+21:57:16::INFO::error catched!:
+21:57:16::INFO::error message:
+
+21:57:16::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 576, in choques_changed
+    self.disciplina_atual.choques = choques
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\modelos.py", line 366, in choques
+    disciplinas.update({'choques': choques},
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\table.py", line 415, in update
+    self._update_table(updater)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\table.py", line 747, in _update_table
+    self._storage.write(tables)
+  File "C:\Users\Joseito\Documents\GitHub\TCC\.venv\lib\site-packages\tinydb\storages.py", line 132, in write
+    serialized = json.dumps(data, **self.kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+
+21:58:13::INFO::olá mundo
+22:01:06::INFO::olá mundo
+23:26:48::INFO::error catched!:
+23:26:48::INFO::error message:
+
+23:26:48::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 679, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 56, in __init__
+    self.console = Console(self.ui.console)
+AttributeError: 'Ui_MainWindow' object has no attribute 'console'
+
+23:27:03::INFO::error catched!:
+23:27:03::INFO::error message:
+
+23:27:03::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 677, in <module>
+    app = Window()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 61, in __init__
+    self.tab_discilina()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 626, in tab_discilina
+    self.carregar_laboratorios()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 648, in carregar_laboratorios
+    self.ui.list_laboratorios.addItems([lab['nome'] for lab in labs])
+AttributeError: 'Ui_MainWindow' object has no attribute 'list_laboratorios'
+
+23:28:00::INFO::error catched!:
+23:28:00::INFO::error message:
+
+23:28:00::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 577, in exibir_disciplina_atual
+    self.carregar_salas_disciplina()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in carregar_salas_disciplina
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in <listcomp>
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+AttributeError: 'dict' object has no attribute 'nome'
+
+23:28:02::INFO::error catched!:
+23:28:02::INFO::error message:
+
+23:28:02::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 577, in exibir_disciplina_atual
+    self.carregar_salas_disciplina()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in carregar_salas_disciplina
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in <listcomp>
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+AttributeError: 'dict' object has no attribute 'nome'
+
+23:28:04::INFO::error catched!:
+23:28:04::INFO::error message:
+
+23:28:04::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 577, in exibir_disciplina_atual
+    self.carregar_salas_disciplina()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in carregar_salas_disciplina
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 581, in <listcomp>
+    nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+AttributeError: 'dict' object has no attribute 'nome'
+
+23:35:35::INFO::error catched!:
+23:35:35::INFO::error message:
+
+23:35:35::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 685, in <module>
+    sys.exit(root.exec_())
+KeyboardInterrupt
+

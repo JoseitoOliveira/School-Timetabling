@@ -1,4 +1,4 @@
-from src.metadata import metadata, extrair_dados
+from src.metadata import extrair_dados
 from src.fitness import Fitness
 
 TEMPLATE_HTML = """
@@ -64,9 +64,9 @@ Disciplinas: {disciplinas}<br>
 empty_table_args = {f'_{i}': '' for i in range(60)}
 
 
-def make_html(ind):
+def make_html(ind, metadata):
 
-    grades = metadata.grades
+    grades = sorted(metadata.grades)
     tables_args = [empty_table_args.copy() for _ in grades]
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]
@@ -80,9 +80,9 @@ def make_html(ind):
         (i_p, i_s, i_l, i_h,
          salas, laboratorios,
          qtd_horas, horarios,
-         grades, professor) = extrair_dados(disciplina, ind)
+         grades, professor) = extrair_dados(metadata, disciplina, ind)
 
-        if not professor.sem_professor:
+        if professor is not None:
             if professor.nome not in professores:
                 professores[professor.nome] = {
                     'nome': professor.nome,
@@ -97,12 +97,13 @@ def make_html(ind):
 
         for grade in grades:
             i_grade = metadata.grades.index(grade)
-            for i, sala in enumerate(salas):
-                for h in range(i_h[i], i_h[i]+qtd_horas[i]):
+            for i, hrs in enumerate(qtd_horas):
+                sala = salas[i].nome if not disciplina.sem_professor else ''
+                for h in range(i_h[i], i_h[i] + hrs):
                     args = (
                         f"{disciplina.nome}<br>"
-                        f"{professor.nome}<br>"
-                        f"{sala.nome}<br>"
+                        f"{professor.nome if professor else ''}<br>"
+                        f"{sala}<br>"
                         f"{laboratorios[i].nome if laboratorios else ''}"
                     )
                     tables_args[i_grade][f'_{h}'] += args
@@ -120,7 +121,10 @@ def make_html(ind):
         for args in professores.values()]
     )
 
-    return TEMPLATE_HTML.format(tables=tables, stats=stats, fitness=sum_fit, professores=profes_html)
+    return TEMPLATE_HTML.format(tables=tables,
+                                stats=stats,
+                                fitness=sum_fit,
+                                professores=profes_html)
 
 
 TEMPLATE_INDIVIDUO = """
@@ -136,7 +140,7 @@ with open('output.html', mode='w', encoding='utf8') as f:
 """
 
 
-def individuo_formatado(ind):
+def individuo_formatado(ind, metadata):
     str_cromossomos = []
     for disciplina in metadata.disciplinas.values():
 

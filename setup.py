@@ -2,7 +2,8 @@ from setuptools import setup
 
 NAME = "UFPB School Timetabling"
 VERSION = "0.3.0"
-DESCRIPTION = "Software para planejamento ótimo de períodos, horários das turmas, professores e salas no DEE/UFPB"
+DESCRIPTION = """Software para planejamento ótimo de períodos, \
+horários das turmas, professores e salas no DEE/UFPB"""
 AUTHOR = "Joseíto Oliveira"
 AUTHOR_EMAIL = "joseito.junior@cear.ufpb.br"
 
@@ -26,5 +27,6 @@ setup(
         'numpy==1.22.2',
         'deap==1.3.1',
         'more-itertools==8.12.0',
+        'fire==0.4.0',
     ]
 )

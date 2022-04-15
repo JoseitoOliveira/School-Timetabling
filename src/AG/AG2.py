@@ -1,15 +1,13 @@
+from src.AG.utilidades_AG import HallOfFame
+from src.AG.classes import Individual
+from tqdm import tqdm
+import numpy as np
+from typing import List
 import random
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from copy import deepcopy
 from functools import partial
 from multiprocessing import cpu_count
-from typing import List
-
-import numpy as np
-from tqdm import tqdm
-
-from src.AG.classes import Individual
-from src.AG.utilidades_AG import HallOfFame
 
 
 class AG():
@@ -20,9 +18,9 @@ class AG():
     def __init__(self, metadados: dict, filename: str = 'out/Indivíduos.txt'):
         '''
         Cria uma instância da classe.
-        O único argumento é metadados, em que devem estar todos os dados 
+        O único argumento é metadados, em que devem estar todos os dados
         necessários para realizar a otimização.
-        Atenção: 
+        Atenção:
             Não foi feita uma cópia de metadados, apenas uma referência!
         '''
         self.filename = filename
@@ -79,8 +77,8 @@ class AG():
             genes = item['numero_genes']
             cruzamento_fcn = item['cruzamento']['fcn']
             cruzamento_args = item['cruzamento']['args']
-            cruzamento_fcn(ind1[pos:pos+genes],
-                           ind2[pos:pos+genes], **cruzamento_args)
+            cruzamento_fcn(ind1[pos:pos + genes],
+                           ind2[pos:pos + genes], **cruzamento_args)
             pos += genes
         return ind1, ind2
 
@@ -88,9 +86,9 @@ class AG():
         '''
         Implementa a mutação de ind, conforme especificado em metadados.
 
-        OBS: 
-        A mutação inteira permite fornecer os limites inf e sup, mas são ambos 
-        "inclusivos". Por isso, nos cromossomos inteiros vamos mandar: 
+        OBS:
+        A mutação inteira permite fornecer os limites inf e sup, mas são ambos
+        "inclusivos". Por isso, nos cromossomos inteiros vamos mandar:
             "up = limsup_2-1".
 
         Retorna um individuo após mutação "inplace".
@@ -103,9 +101,9 @@ class AG():
             genes = item['numero_genes']
             limite_inf = item['limite_inferior']
             limite_sup = item['limite_superior']
-            mutacao_fcn(ind[pos:pos+genes], **mutacao_args)
-            ind[pos:pos+genes] = np.clip(ind[pos:pos+genes],
-                                         limite_inf, limite_sup)
+            mutacao_fcn(ind[pos:pos + genes], **mutacao_args)
+            ind[pos:pos + genes] = np.clip(ind[pos:pos + genes],
+                                           limite_inf, limite_sup)
             pos += genes
         return ind,
 
@@ -121,7 +119,7 @@ class AG():
         # Seleciona "npop-tam_elitismo" indivíduos
         offspring: List[Individual] = self.metadados['selecao']['fcn'](
             individuals=pop,
-            k=int(npop/n_workers),
+            k=int(npop / n_workers),
             **self.metadados['selecao']['args']
         )
         offspring = [deepcopy(ind) for ind in offspring]
@@ -188,6 +186,20 @@ class AG():
         taxa_cruzamento = self.metadados['taxa_cruzamento']
         taxa_mutacao = self.metadados['taxa_mutacao']
 
+        def fun_cruzamento(g):
+            x1, x2 = 0, geracoes
+            y1, y2 = taxa_cruzamento
+            a = (y2 - y1) / (x2 - x1)
+            b = y1 - a * x1
+            return a * g + b
+
+        def fun_mutacao(g):
+            x1, x2 = 0, geracoes
+            y1, y2 = taxa_mutacao
+            a = (y2 - y1) / (x2 - x1)
+            b = y1 - a * x1
+            return a * g + b
+
         with ProcessPoolExecutor(n_workers) as mp:
             pbar_geracoes = tqdm(range(geracoes))
             for g in pbar_geracoes:
@@ -196,8 +208,8 @@ class AG():
                     mp.submit(
                         worker,
                         pop=pop,
-                        taxa_cruzamento=taxa_cruzamento(g),
-                        taxa_mutacao=taxa_mutacao(g),
+                        taxa_cruzamento=fun_cruzamento(g),
+                        taxa_mutacao=fun_mutacao(g),
                     )
                     for _ in range(n_workers)
                 ]

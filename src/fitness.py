@@ -1,12 +1,11 @@
 from dataclasses import dataclass
-from functools import partial, reduce
+from functools import reduce
 from itertools import chain
 from typing import Tuple
 
 from more_itertools import pairwise
 
 from src.metadata import extrair_dados, get_horarios
-from src.metadata import metadata as md
 from src.modelos import Disciplina, MetaData, Professor, Sala
 
 CHOQUE_SALA = -30
@@ -74,8 +73,9 @@ class Partial_Fitnesses:
 
 class Fitness:
 
-    def __init__(self, metadata: MetaData):
-        self.metadata = metadata
+    def __init__(self, metadata: MetaData = None):
+        if metadata is not None:
+            self.metadata = metadata
 
     def __call__(self, individuo) -> Tuple[int, Partial_Fitnesses]:
         """
@@ -106,7 +106,7 @@ class Fitness:
             (i_p, i_s, i_l, i_h,
              salas, laboratorios,
              qtd_horas, horarios,
-             grades, professor) = extrair_dados(disciplina, individuo)
+             grades, professor) = extrair_dados(self.metadata, disciplina, individuo)
 
             fit.choque_grade += self.fit_choque_grade(grades, horarios)
             fit.choque_laboratorios += self.fit_choque_laboratorios(laboratorios,
@@ -119,8 +119,9 @@ class Fitness:
             fit.aulas_em_dias_seguidos += self.fit_aulas_em_dias_seguidos(i_h)
 
             if not disciplina.sem_sala:
-                fit.choque_salas += self.fit_choque_salas(
-                    salas, horarios, disciplina.nome)
+                fit.choque_salas += self.fit_choque_salas(salas,
+                                                          horarios,
+                                                          disciplina.nome)
                 fit.afinidade_salas_horarios += self.fit_afinidade_salas_horarios(
                     salas, horarios)
                 self.adicionar_grade_dia_sala(salas, horarios, grades)
@@ -128,8 +129,8 @@ class Fitness:
             if not disciplina.sem_professor:
                 fit.afinidade_professor_disciplina += self.fit_afinidade_professor_disciplina(
                     professor, disciplina.nome)
-                fit.choque_professor += self.fit_choque_profe(
-                    professor, horarios)
+                fit.choque_professor += self.fit_choque_profe(professor,
+                                                              horarios)
                 fit.afinidade_professor_horarios += self.fit_afinidade_professor_horarios(
                     professor, horarios)
                 fit.afinidade_professor_salas += self.fit_afinidade_professor_salas(
@@ -182,7 +183,7 @@ class Fitness:
 
     def fit_mesmo_turno(self, ini_horas):
         """ Verifica se os horários da aula são no mesmo turno """
-        turnos = map(lambda i: bool(int(i/5) % 2), ini_horas)
+        turnos = map(lambda i: bool(int(i / 5) % 2), ini_horas)
         mudanca_turno = reduce(lambda x, y: x != y, turnos,)
         return MUDANCA_DE_TURNO if mudanca_turno else 0
 
@@ -207,8 +208,6 @@ class Fitness:
         """Verifica se a sala está ocupada no horário"""
         fit = 0
         for sala, _horarios in zip(salas, horarios):
-            if sala.sem_sala:
-                continue
             nome_sala = sala.nome
             for h in _horarios:
                 sala_hora_disciplinas = self.salas_hora_disciplinas[nome_sala][h]
@@ -226,7 +225,7 @@ class Fitness:
         fit = 0
         for nome_disciplina, nome_outras in self.metadata.choques.items():
             disciplina = self.metadata.disciplinas[nome_disciplina]
-            horarios, _ = get_horarios(disciplina, ind)
+            horarios, _ = get_horarios(self.metadata, disciplina, ind)
             horarios = list(chain(*horarios))
             for nome_outra in nome_outras:
                 outra_disciplina = self.metadata.disciplinas[nome_outra]
@@ -314,10 +313,8 @@ class Fitness:
                 if h_salas != []:
                     distancia += 1000
                 for (_, s1), (_, s2) in pairwise(h_salas):
-                    if s1 != s2:
-                        distancia += self.metadata.distancias[s1.nome][s2.nome]
+                    if s1 == s2:
+                        continue
+                    distancia += self.metadata.distancias[s1.nome][s2.nome]
 
         return distancia * DISTANCIA_ENTRE_SALAS
-
-
-fitness = Fitness(metadata=md)

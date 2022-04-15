@@ -9,6 +9,9 @@ from src.horarios import horarios_str as horarios_1_str
 
 class Professor:
 
+    def __repr__(self):
+        return str(self.as_json())
+
     def __init__(
         self,
         nome: str,
@@ -111,6 +114,9 @@ class Professor:
 
 
 class Sala:
+
+    def __repr__(self):
+        return str(self.as_json())
 
     def __init__(
         self,
@@ -221,6 +227,9 @@ class Cromossomo:
     slice_i: int
     slice_f: int
 
+    def __repr__(self):
+        return str(self.as_json())
+
     def as_json(self):
         return {
             'numero_genes': self.numero_genes,
@@ -243,6 +252,9 @@ class Cromossomo:
 
 class Disciplina:
 
+    def __repr__(self):
+        return str(self.as_json())
+
     def __init__(
             self,
             nome: str,
@@ -253,6 +265,7 @@ class Disciplina:
             laboratorios: list[Sala] = None,
             salas: list[Sala] = None,
             professores: list[Professor] = None,
+            choques: list[str] = None,
             cromossomos: list[Cromossomo] = None,
             sem_professor: bool = False,
             sem_sala: bool = False
@@ -262,10 +275,43 @@ class Disciplina:
         self._grades = grades
         self._horas = horas
         self._horarios = horarios or []
-        self._laboratorios = laboratorios or []
-        self._salas = salas or []
-        self._professores = professores or []
-        self._cromossomos = cromossomos or []
+
+        if isinstance(laboratorios, list) and len(laboratorios) > 0:
+            if isinstance(laboratorios[0], Sala):
+                self._laboratorios = laboratorios
+            else:
+                self._laboratorios = [Sala.from_json(lab)
+                                      for lab in laboratorios]
+        else:
+            self._laboratorios = []
+
+        if isinstance(salas, list) and len(salas) > 0:
+            if isinstance(salas[0], Sala):
+                self._salas = salas
+            else:
+                self._salas = [Sala.from_json(sala) for sala in salas]
+        else:
+            self._salas = []
+
+        if isinstance(professores, list) and len(professores) > 0:
+            if isinstance(professores[0], Professor):
+                self._professores = professores
+            else:
+                self._professores = [Professor.from_json(prof)
+                                     for prof in professores]
+        else:
+            self._professores = []
+
+        if isinstance(cromossomos, list) and len(cromossomos) > 0:
+            if isinstance(cromossomos[0], Cromossomo):
+                self._cromossomos = cromossomos
+            else:
+                self._cromossomos = [Cromossomo.from_json(crom)
+                                     for crom in cromossomos]
+        else:
+            self._cromossomos = []
+
+        self._choques = choques or []
         self._sem_professor = sem_professor
         self._sem_sala = sem_sala
 
@@ -273,6 +319,21 @@ class Disciplina:
             self.make_horarios()
 
         assert len(self.horarios) == len(self.horas)
+
+    def atualizar_professores(self):
+        nomes = [prof.nome for prof in self.professores]
+        prof_dicts = [professores.get(where('nome') == n) for n in nomes]
+        self.professores = [Professor.from_json(prof) for prof in prof_dicts]
+
+    def atualizar_salas(self):
+        nomes = [sala.nome for sala in self.salas]
+        sala_dicts = [salas.get(where('nome') == n) for n in nomes]
+        self.salas = [Sala.from_json(sala) for sala in sala_dicts]
+
+    def atualizar_laboratorios(self):
+        nomes = [lab.nome for lab in self.laboratorios]
+        lab_dicts = [salas.get(where('nome') == n) for n in nomes]
+        self.laboratorios = [Sala.from_json(lab) for lab in lab_dicts]
 
     @property
     def nome(self):
@@ -290,7 +351,7 @@ class Disciplina:
     @num_alunos.setter
     def num_alunos(self, num_alunos):
         self._num_alunos = num_alunos
-        disciplinas.update({'num_alunos': self.num_alunos},
+        disciplinas.update({'num_alunos': num_alunos},
                            where('nome') == self.nome)
 
     @property
@@ -300,7 +361,7 @@ class Disciplina:
     @grades.setter
     def grades(self, grades):
         self._grades = grades
-        disciplinas.update({'grades': self.grades},
+        disciplinas.update({'grades': grades},
                            where('nome') == self.nome)
 
     @property
@@ -310,7 +371,7 @@ class Disciplina:
     @horas.setter
     def horas(self, horas):
         self._horas = horas
-        disciplinas.update({'horas': self.horas},
+        disciplinas.update({'horas': horas},
                            where('nome') == self.nome)
 
     @property
@@ -320,7 +381,7 @@ class Disciplina:
     @horarios.setter
     def horarios(self, horarios):
         self._horarios = horarios
-        disciplinas.update({'horarios': self.horarios},
+        disciplinas.update({'horarios': horarios},
                            where('nome') == self.nome)
 
     @property
@@ -331,7 +392,7 @@ class Disciplina:
     def laboratorios(self, laboratorios):
         self._laboratorios = laboratorios
         disciplinas.update(
-            {'laboratorios': [lab.as_json for lab in self.laboratorios]},
+            {'laboratorios': [lab.as_json() for lab in laboratorios]},
             where('nome') == self.nome)
 
     @property
@@ -341,7 +402,7 @@ class Disciplina:
     @salas.setter
     def salas(self, salas):
         self._salas = salas
-        disciplinas.update({'salas': [s.as_json() for s in self.salas]},
+        disciplinas.update({'salas': [s.as_json() for s in salas]},
                            where('nome') == self.nome)
 
     @property
@@ -351,7 +412,17 @@ class Disciplina:
     @professores.setter
     def professores(self, professores):
         self._professores = professores
-        disciplinas.update({'professores': [p.as_json() for p in self.professores]},
+        disciplinas.update({'professores': [p.as_json() for p in professores]},
+                           where('nome') == self.nome)
+
+    @property
+    def choques(self):
+        return self._choques
+
+    @choques.setter
+    def choques(self, choques):
+        self._choques = choques
+        disciplinas.update({'choques': choques},
                            where('nome') == self.nome)
 
     @property
@@ -361,7 +432,7 @@ class Disciplina:
     @cromossomos.setter
     def cromossomos(self, cromossomos):
         self._cromossomos = cromossomos
-        disciplinas.update({'cromossomos': [c.as_json() for c in self.cromossomos]},
+        disciplinas.update({'cromossomos': [c.as_json() for c in cromossomos]},
                            where('nome') == self.nome)
 
     @property
@@ -371,7 +442,7 @@ class Disciplina:
     @sem_professor.setter
     def sem_professor(self, sem_professor):
         self._sem_professor = sem_professor
-        disciplinas.update({'sem_professor': self.sem_professor},
+        disciplinas.update({'sem_professor': sem_professor},
                            where('nome') == self.nome)
 
     @property
@@ -381,7 +452,7 @@ class Disciplina:
     @sem_sala.setter
     def sem_sala(self, sem_sala):
         self._sem_sala = sem_sala
-        disciplinas.update({'sem_sala': self.sem_sala},
+        disciplinas.update({'sem_sala': sem_sala},
                            where('nome') == self.nome)
 
     def add_aula(self, creditos):
@@ -477,7 +548,10 @@ class MetaData:
     disciplinas: dict[str, Disciplina]
     horarios: list[str]
     distancias: dict[str, dict[str, int]]
-    choques: dict
+    choques: dict[str, list]
+
+    def __repr__(self):
+        return str(self.as_json())
 
     def __post_init__(self):
         self.__grades__ = list(set([
@@ -513,6 +587,19 @@ class MetaData:
                 for d in d['disciplinas'].values()
             },
             horarios=d['horarios'],
-            distancias=d['distancias'],
+            distancias={s1['nome']: {s2['nome'] for s2 in s1['distancias']}
+                        for s1 in salas.all()},
             choques=d['choques']
         )
+
+
+def get_metadata():
+    return MetaData(
+        professores=[Professor.from_json(p) for p in professores.all()],
+        disciplinas={d['nome']: Disciplina.from_json(
+            d) for d in disciplinas.all()},
+        salas=[Sala.from_json(s) for s in salas.all()],
+        horarios=horarios_1_str,
+        distancias={s1['nome']: s1['distancias'] for s1 in salas.all()},
+        choques={s1['nome']: s1['choques'] for s1 in disciplinas.all()}
+    )

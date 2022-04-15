@@ -6,6 +6,7 @@
 """
 
 import builtins
+import subprocess
 import sys
 import traceback
 
@@ -17,7 +18,6 @@ from tinydb import where
 
 import src.aa_update  # noqa
 from resources.ui_files.main import Ui_MainWindow
-from src.console import Console
 from src.data import disciplinas, professores, salas  # noqa
 from src.horarios import horarios_str as horarios_1_str
 from src.logger import logger_print, print_exception_locals
@@ -50,10 +50,7 @@ class Window(QMainWindow):
                             Qt.WindowMaximizeButtonHint |
                             Qt.WindowCloseButtonHint)
 
-        self.console = Console(self.ui.console)
-        self.console.add_logging()
-        print('olá mundo')
-
+        self.init_tab_executar()
         self.init_tab_disciplinas()
         self.init_tab_professores()
         self.init_tab_salas()
@@ -75,6 +72,9 @@ class Window(QMainWindow):
 
         self.ui.tab_telas.currentChanged.connect(self.change_tab)
 
+    def init_tab_executar(self):
+        self.ui.btn_executar.clicked.connect(self.executar)
+
     def init_tab_disciplinas(self):
 
         self.ui.choques.horizontalHeader().setSectionResizeMode(
@@ -82,6 +82,18 @@ class Window(QMainWindow):
 
         self.ui.choques.horizontalHeader().hide()
         self.ui.choques.verticalHeader().hide()
+
+        self.ui.disciplina_salas.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Stretch)
+
+        self.ui.disciplina_salas.verticalHeader().hide()
+
+        self.ui.disciplina_labs.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Stretch)
+
+        self.ui.disciplina_labs.verticalHeader().hide()
+
+        self.ui.choques.itemChanged.connect(self.choques_changed)
 
         self.ui.list_disciplinas.currentRowChanged.connect(
             self.set_disciplina_atual)
@@ -91,12 +103,6 @@ class Window(QMainWindow):
 
         self.ui.list_horarios_todos.itemDoubleClicked.connect(
             self.disciplina_add_horario)
-
-        self.ui.list_laboratorios.itemDoubleClicked.connect(
-            self.disciplina_add_laboratorio)
-
-        self.ui.list_laboratorios_disciplinas.itemDoubleClicked.connect(
-            self.disciplina_rmv_laboratorio)
 
         self.ui.btn_add_disciplina.clicked.connect(self.add_disciplina)
         self.ui.btn_rmv_disciplina.clicked.connect(self.rmv_disciplina)
@@ -188,6 +194,17 @@ class Window(QMainWindow):
 
         self.ui.btn_add_professor.clicked.connect(self.add_professor)
         self.ui.btn_rmv_professor.clicked.connect(self.rmv_professor)
+
+    def executar(self):
+        command = 'otimizador.exe {} {} {} {} {} {}'.format(
+            self.ui.tam_pop.value(),
+            self.ui.num_ger.value(),
+            self.ui.taxa_cruz.value(),
+            self.ui.taxa_mut.value(),
+            self.ui.num_rep.value(),
+            self.ui.tournsize.value()
+        )
+        subprocess.Popen(command, shell=True)
 
     def capacidade_sala_changed(self, value):
         self.sala_atual.capacidade = value
@@ -497,14 +514,14 @@ class Window(QMainWindow):
         if current_item is None:
             return
         professor = professores.get(where('nome') == current_item.text())
-        self.professor_atual = Professor(**professor)
+        self.professor_atual = Professor.from_json(professor)
 
     def set_sala_atual(self, *args, **kwargs):
         current_item = self.ui.list_salas.currentItem()
         if current_item is None:
             return
         sala = salas.get(where('nome') == current_item.text())
-        self.sala_atual = Sala(**sala)
+        self.sala_atual = Sala.from_json(sala)
 
     def exibir_sala_atual(self):
         self.ui.nome_sala.setText(self.sala_atual.nome)
@@ -518,7 +535,7 @@ class Window(QMainWindow):
         if current_item is None:
             return
         disciplina = disciplinas.get(where('nome') == current_item.text())
-        self.disciplina_atual = Disciplina(**disciplina)
+        self.disciplina_atual = Disciplina.from_json(disciplina)
 
     def exibir_disciplina_atual(self, *args, **kwargs):
         horas = [str(h) for h in self.disciplina_atual.horas]
@@ -542,11 +559,25 @@ class Window(QMainWindow):
             new_tab.addItems(self.disciplina_atual.horarios[i])
             self.ui.tab_horarios.addTab(new_tab, hora)
 
-        self.ui.list_laboratorios_disciplinas.clear()
-        self.ui.list_laboratorios_disciplinas.addItems(
-            [lab['nome'] for lab in self.disciplina_atual.laboratorios]
-        )
+        self.carregar_choques_disciplina()
+        self.carregar_salas_disciplina()
 
+    def carregar_salas_disciplina(self):
+        self.ui.disciplina_salas.setRowCount(0)
+        nomes_salas = [s.nome for s in self.disciplina_atual.salas]
+        for sala in sorted(salas.all(), key=lambda d: d['nome']):
+            cell = QTableWidgetItem(sala['nome'])
+            cell.setFlags(Qt.ItemFlag.ItemIsEnabled |
+                          Qt.ItemFlag.ItemIsUserCheckable)
+            if sala['nome'] in nomes_salas:
+                cell.setCheckState(Qt.CheckState.Checked)
+            else:
+                cell.setCheckState(Qt.CheckState.Unchecked)
+            index = self.ui.disciplina_salas.rowCount()
+            self.ui.disciplina_salas.insertRow(index)
+            self.ui.disciplina_salas.setItem(index, 0, cell)
+
+    def carregar_choques_disciplina(self):
         self.ui.choques.setRowCount(0)
         for disciplina in sorted(disciplinas.all(), key=lambda d: d['nome']):
             if set(self.disciplina_atual.grades).intersection(
@@ -556,10 +587,22 @@ class Window(QMainWindow):
             cell = QTableWidgetItem(disciplina['nome'])
             cell.setFlags(Qt.ItemFlag.ItemIsEnabled |
                           Qt.ItemFlag.ItemIsUserCheckable)
-            cell.setCheckState(Qt.CheckState.Unchecked)
+            if disciplina['nome'] in self.disciplina_atual.choques:
+                cell.setCheckState(Qt.CheckState.Checked)
+            else:
+                cell.setCheckState(Qt.CheckState.Unchecked)
             index = self.ui.choques.rowCount()
             self.ui.choques.insertRow(index)
             self.ui.choques.setItem(index, 0, cell)
+
+    def choques_changed(self, item: QTableWidgetItem):
+        choques = set(self.disciplina_atual.choques)
+        if item.checkState() == Qt.CheckState.Checked:
+            choques.add(item.text())
+            self.disciplina_atual.choques = list(choques)
+        elif item.text() in choques:
+            choques.remove(item.text())
+            self.disciplina_atual.choques = list(choques)
 
     def disciplina_rmv_laboratorio(self, item):
         self.disciplina_atual.rmv_laboratorio(item.text())
@@ -587,9 +630,9 @@ class Window(QMainWindow):
             tab_functions[index]()
 
     def carregar_laboratorios(self):
-        self.ui.list_laboratorios.clear()
+        self.ui.disciplina_labs.clear()
         labs = salas.search(where('laboratorio') == True)  # noqa
-        self.ui.list_laboratorios.addItems([lab['nome'] for lab in labs])
+        # self.ui.list_laboratorios.addItems([lab['nome'] for lab in labs])
 
     def carregar_salas(self):
         self.ui.list_salas.clear()

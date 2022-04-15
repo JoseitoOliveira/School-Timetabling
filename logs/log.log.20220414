@@ -1,0 +1,360 @@
+20:50:04::INFO::error catched!:
+20:50:04::INFO::error message:
+
+20:50:04::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTM2'
+
+21:01:10::INFO::error catched!:
+21:01:10::INFO::error message:
+
+21:01:10::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 211, in executar
+    pprint(asdict(metadata), stream=f)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\dataclasses.py", line 1074, in asdict
+    raise TypeError("asdict() should be called on dataclass instances")
+TypeError: asdict() should be called on dataclass instances
+
+21:02:19::INFO::error catched!:
+21:02:19::INFO::error message:
+
+21:02:19::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 53, in run
+    'cromossomos': criar_cromossomos(self.metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 183, in criar_cromossomos
+    for disciplina in metadata.disciplinas.values():
+AttributeError: 'NoneType' object has no attribute 'disciplinas'
+
+21:02:59::INFO::error catched!:
+21:02:59::INFO::error message:
+
+21:02:59::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTM4'
+
+21:04:46::INFO::error catched!:
+21:04:46::INFO::error message:
+
+21:04:46::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTJ203'
+
+21:13:51::INFO::error catched!:
+21:13:51::INFO::error message:
+
+21:13:51::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 208, in executar
+    metadata = processar_metadata(metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 170, in processar_metadata
+    metadata = completar_distancias(metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\metadata.py", line 152, in completar_distancias
+    if sala.nome == outra_sala:
+AttributeError: 'str' object has no attribute 'nome'
+
+21:15:36::INFO::error catched!:
+21:15:36::INFO::error message:
+
+21:15:36::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTM1'
+
+21:18:30::INFO::error catched!:
+21:18:30::INFO::error message:
+
+21:18:30::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\main.py", line 211, in executar
+    json.dump(metadata, f, indent=4)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MetaData is not JSON serializable
+
+21:21:34::INFO::error catched!:
+21:21:34::INFO::error message:
+
+21:21:34::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 30, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 139, in __call__
+    fit.distancia_percorrida += self.fit_distancia_percorrida()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 317, in fit_distancia_percorrida
+    distancia += self.metadata.distancias[s1.nome][s2.nome]
+KeyError: 'CTM1'
+
+21:29:23::INFO::error catched!:
+21:29:23::INFO::error message:
+
+21:29:23::INFO::concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Otimizador.run.<locals>.taxa_cruzamento'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 61, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 205, in executa
+    offspring.extend(result.result())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Otimizador.run.<locals>.taxa_cruzamento'
+
+21:55:23::INFO::error catched!:
+21:55:23::INFO::error message:
+
+21:55:23::INFO::concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Otimizador.run.<locals>.fitness_cached'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 58, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 219, in executa
+    offspring.extend(result.result())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Otimizador.run.<locals>.fitness_cached'
+
+22:05:03::INFO::error catched!:
+22:05:03::INFO::error message:
+
+22:05:03::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 58, in run
+    'args': {
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 218, in executa
+    for result in as_completed(futures):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 245, in as_completed
+    waiter.event.wait(wait_timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+22:05:32::INFO::error catched!:
+22:05:32::INFO::error message:
+
+22:05:32::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 70, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 23, in fitness_cached
+    return _fitness_cached(tuple(ind))
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\fitness.py", line 87, in __call__
+    prof.nome: 0 for prof in self.metadata.professores
+AttributeError: 'Fitness' object has no attribute 'metadata'
+
+22:07:05::INFO::error catched!:
+22:07:05::INFO::error message:
+
+22:07:05::INFO::concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Cached_Fitness.create_cache.<locals>.fitness_cached'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 74, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 219, in executa
+    offspring.extend(result.result())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'Cached_Fitness.create_cache.<locals>.fitness_cached'
+
+22:09:48::INFO::error catched!:
+22:09:48::INFO::error message:
+
+22:09:48::INFO::concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: 'functools._lru_cache_wrapper' object has no attribute '__qualname__'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 72, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 219, in executa
+    offspring.extend(result.result())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\queues.py", line 245, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: 'functools._lru_cache_wrapper' object has no attribute '__qualname__'
+
+22:20:19::INFO::error catched!:
+22:20:19::INFO::error message:
+
+22:20:19::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 81, in run
+    list_best_fit, hof = obj.executa()
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in executa
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\AG\AG2.py", line 169, in <listcomp>
+    fitnesses: list = [self.metadados['fitness'](ind) for ind in pop]
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 29, in fitness
+    fit = self._fitness.fitness(ind)
+AttributeError: 'Fitness' object has no attribute 'fitness'
+
+22:29:41::INFO:: 2  | -5106.0 | 0.0
+22:29:41::INFO::11  | -4443.0 | 0.0
+22:29:41::INFO::21  | -4197.0 | 0.0
+22:29:41::INFO::31  | -4197.0 | 0.0
+22:29:41::INFO::51  | -4138.0 | 0.0
+22:29:41::INFO::76  | -3991.0 | 0.0
+22:29:41::INFO::100 | -3991.0 | 0.0
+22:29:41::INFO::error catched!:
+22:29:41::INFO::error message:
+
+22:29:41::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 102, in run
+    with open('out/output.html', mode='w', encoding='utf8') as f:
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\make_output.py", line 83, in make_html
+    grades, professor) = extrair_dados(disciplina, ind)
+TypeError: extrair_dados() missing 1 required positional argument: 'ind'
+
+22:31:56::INFO:: 2  | -4978.0 | 0.0
+22:31:56::INFO:: 6  | -4978.0 | 0.0
+22:31:56::INFO::11  | -4792.0 | 0.0
+22:31:56::INFO::16  | -4638.0 | 0.0
+22:31:56::INFO::26  | -4395.2 | 0.0
+22:31:56::INFO::38  | -4395.2 | 0.0
+22:31:56::INFO::50  | -4323.0 | 0.0
+22:31:56::INFO::error catched!:
+22:31:56::INFO::error message:
+
+22:31:56::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 102, in run
+    html = make_html(best_ind, self.metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\make_output.py", line 85, in make_html
+    if not professor.sem_professor:
+AttributeError: 'NoneType' object has no attribute 'sem_professor'
+
+22:35:08::INFO:: 2  | -5009.1 | 0.0
+22:35:08::INFO:: 6  | -4700.2 | 0.0
+22:35:08::INFO::11  | -4700.2 | 0.0
+22:35:08::INFO::16  | -4700.2 | 0.0
+22:35:08::INFO::26  | -4700.2 | 0.0
+22:35:08::INFO::38  | -4700.2 | 0.0
+22:35:08::INFO::50  | -4584.1 | 0.0
+22:35:08::INFO::error catched!:
+22:35:08::INFO::error message:
+
+22:35:08::INFO::Traceback (most recent call last):
+  File "c:\Users\Joseito\Documents\GitHub\TCC\run.py", line 106, in run
+    html = make_html(best_ind, self.metadata)
+  File "c:\Users\Joseito\Documents\GitHub\TCC\src\make_output.py", line 104, in make_html
+    f"{professor.nome}<br>"
+AttributeError: 'NoneType' object has no attribute 'nome'
+
+22:38:10::INFO:: 2  | -5304.1 | 0.0
+22:38:10::INFO:: 6  | -5117.0 | 0.0
+22:38:10::INFO::11  | -4867.1 | 0.0
+22:38:10::INFO::16  | -4660.1 | 0.0
+22:38:10::INFO::26  | -4590.1 | 0.0
+22:38:10::INFO::38  | -4548.1 | 0.0
+22:38:10::INFO::50  | -4507.1 | 0.0

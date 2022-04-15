@@ -1,272 +1,155 @@
-Fitnesses: -6539.2
-choque_salas: -1650
-choque_professor: -600
-choque_grade: -2670
-choque_laboratorios: -60
-choque_disciplinas: 0
-mesmo_turno: -352
-max_min_horas_professor: -110
-afinidade_professor_disciplina: 93
-afinidade_professor_horarios: -20
-afinidade_professor_salas: 140
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -450
-aulas_em_dias_seguidos: -660
-aulas_aos_sabados: 0
-distancia_percorrida: -200.20000000000002
-Individual([ 0  0  0  7 17  0  0  0  2 15  0  0  0  1  5  0  0  0  8 16  0  0  0  0
- 19 19 41  0  0  3  0  1  4 11  0  0  0  0 17  5  0  0  0 10  9  0  0  0
-  8  3  0  0  0 12  6  0  4  4  7 19  0  1  6  3  2  0  0  0 12  0  0  0
-  0  0 16  0  0  7  2  1  1  7  3  0  0  0 10 19  0  0 10  0  0  0 17  9
-  0  0  0 12  1  0  0  0  7  8  0  0  0  0 19  0  6  0  4 19  0  0 19  0
-  0  0  7 12  0  0  0 18  7  0  0  0 13  3  0  0  0 15 16  0  0  0 14  2
-  0  4  2 10  2  0  6  6 14  8  0  0  0 14  3  0  4  2 14 12  0  0  1 17
- 15  0  5  4 13 14  0  6  3  0 19  0  0  0  3  5  0  0  0 18  7  0  4  0
-  3  5  0  1  8  0  3  0  3 12  0  2  5  0  0  1  2  0  4  2  0  0 19  3
-  0  0  6  0  0  1  5  0  2  0  5  0  0  0  5  4  0  3  1  0  0  2  9  1
-  4  5  0  0 10  3  0  6  5  0  0  0  0  0  3  4  8  8  0  3  6 17  5  0
-  3  0  4 19  0  4  1  6  8  0  5  5 17 16  2  4  5  4 11  0  2  4  2 12
-  0  1  2 12 10  0  3  2 18  0  2  1  0 19  0  0  1  1 11 16  0  4  1  5
- 13  0  0  6  9 10  0  1  3 16 18  0  4  2  8 13  1  3  2  6 11  0  5  2
-  2 17  0  4  1  4  3  1  5  2 15 14  0  0  3  3 13  0  5  2  6  4  1  4
-  3  9  7  1  3  6  9 16  1  6  3  9  4  0  3  0 16  9  1  1  1  4  9  1
-  6  4 18 10  0  3  5 19  9  0  3  2  9 19  0  0  1  7 16  0  0  5 13  2])
-
-Fitnesses: -5889.84
-choque_salas: -1620
-choque_professor: -300
-choque_grade: -2700
+Fitnesses: -5251.04
+choque_salas: -1200
+choque_professor: -420
+choque_grade: -1890
 choque_laboratorios: 0
 choque_disciplinas: 0
 mesmo_turno: -328
-max_min_horas_professor: -150
-afinidade_professor_disciplina: 93
-afinidade_professor_horarios: -30
-afinidade_professor_salas: 100
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -180
-aulas_em_dias_seguidos: -580
-aulas_aos_sabados: 0
-distancia_percorrida: -194.84
-Individual([ 0  0  0  7 17  0  0  0  1 12  0  0  0  1  5  0  0  0  8 16  0  0  0  0
- 19 19 18  0  0  3  0  3  0 11  0  0  0  0  4  5  0  0  0 11  0  0  0  0
-  8  3  0  0  0  5  7  0  4  2  7 16  0  3  6  3  6  0  0  0  3 16  0  0
-  0 13 16  0  0  7  2  1  0  1  3  0  0  0  1  9  0  0 10  0  0  0 17  9
-  0  0  0 13  6  0  0  0  7  8  0  0  0 16  7  0  6  0  3  4  0  0 16  0
-  0  0  7 18  0  0  0 18  7  0  0  0 11  3  0  0  0 15 18  0  0  0 14  2
-  0  4  4 19  2  0  2  6 14  8  0  0  0  0 17  0  4  1 14  7  0  0  0 17
- 15  0  5  6 15 14  0  6  4  0 19  0  0  0  3  5  0  0  0  8  7  0  3  0
-  3  9  0  1  8  0  3  6  3 12  0  2  1  0  0  1  5  0  2  1  0  0 15  3
-  1  4  6  0  0 17  5  0  6  0  5  0  1  1 10  4  0  2  1  0  0  2  3  1
-  5  3  0  0  4  8  0  6  5  0  0 17  0  0  6  5 15  9  0  3  6 17  5  0
-  3  0  6 19  0  4  5 14  8  0  5  5  8  4  2  4  4  5  7  0  1  4  2 10
-  0  5  4 12 10  0  2  6  8  0  2  0  0 10  0  0  2  1 11 15  0  0  1  5
- 13  0  6  6  9 10  0  6  3  0 18  0  3  3 16  5  1  4  2  6 11  0  6  4
-  2 17  0  4  1 12  3  1  0  2 10  7  0  6  4  3 13  0  4  2  2  4  1  2
-  3 13  6  0  1  6  9 13  1  5  1  9 17  0  3  0  3  9  1  3  4 11 16  1
-  6  4 18 10  0  0  2 19  3  0  2  2  9  5  0  0  1  1  9  0  0  4 16  3])
-
-Fitnesses: -5566.62
-choque_salas: -1620
-choque_professor: -240
-choque_grade: -2400
-choque_laboratorios: 0
-choque_disciplinas: 0
-mesmo_turno: -352
-max_min_horas_professor: -130
-afinidade_professor_disciplina: 92
-afinidade_professor_horarios: -40
-afinidade_professor_salas: 130
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -180
-aulas_em_dias_seguidos: -620
-aulas_aos_sabados: 0
-distancia_percorrida: -206.62
-Individual([ 0  0  0  7 17  0  0  0  1 15  0  0  0  1  5  0  0  0  8 16  0  0  0  0
- 19 19 18  0  0  3  0  3  4 11  0  0  0  0  4  5  0  0  0 10  0  0  0  0
-  8  3  0  0  0  5  7  0  4  4  7 16  0  3  6  1  6  0  0  0  3 16  0  0
-  0 13 16  0  0  9  1  1  0  1  3  0  0  0  1 19  0  0 10  0  0  0 17  9
-  0  0  0 13  6  0  0  0  7  8  0  0  0 15  7  0  6  0  3  4  0  0 16  0
-  0  0  7 12  0  0  0 18  7  0  0  0 11  3  0  0  0 15 18  0  0  0 14  2
-  0  4  2 10  2  0  2  6 14  8  0  0  0  0 17  0  4  1 14  7  0  0  0 17
- 15  0  5  6 13 14  0  6  4 11 19  0  0  0  3  5  0  0  0  8  7  0  3  0
-  3  9  0  1  8  0  0  3  8 12  1  5  1  0  0  1  5  0  2  2  0  0 19  3
-  1  4  6  0  0 17  5  0  6  0  5  0  1  1 10  4  0  3  1  0  0  2  3  1
-  5  3  0  0  4  7  0  6  5  0  0 17  0  0  6  5 15  9  0  3  6 17  5  0
-  3  0  6 19  0  4  5 14  8  0  5  5  8  4  2  4  5  4  7  0  1  4  2 10
-  0  5  4 12 10  0  2  2 18  0  2  1  0 10  0  0  6  1 11 15  0  0  1  5
- 13  0  0  6  9 10  0  6  3  0 18  0  3  3 16  5  1  4  2  6 11  0  6  4
-  2 17  0  4  1 12  3  1  0  2 10  7  0  6  4  3 13  0  4  2  2  4  1  4
-  3 17  6  1  1  6  9 13  1  5  1  9 17  0  3  0 16  8  1  3  4 11 16  1
-  6  4 18 10  0  0  2 19  3  0  2  2  9  5  0  0  1  1 16  0  0  4 13  2])
-
-Fitnesses: -5403.8
-choque_salas: -1440
-choque_professor: -180
-choque_grade: -2520
-choque_laboratorios: 0
-choque_disciplinas: 0
-mesmo_turno: -344
-max_min_horas_professor: -100
-afinidade_professor_disciplina: 92
-afinidade_professor_horarios: -40
-afinidade_professor_salas: 110
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -180
+max_min_horas_professor: -230
+afinidade_professor_disciplina: 94
+afinidade_professor_horarios: -20
+afinidade_professor_salas: 120
+afinidade_salas_horarios: 10
+aulas_no_mesmo_dia: -270
 aulas_em_dias_seguidos: -600
-aulas_aos_sabados: 0
-distancia_percorrida: -201.8
-Individual([ 0  0  0  7 17  0  0  0  1 12  0  0  0  1  5  0  0  0  8 16  0  0  0  0
- 19 19 18  0  0  3  0  3  0 11  0  0  0  0  4  5  0  0  0 11  0  0  0  0
-  8  3  0  0  0  5  7  0  4  2  7 16  0  3  6  1  6  0  0  0  3 16  0  0
-  0 13 16  0  0  9  1  1  0  1  3  0  0  0  1 19  0  0 10  0  0  0 17  9
-  0  0  0 13  6  0  0  0  7  8  0  0  0 15  7  0  6  0  3  4  0  0 16  0
-  0  0  7 12  0  0  0 18  7  0  0  0 11  3  0  0  0 15 18  0  0  0 14  2
-  0  4  4 19  2  0  2  6 14  8  0  0  0  0 17  0  4  1 14  7  0  0  0 17
- 15  0  5  6 13 14  0  6  4  0 19  0  0  0  3  5  0  0  0  8  7  0  3  0
-  3  9  0  1  8  0  0  3  8 12  0  2  1  0  0  1  5  0  2  2  0  0 19  3
-  1  4  6  0  0 17  5  0  6  0  5  0  1  1 10  4  0  3  1  0  0  2  3  1
-  5  3  0  0  4  7  0  6  5  0  0 17  0  0  6  5 15  9  0  3  6 17  5  0
-  3  0  6 19  0  4  5 14  8  0  5  5  8  4  2  4  4  5  7  0  1  4  2 10
-  0  5  4 12 10  0  2  2  8  0  2  0  0 10  0  0  6  1 11 15  0  0  1  5
- 13  0  6  6  9 10  0  6  3  0 18  0  3  3 16  5  1  4  2  6 11  0  6  4
-  2 17  0  4  1 12  3  1  0  2 10  7  0  6  4  3 13  0  4  2  2  4  1  4
-  3 13  6  1  1  6  9 13  1  5  1  9 17  0  3  0 16  9  1  3  4 11 16  1
-  6  4 18 10  0  0  2 19  3  0  2  2  9  5  0  0  1  1  9  0  0  4 13  2])
+aulas_aos_sabados: -210
+distancia_percorrida: -307.04
+Individual([23 10 12 17 18 14  4  6  5 11 49  1  0  3  1  1 12 22 15  0 10  7 22 20
+ 12  0  3  0 23 19  0  3  6 15  8 14 19 11  9  6  0  3  0 18  4 10  8  4
+ 23  3  9 14 21 18  7  0  0  0  1  1 14  5  6  6 11  8  4 22 10 13  8 19
+  0  3  3  3  5  0  4  1  6  1 19 10  0  2  0 23 12  2  0  0  5 13  0  5
+  6 11 13  0  3  5  1  3 17  5  9  0  3  3  6  2  3  3  0  4  0  1 12  0
+  5  6  0  0  4 19  0  0  3  0  0 22  7  1  4  1  0  0 21  8  0  5  0  2
+  0  0  1 10 19  0  3  2  0  0 22  4  2  2  2  0  0 17  6  0  2  4  0  0
+ 16  5  0  2  0 15  9  0  5  2 23  7  0  4  1  9  4  0  2  1 11 17  0  1
+  4 16 18  2  0  1  4 15  0  4  3 12  1  1  6  6  6 22  0  6  0  8 10  0
+  0  1 20  2  0  5  0 10  6  0  6  4  3 17  0  5  0 23  4  0  1  5 21 11
+  0  3  5 10  1  0  6  5  1 15  0  1  4 16  0  0  2  6 15 23  0  4  3 17
+ 12  0  0  2 23 18  0  2  6  1 10  1  2  0 23  2  1  1  2  6 13  1  6  1
+ 20 13  0  0  5 17  7  0  0  1  3  5  0  2  1  5 14  0  6  5  8 13  0  6
+  0  6 12  0  4  5 11 16  0  6  1 17 16])
 
-Fitnesses: -5403.64
-choque_salas: -1440
-choque_professor: -180
-choque_grade: -2520
+Fitnesses: -4968.0
+choque_salas: -960
+choque_professor: -360
+choque_grade: -1920
 choque_laboratorios: 0
 choque_disciplinas: 0
-mesmo_turno: -352
-max_min_horas_professor: -100
-afinidade_professor_disciplina: 92
-afinidade_professor_horarios: -40
-afinidade_professor_salas: 110
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -150
-aulas_em_dias_seguidos: -620
-aulas_aos_sabados: 0
-distancia_percorrida: -203.64000000000001
-Individual([ 0  0  0  7 17  0  0  0  1 15  0  0  0  1  5  0  0  0  8 16  0  0  0  0
- 19 19 18  0  0  3  0  3  0  7  0  0  0  0  4  5  0  0  0 10  0  0  0  0
-  8  3  0  0  0  5  7  0  4  4  7 16  0  3  6  3  6  0  0  0  3 16  0  0
-  0 13 16  0  0  9  1  1  0  1  3  0  0  0  1  9  0  0 10  0  0  0 17  9
-  0  0  0 13  6  0  0  0  7  8  0  0  0 15  7  0  6  0  3  4  0  0 16  0
-  0  0  7 12  0  0  0 18  7  0  0  0 11  3  0  0  0 15 18  0  0  0 14  2
-  0  4  4 10  2  0  2  6 14  8  0  0  0  0 17  0  4  1 16  7  0  0  0 17
- 15  0  5  6 13 14  0  6  4 11 19  0  0  0  3  6  0  0  0  8  7  0  3  0
-  3  9  0  1  8  0  0  3  8 12  0  2  1  0  0  1  5  0  2  1  0  0 19  3
-  1  4  6  0  0 17  5  0  6  0  5  0  1  1 10  4  0  3  1  0  0  2  3  1
-  5  3  0  0  4  7  0  6  5  0  0 17  0  0  6  4 15  9  0  3  6 17  5  0
-  3  0  4 19  0  4  5 14  8  0  5  5  8  4  2  4  5  5  7  0  1  4  2 10
-  0  5  4 12 10  0  2  2 18  0  2  1  0 10  0  0  6  1 11 15  0  0  1  5
- 13  0  0  6  9 16  0  1  3  0 18  0  3  3 16  5  1  4  2  6 11  0  4  4
-  2 17  0  4  1 12  3  1  0  2 10  7  0  6  4  3 13  0  4  2  2  4  1  4
-  3 17  6  1  1  6  9 13  1  5  1  9 17  0  3  0 16  8  1  3  4 11 16  1
-  6  4 18 10  0  0  2 19  3  0  2  2  9  5  0  0  1  1 16  0  0  4 13  2])
-
-Fitnesses: -6237.74
-choque_salas: -1650
-choque_professor: -180
-choque_grade: -2760
-choque_laboratorios: 0
-choque_disciplinas: 0
-mesmo_turno: -368
-max_min_horas_professor: -170
+mesmo_turno: -296
+max_min_horas_professor: -320
 afinidade_professor_disciplina: 94
 afinidade_professor_horarios: -10
-afinidade_professor_salas: 130
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -330
-aulas_em_dias_seguidos: -800
-aulas_aos_sabados: 0
-distancia_percorrida: -193.74
-Individual([ 0  0  0 19  3  0  0  0 16  3  0  0  0 18  2  0  0  0  5  3  0  0  0  0
- 16 11 41  0  0  3  0  5  0  8 15  0  0  0  1  7  0  0  0 17  6  0  0  0
-  9  7  0  0  0  7  1  0  4  5  8 14  0  2  3 16 13  0  0  0  7  3  0  0
-  0 16  8  0  0  4  0  0  0  4  3  0  0  0  3 12  0  0  3  0  0  0  2  9
-  0  0  0 17 15  0  0  0 10  9  0  0  0  5 12  0  1  4 18  2  0  0  9  0
-  0  0  8 13  0  0  0 15 14  0  0  0 12 18  0  0  0  8  5  0  0  0  2 19
-  0  0  1  0  1  0  5  6 18 16  0  0  0 18 17  0  5  6 17 19  2  1  0  9
- 12  0  0  1  9 16  0  3  5 12  3  0  0  0 15  3  0  0  0  0  6  0  1  2
-  1  3  0  5  1  0  1  0  5  3  0  2  4  0  0  1  8  0  4  2  0  0 10  0
-  0  3  3  0  0 15  8  0  0  0  7  0  0  0 16  8  0  6  3  0  0 16  6  1
-  5  6  0  0 18  0  0  3  4  0  0  1  2  0  4  3 13  7  0  1  2 15  0  0
-  2  0 14  4  0  6  4  6  0  0  3  4  7  9  2  6  5  3 15  0  4  3 10 17
-  0  6  2 17 15  0  2  0  9  3  0  1  0  0  4  0  0  5 11 18  0  6  2  8
- 14  0  2  2 11 18  0  6  6 16  5  0  0  4 12 17  0  2  5 19  5  0  4  3
-  3 11  0  4  0  4 19  0  0  1  7  9  0  6  4  4 14  0  2  2  7 13  1  4
-  4  8 12  0  5  5  3 18  1  3  5 10 19  0  4  3 14 15  1  2  0 12  0  1
-  2  2  8  6  0  5  1  2  5  0  6  3  3  6  0  6  6  3 11  0  5  4  2  0])
+afinidade_professor_salas: 210
+afinidade_salas_horarios: 10
+aulas_no_mesmo_dia: -240
+aulas_em_dias_seguidos: -600
+aulas_aos_sabados: -280
+distancia_percorrida: -296.0
+Individual([20  7 16 18  2 12 14 19 20  6 32  5  0  5  1 10 10 21  2  1 21 18 13 11
+ 18  0  5  6  6 22  0  1  0 17  9 17  3  0  7  0  0  0  5  5  0 12  1  5
+  3  9 10 14 20 22  9 11  0  1  0  6  0 21 16 20  6 15 10 19 18  4 19 14
+  0  6  4  7  1  0  6  2 19  3 20  1  0  5  3 23 18  2  1  1  8  0  0  0
+  1  8 18  0  3  6  5 15 13  4  7  1  2  1  2  2  4  9  0  4  0 20  2  0
+  6  2  0  0  6 21  0  6  6  0  0  7 11  0  3  5  0  0 15  5  0  1  0  8
+  0  0  1  8  1  0  2  1  0  0 17  0  0  1  3  0  0  1  2  0  0  0  0  0
+  7  9  0  2  6 21  7  0  3  0 22  0  0  0  1 14 15  0  5  4 20  7  0  1
+  6 23 16  1  2  4 12 19  0  4  0 12 22  1  1  0  6  1  0  3  3 21 23  1
+  1  0 17  6  0  6  0  3 19  0  5  1 14 11  0  2  6  9 21  0  3  4 17  3
+  0  6  1  1 20  0  2  6 12 21  0  0  0  7  4  0  2  6  1  9  1  1  0 21
+  2  0  1  3  2 19  0  1  2 13 11  0  4  3 10 20  0  3  0  1 11  0  4  3
+  6  1  0  2  4 15 20  1  4  5 12  4  0  3  5  9 18  0  4  4  8 16  0  1
+  0  3 14  0  5  1 16 22  0  1  1 20  1])
 
-Fitnesses: -5563.78
-choque_salas: -1350
-choque_professor: -300
-choque_grade: -2250
+Fitnesses: -4861.06
+choque_salas: -1320
+choque_professor: -420
+choque_grade: -1800
 choque_laboratorios: 0
 choque_disciplinas: 0
-mesmo_turno: -368
-max_min_horas_professor: -190
+mesmo_turno: -240
+max_min_horas_professor: -210
 afinidade_professor_disciplina: 94
-afinidade_professor_horarios: 0
+afinidade_professor_horarios: -10
+afinidade_professor_salas: 180
+afinidade_salas_horarios: 10
+aulas_no_mesmo_dia: -210
+aulas_em_dias_seguidos: -500
+aulas_aos_sabados: -150
+distancia_percorrida: -285.06
+Individual([21 12 11 12  0  5 19 11  3  2  0  5  0  0  0 16 16  6  0 13 18 12  4  9
+ 11  0  2  0  2 19  0  0  0 14 23 19  5 22  2  4  0  4  1 17  3 17 16  4
+  7 22 19  2 14 19  5  9  0  2  0  7 15 13  6  3  3 14  2 10 11  0  8  0
+  0  0  1 21  4  0  4  3 13 21  6  0  0  6  5  7 17  2  0  0  9  3  0  1
+  2  9 15  0  2  2  8  4  9  3  9  1  6  1  5  1  5  9  0  4  0 13 16  0
+  1  4  0  0  5 11  0  1  3  0  0  0 15  1  5  3  0  0 12  2  0  6  0  6
+  0  1  0  7 14  0  3  4  0  0 16  4  1  2  1  0  0 22  7  0  3  1  0  0
+ 13  5  0  2  1 10  9  0  3  6  3  5  0  1  2 19  9  0  5  0  5 12  0  6
+  4  0 16  1  6  0  8 17  0  6  1  8 13  0  6  4  6 15  0  6  3  8 21  2
+  0  1  4 13  0  4  0 18  1  0  2  0  2 17  0  2  5  5 13  0  1  1  3 11
+  0  2  6 16 23  1  3  5  1 17  0  1  1 18 13  0  4  5  3 21  0  2  1 12
+ 22  0  0  5  9  2  0  1  1  1 15  0  0  5  7 16  0  1  5 13 15  1  1  1
+ 16 13  0  5  6 10  7  1  2  4 10 16  1  4  2 20  1  0  6  6 22  3  0  3
+  0 21  4  0  4  6  4 13  0  1  2  0 22])
+
+Fitnesses: -4699.02
+choque_salas: -840
+choque_professor: -360
+choque_grade: -1590
+choque_laboratorios: 0
+choque_disciplinas: 0
+mesmo_turno: -336
+max_min_horas_professor: -350
+afinidade_professor_disciplina: 92
+afinidade_professor_horarios: -20
+afinidade_professor_salas: 110
+afinidade_salas_horarios: 10
+aulas_no_mesmo_dia: -270
+aulas_em_dias_seguidos: -600
+aulas_aos_sabados: -240
+distancia_percorrida: -305.02
+Individual([ 7  8 11 16 14  6 15 22 16  0 10  5  0  2  1 18  1  3 15 10 23  7  2 17
+  0  0  4  3  5 15  0  6  6 12  8 18 22  9  1  6  1  3  5 20  3 10  2 19
+  3 16 17  3 16 23  8 13  0  3  2 13 12 15  1 18  2 17  5 13 19  0 13 22
+  0  1  4  9  7  0  1  0 23 21  7  6  0  5  5  6 13  1  0  0 15  5  0  6
+  6  3 21  0  6  6  8 16 12  1 19  9  6  0  6  4  2  0  0  5  4 16  2  1
+  4  0  0  0  4  4  0  5  0  0  0  7 20  0  3  1  0  0 18  5  0  3  0  2
+  0  0  0 21 22  0  0  3  0  0  5  4  0  2  1  0  0 16  3  0  1  3  0  0
+ 21  5  0  0  4 13  0  0  4  1 20  6  0  5  2  7  1  0  6  6  9 12  0  4
+  2 23  3  1  5  0  0  3  0  3  4 14 16  0  3  2 19  5  0  5  6  3 23  0
+  0  1 10  6  0  0  4 19 11  0  2  5 22 21  0  4  6 15 20  0  1  0 10 23
+  0  6  4  5  9  1  5  5  2  1  0  4  3  6 23  1  5  0  9 22  1  3  1  5
+ 13  0  2  6  2  8  0  4  5 17 22  0  6  0  5 16  1  5  3 14  9  1  0  5
+  7 13  0  2  2 19  4  1  0  6  7 17  1  4  6  0  4  0  6  2 18 12  0  6
+  0 23 10  0  4  5  4 11  0  2  4 13 12])
+
+Fitnesses: -4530.0
+choque_salas: -1110
+choque_professor: -120
+choque_grade: -1950
+choque_laboratorios: 0
+choque_disciplinas: 0
+mesmo_turno: -328
+max_min_horas_professor: -70
+afinidade_professor_disciplina: 94
+afinidade_professor_horarios: -10
 afinidade_professor_salas: 140
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -390
-aulas_em_dias_seguidos: -740
-aulas_aos_sabados: 0
-distancia_percorrida: -209.78
-Individual([ 0  0  0 19  8  0  0  0 13  3  0  0  0 18  2  0  0  0  5 15  0  0  0  0
- 16  2 41  0  0  3  0  5  0  8  3  0  0  0  1 16  0  0  0 17  6  0  0  0
-  9 15  0  0  0  7  1  0  4  5  8  6  0  2  3 16 13  0  0  0  7  3  0  0
-  0 16  8  0  0  4  0  0  0 16  8  0  0  0  4 14  0  0  3  0  0  0  2  9
-  0  0  0 17 15  0  0  0 10  1  0  0  0  3 12  0  1  4 18  7  0  0  5  0
-  0  0  8 13  0  0  0 15 14  0  0  0 17 13  0  0  0  5  6  0  0  0  2 19
-  0  6  1  0  1  0  2  6 18 16  0  0  0 18 19  0  5  6 17 19  2  1  1  9
- 12  0  3  1 16  4  0  3  5  0  2  0  0  0 15  3  0  0  0  1  6  0  1  0
-  6  3  0  4  1  0  1  0  5  3  1  2  3  0  0  1  8  0  2  6  0  0 10  0
-  0  5  0  0  0 15  8  0  0  0  7  0  0  1 16  8  0  6  3  0  0 19  6  1
-  6  4  0  0 10  8  0  2  0  0  0  1  2  0  2  3 13  8  0  1  2 15  0  0
-  2  0 14  4  0  6  4  6  0  0  3  4  7  1  2  6  5  3 10  0  4  3 10 17
-  0  6  2 17 15  0  2  3  9  3  1  1  1 18 11  0  4  3 11 18  0  6  2  8
- 14  0  2  2 11 18  0  6  1 16  5  0  0  2 17 17  0  6  5 19  5  0  4  3
-  9 11  0  4  0  4 19  1  0  3  1  9  0  6  1  4 14  0  2  2  7  0  1  4
-  4  8 12  0  5  2 12  4  0  3  5 10 19  0  0  4 14 15  1  2  0  5  0  1
-  2  2  8  6  0  5  1  2  5  0  6  5  3  6  0  6  6  3 11  0  4  4  2  0])
-
-Fitnesses: -5227.48
-choque_salas: -1350
-choque_professor: -180
-choque_grade: -2190
-choque_laboratorios: 0
-choque_disciplinas: 0
-mesmo_turno: -360
-max_min_horas_professor: -160
-afinidade_professor_disciplina: 94
-afinidade_professor_horarios: 0
-afinidade_professor_salas: 160
-afinidade_salas_horarios: 0
-aulas_no_mesmo_dia: -330
-aulas_em_dias_seguidos: -700
-aulas_aos_sabados: 0
-distancia_percorrida: -211.48000000000002
-Individual([ 0  0  0 19  3  0  0  0 13  3  0  0  0 18  2  0  0  0  5 15  0  0  0  0
- 16 11 41  0  0  3  0  5  0  8  3  0  0  0  1  7  0  0  0 17  6  0  0  0
-  9 15  0  0  0  7  1  0  4  5  8  6  0  2  3 16 13  0  0  0  7  3  0  0
-  0 16  8  0  0  4  0  0  0  4  8  0  0  0  4 12  0  0  3  0  0  0  2  9
-  0  0  0 17 15  0  0  0 10  9  0  0  0  3 12  0  1  4 18  7  0  0  5  0
-  0  0  8 13  0  0  0 15 14  0  0  0 17 13  0  0  0  5  6  0  0  0  2 19
-  0  6  1  0  1  0  5  6 18 16  0  0  0 18 19  0  5  6 17 19  2  1  1  9
- 12  0  0  1 16  4  0  3  5  0  2  0  0  0 15  3  0  0  0  1  6  0  1  0
-  6  3  0  4  1  0  1  0  5  3  1  2  4  0  0  1  8  0  2  2  0  0 10  0
-  0  5  0  0  0 15  8  0  0  0  7  0  0  1 16  8  0  6  3  0  0 19  6  1
-  6  6  0  0 10  8  0  2  0  0  0  1  2  0  4  3 13  8  0  1  2 15  0  0
-  2  0 14  4  0  6  4  6  0  0  3  4  7  1  2  6  5  3 10  0  4  3 10 17
-  0  6  2 17 15  0  2  3  9  3  1  1  1  0 11  0  4  3 11 18  0  6  2  8
- 14  0  2  2 11 18  0  6  1 16  5  0  0  2 12 17  0  2  5 19  5  0  4  3
-  3 11  0  4  0  4 19  0  0  3  1  9  0  6  1  4 14  0  2  2  7 13  1  4
-  4  8 12  0  5  2 12  4  0  3  5 10 19  0  4  4 14 15  1  2  0 12  0  1
-  2  2  8  6  0  5  1  2  5  0  6  5  3  6  0  6  6  3 11  0  4  4  2  0])
+afinidade_salas_horarios: 10
+aulas_no_mesmo_dia: -150
+aulas_em_dias_seguidos: -480
+aulas_aos_sabados: -230
+distancia_percorrida: -326.0
+Individual([ 2 19 13  1 20  0  4 14  3 18 35  4  0  4  0  4 22 11 15 16 21 23 13  6
+ 19  0  6  3  6 20  0  6  2  7 17  7 23 14 17  0  2  2  2  3  5  3 11  3
+ 16 10 17  2  3  7 22 10  0  1  0  0 12  6  2 15 15 21 10 14  0 22 16  7
+  0  3  3 21  9  0  0  4 14  0 17  7  0  6  5 12  6  2  0  0 14 23  0  1
+  3  3 11  0  4  5 18  3 13  2 16  8  4  2  0  7  4  9  0  0  6  4  1  1
+  2  2  0  0  5 13  0  3  3  0  0 19 10  0  1  1  0  0 17  2  0  1  0  6
+  0  1  0 13 19  0  5  3  0  0 18  3  1  1  0  0  0 22  0  0  6  4  0  0
+ 21  1  0  2  2  1  1  0  5  5 22  6  0  6  6 10  4  0  0  1 21  4  0  6
+  6 23  1  2  5  5 11  4  0  3  6 23 11  1  6  5  2  5  0  3  3 19  0  1
+  0  0 17 18  0  1  1 18 11  0  6  0  9 13  0  4  0  7 21  0  1  4  6  9
+  0  3  3 12 17  0  0  0  0 16  0  3  4  5 15  1  2  6 15 22  0  2  1  6
+  1  0  0  1 11  2  0  2  5  0 10  1  3  4  0  5  1  5  5 16 10  1  0  3
+  2 22  0  5  4 15 12  1  1  2 11  2  1  4  3 16  5  0  4  5  0 17  0  6
+  4 21 23  0  4  0  0 14  0  5  6 23 18])
 
