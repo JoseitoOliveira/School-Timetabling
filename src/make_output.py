@@ -66,7 +66,7 @@ empty_table_args = {f'_{i}': '' for i in range(60)}
 
 def make_html(ind, metadata):
 
-    grades = sorted(metadata.grades)
+    grades = metadata.grades
     tables_args = [empty_table_args.copy() for _ in grades]
     [tables_args[i].__setitem__('grade', grade)
      for i, grade in enumerate(grades)]

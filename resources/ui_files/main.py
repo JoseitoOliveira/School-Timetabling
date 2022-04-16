@@ -199,6 +199,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.disciplina_labs = QtWidgets.QTableWidget(self.form_disciplina)
+        self.disciplina_labs.setShowGrid(False)
         self.disciplina_labs.setObjectName("disciplina_labs")
         self.disciplina_labs.setColumnCount(1)
         self.disciplina_labs.setRowCount(0)
@@ -438,10 +439,6 @@ class Ui_MainWindow(object):
         self.tab_sobre.setObjectName("tab_sobre")
         self.tab_telas.addTab(self.tab_sobre, "")
         self.gridLayout.addWidget(self.tab_telas, 1, 1, 1, 1)
-        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setProperty("value", 24)
-        self.progressBar.setObjectName("progressBar")
-        self.gridLayout.addWidget(self.progressBar, 3, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.toolBar = QtWidgets.QToolBar(MainWindow)
         self.toolBar.setMovable(True)
@@ -483,13 +480,13 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionSobre)
 
         self.retranslateUi(MainWindow)
-        self.tab_telas.setCurrentIndex(0)
+        self.tab_telas.setCurrentIndex(1)
         self.tab_horarios.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "UFPB School Timetabling"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "School Timetabling"))
         self.label_17.setText(_translate("MainWindow", "Tamanho da População:"))
         self.label_18.setText(_translate("MainWindow", "Número de Gerações:"))
         self.label_19.setText(_translate("MainWindow", "Número de Repetições:"))

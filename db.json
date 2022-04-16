@@ -4248,7 +4248,7 @@
                 {
                     "nome": "LMI",
                     "capacidade": 30,
-                    "laboratorio": 2,
+                    "laboratorio": true,
                     "afinidade_horarios": {},
                     "distancias": {}
                 },
@@ -10304,8 +10304,10 @@
                 }
             ],
             "sem_professor": false,
-            "sem_sala": false,
-            "choques": []
+            "sem_sala": 0,
+            "choques": [
+                "ACIONAMENTOS DE MÁQUINAS ELÉTRICAS PÓS"
+            ]
         },
         "70": {
             "nome": "Concepção de CI",
@@ -10871,8 +10873,8 @@
                     "slice_f": 280
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false,
+            "sem_professor": 0,
+            "sem_sala": 0,
             "choques": []
         },
         "73": {
@@ -12382,8 +12384,8 @@
                     "slice_f": 320
                 }
             ],
-            "sem_professor": false,
-            "sem_sala": false,
+            "sem_professor": 0,
+            "sem_sala": 0,
             "choques": []
         },
         "81": {
@@ -12657,7 +12659,7 @@
                 "Circuitos Lógicos": 2,
                 "Fontes": 2
             },
-            "hrs_min": 4,
+            "hrs_min": 5,
             "hrs_max": 12,
             "afinidade_horarios": {},
             "afinidade_salas": {
@@ -12904,7 +12906,7 @@
             "laboratorio": 0,
             "afinidade_horarios": {},
             "distancias": {
-                "CTJ202": 500
+                "CTJ202": 1000
             }
         },
         "2": {
@@ -12913,7 +12915,7 @@
             "laboratorio": 0,
             "afinidade_horarios": {},
             "distancias": {
-                "CTJ201": 500
+                "CTJ201": 1000
             }
         },
         "3": {
@@ -12960,14 +12962,14 @@
         "8": {
             "nome": "LMI",
             "capacidade": 30,
-            "laboratorio": 2,
+            "laboratorio": true,
             "afinidade_horarios": {},
             "distancias": {}
         },
         "9": {
             "nome": "LMA",
             "capacidade": 30,
-            "laboratorio": 2,
+            "laboratorio": true,
             "afinidade_horarios": {},
             "distancias": {}
         }

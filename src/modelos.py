@@ -157,7 +157,7 @@ class Sala:
 
     @laboratorio.setter
     def laboratorio(self, laboratorio) -> None:
-        self._laboratorio = laboratorio
+        self._laboratorio = bool(laboratorio)
         salas.update({'laboratorio': self.laboratorio},
                      where('nome') == self.nome)
 
@@ -440,8 +440,8 @@ class Disciplina:
         return self._sem_professor
 
     @sem_professor.setter
-    def sem_professor(self, sem_professor):
-        self._sem_professor = sem_professor
+    def sem_professor(self, sem_professor: bool):
+        self._sem_professor = bool(sem_professor)
         disciplinas.update({'sem_professor': sem_professor},
                            where('nome') == self.nome)
 
@@ -450,8 +450,8 @@ class Disciplina:
         return self._sem_sala
 
     @sem_sala.setter
-    def sem_sala(self, sem_sala):
-        self._sem_sala = sem_sala
+    def sem_sala(self, sem_sala: bool):
+        self._sem_sala = bool(sem_sala)
         disciplinas.update({'sem_sala': sem_sala},
                            where('nome') == self.nome)
 
@@ -554,11 +554,11 @@ class MetaData:
         return str(self.as_json())
 
     def __post_init__(self):
-        self.__grades__ = list(set([
+        self.__grades__ = sorted(list({
             grade
             for disciplina in self.disciplinas.values()
             for grade in disciplina.grades
-        ]))
+        }))
 
     @property
     def grades(self):

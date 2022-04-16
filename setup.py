@@ -1,7 +1,7 @@
 from setuptools import setup
 
-NAME = "UFPB School Timetabling"
-VERSION = "0.3.0"
+NAME = "School Timetabling"
+VERSION = "0.4.2"
 DESCRIPTION = """Software para planejamento ótimo de períodos, \
 horários das turmas, professores e salas no DEE/UFPB"""
 AUTHOR = "Joseíto Oliveira"

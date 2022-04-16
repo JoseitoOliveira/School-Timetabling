@@ -1,8 +1,9 @@
 from functools import lru_cache
 from statistics import mean, pvariance
+from typing import Union
 
+import click
 import numpy as np
-from fire import Fire
 from tqdm.std import trange
 
 from src.AG.AG2 import AG
@@ -11,8 +12,8 @@ from src.fitness import Fitness
 from src.make_output import make_html
 from src.metadata import criar_cromossomos, processar_metadata
 from src.modelos import get_metadata
-
-from typing import Union
+from multiprocessing import freeze_support
+import webbrowser
 
 
 class Cached_Fitness():
@@ -126,6 +127,13 @@ class Otimizador:
         return best_ind
 
 
+@click.command()
+@click.option('--num_repeticoes', default=1, help='Número de repeticoes')
+@click.option('--tam_pop', default=100, help='Tamanho da população')
+@click.option('--num_ger', default=100, help='Número de gerações')
+@click.option('--taxa_cruzamento', default=0.9, help='Taxa de cruzamento')
+@click.option('--taxa_mutacao', default=0.3, help='Taxa de mutação')
+@click.option('--tournsize', default=3, help='Tamanho do torneio')
 def run_otimizador(
     tam_pop: int,
     num_ger: int,
@@ -151,9 +159,11 @@ def run_otimizador(
     html = make_html(best_ind, metadata)
     with open('output.html', mode='w', encoding='utf8') as f:
         f.write(html)
+
+    webbrowser.open('output.html')
     input('Otimização concluída! O resultado foi salvo em output.html')
 
 
 if __name__ == '__main__':
-    # run_otimizador(5, 2)  # to debug
-    Fire(run_otimizador)
+    freeze_support()
+    run_otimizador()
