@@ -72,7 +72,7 @@ class Window(QMainWindow):
 
     def executar(self):
         command = (
-            'start python otimizador.py '
+            'start otimizador.exe '
             f'--tam_pop {self.ui.tam_pop.value()} '
             f'--num_ger {self.ui.num_ger.value()} '
             f'--taxa_cruzamento {self.ui.taxa_cruz.value()} '

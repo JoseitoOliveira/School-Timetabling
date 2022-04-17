@@ -119,7 +119,7 @@ class Otimizador:
             aux = [x[g] for x in lists_bests_fits]
             print(f'{g + 1:^3} | {mean(aux):^6.1f} | {pvariance(aux):0.1f}')
 
-        obj2 = AG(definicoes, 'out/Indivíduos_b.txt')
+        obj2 = AG(definicoes, 'Indivíduos_b.txt')
         for ind in list_best_ind:
             obj2.save_ind(ind)
 

@@ -229,7 +229,9 @@ class Fitness:
             horarios = list(chain(*horarios))
             for nome_outra in nome_outras:
                 outra_disciplina = self.metadata.disciplinas[nome_outra]
-                horarios_outra, _ = get_horarios(outra_disciplina, ind)
+                horarios_outra, _ = get_horarios(self.metadata,
+                                                 outra_disciplina,
+                                                 ind)
                 horarios_outra = list(chain(*horarios_outra))
                 for horario in horarios:
                     if horario in horarios_outra:

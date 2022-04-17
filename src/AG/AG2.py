@@ -15,7 +15,7 @@ class AG():
     Classe usada para executar um Algoritmo Genético.
     '''
 
-    def __init__(self, metadados: dict, filename: str = 'out/Indivíduos.txt'):
+    def __init__(self, metadados: dict, filename: str = 'Indivíduos.txt'):
         '''
         Cria uma instância da classe.
         O único argumento é metadados, em que devem estar todos os dados
