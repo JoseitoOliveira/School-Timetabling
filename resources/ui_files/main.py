@@ -480,7 +480,7 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionSobre)
 
         self.retranslateUi(MainWindow)
-        self.tab_telas.setCurrentIndex(1)
+        self.tab_telas.setCurrentIndex(0)
         self.tab_horarios.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

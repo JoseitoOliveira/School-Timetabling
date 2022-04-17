@@ -55,8 +55,10 @@ class Professor:
 
     @hrs_min.setter
     def hrs_min(self, hrs_min):
-        self._hrs_min = hrs_min
-        professores.update({'hrs_min': hrs_min}, where('nome') == self.nome)
+        if hrs_min != self.hrs_min:
+            self._hrs_min = hrs_min
+            professores.update({'hrs_min': hrs_min},
+                               where('nome') == self.nome)
 
     @property
     def hrs_max(self):
@@ -64,8 +66,10 @@ class Professor:
 
     @hrs_max.setter
     def hrs_max(self, hrs_max):
-        self._hrs_max = hrs_max
-        professores.update({'hrs_max': hrs_max}, where('nome') == self.nome)
+        if hrs_max != self.hrs_max:
+            self._hrs_max = hrs_max
+            professores.update({'hrs_max': hrs_max},
+                               where('nome') == self.nome)
 
     def set_afinidade_disciplinas(self, disciplina, afinidade):
         if afinidade == 0 and disciplina in self.afinidade_disciplinas:
@@ -472,6 +476,51 @@ class Disciplina:
         disciplinas.update({'horas': self.horas, 'horarios': self.horarios},
                            where('nome') == self.nome)
 
+    def add_sala(self, nome: str):
+        nomes_salas = [s.nome for s in self.salas]
+        if nome not in nomes_salas:
+            sala = Sala.from_json(salas.get(where('nome') == nome))
+            self._salas.append(sala)
+            disciplinas.update({'salas': [s.as_json() for s in self.salas]},
+                               where('nome') == self.nome)
+
+    def rmv_sala(self, nome: str):
+        nomes_salas = [s.nome for s in self.salas]
+        if nome in nomes_salas:
+            aux = [s for s in self.salas if s.nome != nome]
+            self._salas = aux
+            disciplinas.update({'salas': [s.as_json() for s in self.salas]},
+                               where('nome') == self.nome)
+
+    def add_lab(self, nome: str):
+        nomes_labs = [s.nome for s in self.laboratorios]
+        if nome not in nomes_labs:
+            lab = Sala.from_json(salas.get(where('nome') == nome))
+            self._laboratorios.append(lab)
+            disciplinas.update({'laboratorios': [s.as_json() for s in self.laboratorios]},
+                               where('nome') == self.nome)
+
+    def rmv_lab(self, nome: str):
+        nomes_labs = [s.nome for s in self.laboratorios]
+        if nome in nomes_labs:
+            aux = [s for s in self.laboratorios if s.nome != nome]
+            self._laboratorios = aux
+            disciplinas.update({'laboratorios': [s.as_json() for s in self.laboratorios]},
+                               where('nome') == self.nome)
+
+    def add_choque(self, nome: str):
+        if nome not in self.choques:
+            self._choques.append(nome)
+            disciplinas.update({'choques': self.choques},
+                               where('nome') == self.nome)
+
+    def rmv_choque(self, nome: str):
+        if nome in self.choques:
+            aux = [s for s in self.choques if s != nome]
+            self._choques = aux
+            disciplinas.update({'choques': self.choques},
+                               where('nome') == self.nome)
+
     def add_horario(self, aula, horario_str):
         if horario_str not in self.horarios[aula]:
             self.horarios[aula].append(horario_str)
@@ -483,22 +532,6 @@ class Disciplina:
             self.horarios[aula].remove(horario_str)
             disciplinas.update({'horarios': self.horarios},
                                where('nome') == self.nome)
-
-    def add_laboratorio(self, sala_nome):
-        labs_nomes = [lab['nome'] for lab in self.laboratorios]
-        if sala_nome not in labs_nomes:
-            sala = salas.get(where('nome') == sala_nome)
-            self.laboratorios.append(sala)
-            disciplinas.update({'laboratorios': self.laboratorios},
-                               where('nome') == self.nome)
-
-    def rmv_laboratorio(self, sala_nome):
-        for lab in self.laboratorios:
-            if lab['nome'] == sala_nome:
-                self.laboratorios.remove(lab)
-                break
-        disciplinas.update({'laboratorios': self.laboratorios},
-                           where('nome') == self.nome)
 
     def make_horarios(self):
         for h in self.horas:
@@ -519,6 +552,7 @@ class Disciplina:
             'laboratorios': [s.as_json() for s in self.laboratorios],
             'salas': [s.as_json() for s in self.salas],
             'professores': [p.as_json() for p in self.professores],
+            'choques': self.choques,
             'cromossomos': [c.as_json() for c in self.cromossomos],
             'sem_professor': self.sem_professor,
             'sem_sala': self.sem_sala,
@@ -535,6 +569,7 @@ class Disciplina:
             laboratorios=[Sala.from_json(s) for s in d['laboratorios']],
             salas=[Sala.from_json(s) for s in d['salas']],
             professores=[Professor.from_json(p) for p in d['professores']],
+            choques=d['choques'],
             cromossomos=[Cromossomo.from_json(c) for c in d['cromossomos']],
             sem_professor=d['sem_professor'],
             sem_sala=d['sem_sala'],

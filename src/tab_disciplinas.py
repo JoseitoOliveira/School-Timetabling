@@ -34,6 +34,9 @@ class TabDisciplinas:
         self.ui.disciplina_labs.itemChanged.connect(
             self.disciplina_labs_changed)
 
+        self.ui.disciplina_salas.itemChanged.connect(
+            self.disciplina_salas_changed)
+
         self.ui.choques.itemChanged.connect(self.choques_changed)
 
         self.ui.list_disciplinas.currentRowChanged.connect(
@@ -79,16 +82,20 @@ class TabDisciplinas:
 
     def grades_changed(self, grades):
         grades = grades.split(' ')
-        self.disciplina_atual.grades = grades
+        if grades != self.disciplina_atual.grades:
+            self.disciplina_atual.grades = grades
 
     def num_alunos_changed(self, value):
-        self.disciplina_atual.num_alunos = value
+        if value != self.disciplina_atual.num_alunos:
+            self.disciplina_atual.num_alunos = value
 
     def sem_sala_changed(self, value):
-        self.disciplina_atual.sem_sala = value
+        if value != self.disciplina_atual.sem_sala:
+            self.disciplina_atual.sem_sala = value
 
     def sem_professor_changed(self, value):
-        self.disciplina_atual.sem_professor = value
+        if value != self.disciplina_atual.sem_professor:
+            self.disciplina_atual.sem_professor = value
 
     def add_aula(self):
         creditos = self.ui.num_credidos_aula.value()
@@ -135,10 +142,6 @@ class TabDisciplinas:
         self.ui.list_disciplinas.takeItem(
             self.ui.list_disciplinas.currentRow())
 
-    def disciplina_add_laboratorio(self, item):
-        self.disciplina_atual.add_laboratorio(item.text())
-        self.exibir_disciplina_atual()
-
     def disciplina_add_horario(self, item):
         aula = self.ui.tab_horarios.currentIndex()
         self.disciplina_atual.add_horario(aula, item.text())
@@ -174,6 +177,7 @@ class TabDisciplinas:
         self.ui.disciplina_labs.setRowCount(0)
         nomes_labs = [s.nome for s in self.disciplina_atual.laboratorios]
         labs = salas.search(where('laboratorio') == True)  # noqa
+        self.ui.disciplina_labs.itemChanged.disconnect()
         for lab in sorted(labs, key=lambda d: d['nome']):
             cell = QTableWidgetItem(lab['nome'])
             cell.setFlags(Qt.ItemFlag.ItemIsEnabled |
@@ -185,6 +189,9 @@ class TabDisciplinas:
             index = self.ui.disciplina_labs.rowCount()
             self.ui.disciplina_labs.insertRow(index)
             self.ui.disciplina_labs.setItem(index, 0, cell)
+
+        self.ui.disciplina_labs.itemChanged.connect(
+            self.disciplina_labs_changed)
 
     def carregar_horarios_disciplina(self):
         horas = [str(h) for h in self.disciplina_atual.horas]
@@ -202,6 +209,7 @@ class TabDisciplinas:
             self.ui.tab_horarios.addTab(new_tab, hora)
 
     def carregar_salas_disciplina(self):
+        self.ui.disciplina_salas.itemChanged.disconnect()
         self.ui.disciplina_salas.setRowCount(0)
         nomes_salas = [s.nome for s in self.disciplina_atual.salas]
         for sala in sorted(salas.all(), key=lambda d: d['nome']):
@@ -216,8 +224,19 @@ class TabDisciplinas:
             self.ui.disciplina_salas.insertRow(index)
             self.ui.disciplina_salas.setItem(index, 0, cell)
 
+        self.ui.disciplina_salas.itemChanged.connect(
+            self.disciplina_salas_changed
+        )
+
+    def disciplina_salas_changed(self, item):
+        if item.checkState() == Qt.CheckState.Checked:
+            self.disciplina_atual.add_sala(item.text())
+        else:
+            self.disciplina_atual.rmv_sala(item.text())
+
     def carregar_choques_disciplina(self):
         self.ui.choques.setRowCount(0)
+        self.ui.choques.itemChanged.disconnect()
         for disciplina in sorted(disciplinas.all(), key=lambda d: d['nome']):
             if set(self.disciplina_atual.grades).intersection(
                     set(disciplina['grades'])
@@ -233,19 +252,16 @@ class TabDisciplinas:
             index = self.ui.choques.rowCount()
             self.ui.choques.insertRow(index)
             self.ui.choques.setItem(index, 0, cell)
+        self.ui.choques.itemChanged.connect(self.choques_changed)
 
-    def disciplina_labs_changed(self):
-        ...
+    def disciplina_labs_changed(self, item: QTableWidgetItem):
+        if item.checkState() == Qt.CheckState.Checked:
+            self.disciplina_atual.add_lab(item.text())
+        else:
+            self.disciplina_atual.rmv_lab(item.text())
 
     def choques_changed(self, item: QTableWidgetItem):
-        choques = set(self.disciplina_atual.choques)
         if item.checkState() == Qt.CheckState.Checked:
-            choques.add(item.text())
-            self.disciplina_atual.choques = list(choques)
-        elif item.text() in choques:
-            choques.remove(item.text())
-            self.disciplina_atual.choques = list(choques)
-
-    def disciplina_rmv_laboratorio(self, item):
-        self.disciplina_atual.rmv_laboratorio(item.text())
-        self.exibir_disciplina_atual()
+            self.disciplina_atual.add_choque(item.text())
+        else:
+            self.disciplina_atual.rmv_choque(item.text())

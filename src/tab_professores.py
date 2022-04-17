@@ -118,10 +118,12 @@ class TabProfessores:
         self.professor_atual.set_afinidade_horarios(horario, afinidade)
 
     def horas_min_professor_changed(self, value):
-        self.professor_atual.hrs_min = value
+        if value != self.professor_atual.hrs_min:
+            self.professor_atual.hrs_min = value
 
     def horas_max_professor_changed(self, value):
-        self.professor_atual.hrs_max = value
+        if value != self.professor_atual.hrs_max:
+            self.professor_atual.hrs_max = value
 
     def add_professor(self):
         novo_professor = Professor(nome='Novo professor')

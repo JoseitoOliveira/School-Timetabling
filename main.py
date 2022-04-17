@@ -11,12 +11,11 @@ import sys
 import traceback
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (QApplication,  QMainWindow)
+from PyQt5.QtWidgets import QApplication,  QMainWindow
 from qt_material import apply_stylesheet
 
 import src.aa_update  # noqa
 from resources.ui_files.main import Ui_MainWindow
-from src.data import disciplinas
 from src.logger import logger_print, print_exception_locals
 from src.tab_disciplinas import TabDisciplinas
 from src.tab_salas import TabSalas
