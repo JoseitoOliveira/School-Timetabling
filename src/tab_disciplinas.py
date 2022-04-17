@@ -137,10 +137,12 @@ class TabDisciplinas:
         self.ui.list_disciplinas.setCurrentRow(0)
 
     def rmv_disciplina(self):
+        current_row = self.ui.list_disciplinas.currentRow()
+        if current_row == -1:
+            return
         nome = self.disciplina_atual.nome
         disciplinas.remove(where('nome') == nome)  # type: ignore
-        self.ui.list_disciplinas.takeItem(
-            self.ui.list_disciplinas.currentRow())
+        self.ui.list_disciplinas.takeItem(current_row)
 
     def disciplina_add_horario(self, item):
         aula = self.ui.tab_horarios.currentIndex()

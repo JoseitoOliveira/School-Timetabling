@@ -132,10 +132,12 @@ class TabProfessores:
         self.ui.list_professores.setCurrentRow(0)
 
     def rmv_professor(self):
+        current_row = self.ui.list_professores.currentRow()
+        if current_row == -1:
+            return
         nome = self.professor_atual.nome
         professores.remove(where('nome') == nome)  # type: ignore
-        self.ui.list_professores.takeItem(
-            self.ui.list_professores.currentRow())
+        self.ui.list_professores.takeItem(current_row)
 
     def professor_afinidade_sala_changed(self, item: QTableWidgetItem):
         current_item = self.ui.professor_afinidade_sala.currentItem()

@@ -17,8 +17,8 @@ class TabSalas:
         self.ui.eh_laboratorio.stateChanged.connect(
             self.eh_laboratorio_changed)
 
-        # self.ui.btn_add_sala.clicked.connect(self.add_sala)
-        # self.ui.btn_rmv_sala.clicked.connect(self.rmv_sala)
+        self.ui.btn_add_sala.clicked.connect(self.add_sala)
+        self.ui.btn_rmv_sala.clicked.connect(self.rmv_sala)
 
         self.ui.sala_afinidade_horario.itemChanged.connect(
             self.sala_afinidade_horario_changed
@@ -39,6 +39,20 @@ class TabSalas:
 
         self.ui.sala_distancias.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch)
+
+    def add_sala(self):
+        nova_sala = Sala(nome='Nova sala', capacidade=30)
+        salas.insert(nova_sala.as_json())
+        self.ui.list_salas.insertItem(0, nova_sala.nome)
+        self.ui.list_salas.setCurrentRow(0)
+
+    def rmv_sala(self):
+        current_row = self.ui.list_salas.currentRow()
+        if current_row == -1:
+            return
+        nome = self.sala_atual.nome
+        salas.remove(where('nome') == nome)  # type: ignore
+        self.ui.list_salas.takeItem(current_row)
 
     def carregar_afinidade_sala_horarios(self):
         afinidade_horarios = self.sala_atual.afinidade_horarios
